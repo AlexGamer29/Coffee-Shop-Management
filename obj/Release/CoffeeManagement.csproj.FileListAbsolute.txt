@@ -1,0 +1,13 @@
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\bin\Release\Login.exe.config
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\bin\Release\Login.exe
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\bin\Release\Login.pdb
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\obj\Release\CoffeeManagement.csproj.AssemblyReference.cache
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\obj\Release\CoffeeManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\obj\Release\Login.fAccountProfile.resources
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\obj\Release\Login.fLogin.resources
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\obj\Release\Login.fManageTable.resources
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\obj\Release\Login.Properties.Resources.resources
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\obj\Release\CoffeeManagement.csproj.GenerateResource.cache
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\obj\Release\CoffeeManagement.csproj.CoreCompileInputs.cache
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\obj\Release\Login.exe
+C:\Users\Hi there\Desktop\Coffee-management\Login\Login\obj\Release\Login.pdb
