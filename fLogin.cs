@@ -53,7 +53,6 @@ namespace Login
             else
             {
                 MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
-
             }
             connection.Close();
         }
