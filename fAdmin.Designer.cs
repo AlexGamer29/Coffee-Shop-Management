@@ -28,26 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl_receipt = new System.Windows.Forms.TabControl();
-            this.tabPage_menu = new System.Windows.Forms.TabPage();
-            this.tabPage_idCategories = new System.Windows.Forms.TabPage();
-            this.tabPage_table = new System.Windows.Forms.TabPage();
-            this.tabPage_revenue = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_viewReceipt = new System.Windows.Forms.Button();
-            this.dateTimePicker_toDate = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker_fromDate = new System.Windows.Forms.DateTimePicker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView_receipt = new System.Windows.Forms.DataGridView();
-            this.pictureBox_close = new System.Windows.Forms.PictureBox();
             this.tabPage_account = new System.Windows.Forms.TabPage();
-            this.dataGridView_Menu = new System.Windows.Forms.DataGridView();
+            this.tabPage_menu = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,23 +51,30 @@
             this.panel_username = new System.Windows.Forms.Panel();
             this.label_userName = new System.Windows.Forms.Label();
             this.txtbox_foodID = new System.Windows.Forms.TextBox();
-            this.btn_search = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btn_viewMenu = new System.Windows.Forms.Button();
             this.btn_editMenu = new System.Windows.Forms.Button();
             this.btn_deleteMenu = new System.Windows.Forms.Button();
             this.btn_addMenu = new System.Windows.Forms.Button();
-            this.txtbox_searchFoodName = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView_Menu = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txtbox_searchFoodName = new System.Windows.Forms.TextBox();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.tabPage_idCategories = new System.Windows.Forms.TabPage();
+            this.tabPage_table = new System.Windows.Forms.TabPage();
+            this.tabPage_revenue = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_viewReceipt = new System.Windows.Forms.Button();
+            this.dateTimePicker_toDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_fromDate = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView_receipt = new System.Windows.Forms.DataGridView();
+            this.pictureBox_close = new System.Windows.Forms.PictureBox();
+            this.button_add = new System.Windows.Forms.Button();
             this.tabControl_receipt.SuspendLayout();
+            this.tabPage_account.SuspendLayout();
             this.tabPage_menu.SuspendLayout();
-            this.tabPage_revenue.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receipt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Menu)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_foodPrice)).BeginInit();
@@ -87,7 +83,13 @@
             this.panel_username.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Menu)).BeginInit();
             this.panel5.SuspendLayout();
+            this.tabPage_revenue.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receipt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_receipt
@@ -103,6 +105,17 @@
             this.tabControl_receipt.Size = new System.Drawing.Size(802, 497);
             this.tabControl_receipt.TabIndex = 0;
             // 
+            // tabPage_account
+            // 
+            this.tabPage_account.Controls.Add(this.button_add);
+            this.tabPage_account.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_account.Name = "tabPage_account";
+            this.tabPage_account.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_account.Size = new System.Drawing.Size(794, 471);
+            this.tabPage_account.TabIndex = 0;
+            this.tabPage_account.Text = "Tài khoản";
+            this.tabPage_account.UseVisualStyleBackColor = true;
+            // 
             // tabPage_menu
             // 
             this.tabPage_menu.Controls.Add(this.panel4);
@@ -116,163 +129,6 @@
             this.tabPage_menu.TabIndex = 1;
             this.tabPage_menu.Text = "Menu";
             this.tabPage_menu.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_idCategories
-            // 
-            this.tabPage_idCategories.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_idCategories.Name = "tabPage_idCategories";
-            this.tabPage_idCategories.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_idCategories.Size = new System.Drawing.Size(794, 471);
-            this.tabPage_idCategories.TabIndex = 2;
-            this.tabPage_idCategories.Text = "Danh mục";
-            this.tabPage_idCategories.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_table
-            // 
-            this.tabPage_table.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_table.Name = "tabPage_table";
-            this.tabPage_table.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_table.Size = new System.Drawing.Size(794, 471);
-            this.tabPage_table.TabIndex = 3;
-            this.tabPage_table.Text = "Bàn";
-            this.tabPage_table.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_revenue
-            // 
-            this.tabPage_revenue.Controls.Add(this.panel2);
-            this.tabPage_revenue.Controls.Add(this.panel1);
-            this.tabPage_revenue.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_revenue.Name = "tabPage_revenue";
-            this.tabPage_revenue.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_revenue.Size = new System.Drawing.Size(794, 471);
-            this.tabPage_revenue.TabIndex = 4;
-            this.tabPage_revenue.Text = "Doanh thu";
-            this.tabPage_revenue.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btn_viewReceipt);
-            this.panel2.Controls.Add(this.dateTimePicker_toDate);
-            this.panel2.Controls.Add(this.dateTimePicker_fromDate);
-            this.panel2.Location = new System.Drawing.Point(6, 6);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(782, 28);
-            this.panel2.TabIndex = 1;
-            // 
-            // btn_viewReceipt
-            // 
-            this.btn_viewReceipt.Location = new System.Drawing.Point(361, 2);
-            this.btn_viewReceipt.Name = "btn_viewReceipt";
-            this.btn_viewReceipt.Size = new System.Drawing.Size(75, 23);
-            this.btn_viewReceipt.TabIndex = 1;
-            this.btn_viewReceipt.Text = "Xem";
-            this.btn_viewReceipt.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker_toDate
-            // 
-            this.dateTimePicker_toDate.Location = new System.Drawing.Point(535, 3);
-            this.dateTimePicker_toDate.Name = "dateTimePicker_toDate";
-            this.dateTimePicker_toDate.Size = new System.Drawing.Size(244, 20);
-            this.dateTimePicker_toDate.TabIndex = 2;
-            // 
-            // dateTimePicker_fromDate
-            // 
-            this.dateTimePicker_fromDate.Location = new System.Drawing.Point(3, 3);
-            this.dateTimePicker_fromDate.Name = "dateTimePicker_fromDate";
-            this.dateTimePicker_fromDate.Size = new System.Drawing.Size(244, 20);
-            this.dateTimePicker_fromDate.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dataGridView_receipt);
-            this.panel1.Location = new System.Drawing.Point(6, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(782, 379);
-            this.panel1.TabIndex = 0;
-            // 
-            // dataGridView_receipt
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_receipt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView_receipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_receipt.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView_receipt.Location = new System.Drawing.Point(4, 3);
-            this.dataGridView_receipt.Name = "dataGridView_receipt";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_receipt.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView_receipt.Size = new System.Drawing.Size(775, 373);
-            this.dataGridView_receipt.TabIndex = 0;
-            // 
-            // pictureBox_close
-            // 
-            this.pictureBox_close.Image = global::Login.Properties.Resources.close;
-            this.pictureBox_close.Location = new System.Drawing.Point(774, 2);
-            this.pictureBox_close.Name = "pictureBox_close";
-            this.pictureBox_close.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox_close.TabIndex = 1;
-            this.pictureBox_close.TabStop = false;
-            this.pictureBox_close.Click += new System.EventHandler(this.pictureBox_close_Click);
-            // 
-            // tabPage_account
-            // 
-            this.tabPage_account.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_account.Name = "tabPage_account";
-            this.tabPage_account.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_account.Size = new System.Drawing.Size(794, 471);
-            this.tabPage_account.TabIndex = 0;
-            this.tabPage_account.Text = "Tài khoản";
-            this.tabPage_account.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView_Menu
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Menu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView_Menu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_Menu.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView_Menu.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView_Menu.Name = "dataGridView_Menu";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Menu.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView_Menu.Size = new System.Drawing.Size(428, 371);
-            this.dataGridView_Menu.TabIndex = 0;
             // 
             // panel4
             // 
@@ -419,15 +275,6 @@
             this.txtbox_foodID.Size = new System.Drawing.Size(215, 27);
             this.txtbox_foodID.TabIndex = 4;
             // 
-            // btn_search
-            // 
-            this.btn_search.Location = new System.Drawing.Point(239, 3);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(99, 70);
-            this.btn_search.TabIndex = 5;
-            this.btn_search.Text = "Tìm kiếm";
-            this.btn_search.UseVisualStyleBackColor = true;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.btn_viewMenu);
@@ -475,13 +322,6 @@
             this.btn_addMenu.Text = "Thêm";
             this.btn_addMenu.UseVisualStyleBackColor = true;
             // 
-            // txtbox_searchFoodName
-            // 
-            this.txtbox_searchFoodName.Location = new System.Drawing.Point(5, 29);
-            this.txtbox_searchFoodName.Name = "txtbox_searchFoodName";
-            this.txtbox_searchFoodName.Size = new System.Drawing.Size(230, 20);
-            this.txtbox_searchFoodName.TabIndex = 6;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dataGridView_Menu);
@@ -489,6 +329,38 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(434, 377);
             this.panel3.TabIndex = 4;
+            // 
+            // dataGridView_Menu
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Menu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_Menu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_Menu.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_Menu.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView_Menu.Name = "dataGridView_Menu";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Menu.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView_Menu.Size = new System.Drawing.Size(428, 371);
+            this.dataGridView_Menu.TabIndex = 0;
             // 
             // panel5
             // 
@@ -498,6 +370,147 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(342, 76);
             this.panel5.TabIndex = 6;
+            // 
+            // txtbox_searchFoodName
+            // 
+            this.txtbox_searchFoodName.Location = new System.Drawing.Point(5, 29);
+            this.txtbox_searchFoodName.Name = "txtbox_searchFoodName";
+            this.txtbox_searchFoodName.Size = new System.Drawing.Size(230, 20);
+            this.txtbox_searchFoodName.TabIndex = 6;
+            // 
+            // btn_search
+            // 
+            this.btn_search.Location = new System.Drawing.Point(239, 3);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(99, 70);
+            this.btn_search.TabIndex = 5;
+            this.btn_search.Text = "Tìm kiếm";
+            this.btn_search.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_idCategories
+            // 
+            this.tabPage_idCategories.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_idCategories.Name = "tabPage_idCategories";
+            this.tabPage_idCategories.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_idCategories.Size = new System.Drawing.Size(794, 471);
+            this.tabPage_idCategories.TabIndex = 2;
+            this.tabPage_idCategories.Text = "Danh mục";
+            this.tabPage_idCategories.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_table
+            // 
+            this.tabPage_table.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_table.Name = "tabPage_table";
+            this.tabPage_table.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_table.Size = new System.Drawing.Size(794, 471);
+            this.tabPage_table.TabIndex = 3;
+            this.tabPage_table.Text = "Bàn";
+            this.tabPage_table.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_revenue
+            // 
+            this.tabPage_revenue.Controls.Add(this.panel2);
+            this.tabPage_revenue.Controls.Add(this.panel1);
+            this.tabPage_revenue.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_revenue.Name = "tabPage_revenue";
+            this.tabPage_revenue.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_revenue.Size = new System.Drawing.Size(794, 471);
+            this.tabPage_revenue.TabIndex = 4;
+            this.tabPage_revenue.Text = "Doanh thu";
+            this.tabPage_revenue.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_viewReceipt);
+            this.panel2.Controls.Add(this.dateTimePicker_toDate);
+            this.panel2.Controls.Add(this.dateTimePicker_fromDate);
+            this.panel2.Location = new System.Drawing.Point(6, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(782, 28);
+            this.panel2.TabIndex = 1;
+            // 
+            // btn_viewReceipt
+            // 
+            this.btn_viewReceipt.Location = new System.Drawing.Point(361, 2);
+            this.btn_viewReceipt.Name = "btn_viewReceipt";
+            this.btn_viewReceipt.Size = new System.Drawing.Size(75, 23);
+            this.btn_viewReceipt.TabIndex = 1;
+            this.btn_viewReceipt.Text = "Xem";
+            this.btn_viewReceipt.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker_toDate
+            // 
+            this.dateTimePicker_toDate.Location = new System.Drawing.Point(535, 3);
+            this.dateTimePicker_toDate.Name = "dateTimePicker_toDate";
+            this.dateTimePicker_toDate.Size = new System.Drawing.Size(244, 20);
+            this.dateTimePicker_toDate.TabIndex = 2;
+            // 
+            // dateTimePicker_fromDate
+            // 
+            this.dateTimePicker_fromDate.Location = new System.Drawing.Point(3, 3);
+            this.dateTimePicker_fromDate.Name = "dateTimePicker_fromDate";
+            this.dateTimePicker_fromDate.Size = new System.Drawing.Size(244, 20);
+            this.dateTimePicker_fromDate.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView_receipt);
+            this.panel1.Location = new System.Drawing.Point(6, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(782, 379);
+            this.panel1.TabIndex = 0;
+            // 
+            // dataGridView_receipt
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_receipt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView_receipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_receipt.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView_receipt.Location = new System.Drawing.Point(4, 3);
+            this.dataGridView_receipt.Name = "dataGridView_receipt";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_receipt.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView_receipt.Size = new System.Drawing.Size(775, 373);
+            this.dataGridView_receipt.TabIndex = 0;
+            // 
+            // pictureBox_close
+            // 
+            this.pictureBox_close.Image = global::Login.Properties.Resources.close;
+            this.pictureBox_close.Location = new System.Drawing.Point(774, 2);
+            this.pictureBox_close.Name = "pictureBox_close";
+            this.pictureBox_close.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox_close.TabIndex = 1;
+            this.pictureBox_close.TabStop = false;
+            this.pictureBox_close.Click += new System.EventHandler(this.pictureBox_close_Click);
+            // 
+            // button_add
+            // 
+            this.button_add.Location = new System.Drawing.Point(323, 138);
+            this.button_add.Name = "button_add";
+            this.button_add.Size = new System.Drawing.Size(75, 23);
+            this.button_add.TabIndex = 0;
+            this.button_add.Text = "Thêm tài khoản";
+            this.button_add.UseVisualStyleBackColor = true;
+            this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
             // fAdmin
             // 
@@ -510,13 +523,8 @@
             this.Name = "fAdmin";
             this.Text = "Admin";
             this.tabControl_receipt.ResumeLayout(false);
+            this.tabPage_account.ResumeLayout(false);
             this.tabPage_menu.ResumeLayout(false);
-            this.tabPage_revenue.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receipt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Menu)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -529,8 +537,14 @@
             this.panel_username.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Menu)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.tabPage_revenue.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receipt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -574,5 +588,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtbox_searchFoodName;
         private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.Button button_add;
     }
 }
