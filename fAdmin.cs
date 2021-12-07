@@ -39,5 +39,12 @@ namespace Login
         {
             this.Close();
         }
+
+        private void button_add_Click(object sender, EventArgs e)
+        {
+            fCreateAccount formCreateAccount = new fCreateAccount();
+            formCreateAccount.ShowDialog();
+            this.Show();
+        }
     }
 }

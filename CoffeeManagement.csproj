@@ -48,8 +48,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Frameworks, Version=4.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Frameworks.4.6.4\lib\net46\NuGet.Frameworks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +76,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DropShadow.cs" />
     <Compile Include="CoffeeShopDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -91,6 +109,28 @@
     <Compile Include="fManageTable.Designer.cs">
       <DependentUpon>fManageTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="fCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCreateAccount.Designer.cs">
+      <DependentUpon>fCreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hashing.cs" />
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccountModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fAccountProfile.resx">
@@ -98,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCreateAccount.resx">
+      <DependentUpon>fCreateAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -126,6 +169,14 @@
     <None Include="CoffeeShopDataSet.xss">
       <DependentUpon>CoffeeShopDataSet.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="AccountModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AccountModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AccountModel.edmx.diagram">
+      <DependentUpon>AccountModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -151,9 +202,26 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>AccountModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AccountModel.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
