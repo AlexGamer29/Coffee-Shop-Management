@@ -18,21 +18,19 @@ namespace Login
         public fAdmin()
         {
             InitializeComponent();
+            LoadAccountList();
+        }
+
+        void LoadMenu()
+        {
+            string query = "SELECT * FROM dbo.Menu";
+            dataGridView_menu.DataSource = DataAccess.Instance.ExecuteQuery(query);
         }
 
         void LoadAccountList()
         {
-            string connectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(connectionString);
-
-            string query = "SELECT * FROM dbo.Account";
-            connection.Open();
-            SqlCommand cmd = new SqlCommand(query, connection);
-            DataTable data = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(data);
-            connection.Close();
-            //dataGridView_account.DataSource = data;
+            string query = "EXEC dbo.USERPROC_GetAccountByUserName @userName";
+            dataGridView_account.DataSource = DataAccess.Instance.ExecuteQuery(query, new object[] {"admin"});
         }
 
         private void pictureBox_close_Click(object sender, EventArgs e)
