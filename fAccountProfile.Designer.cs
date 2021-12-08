@@ -34,7 +34,7 @@
             this.panel_displayName = new System.Windows.Forms.Panel();
             this.label_displayName = new System.Windows.Forms.Label();
             this.txtbox_displayName = new System.Windows.Forms.TextBox();
-            this.label_password = new System.Windows.Forms.Label();
+            this.label_oldPassword = new System.Windows.Forms.Label();
             this.txtbox_password = new System.Windows.Forms.TextBox();
             this.panel_password = new System.Windows.Forms.Panel();
             this.txtbox_newPassword = new System.Windows.Forms.TextBox();
@@ -57,7 +57,7 @@
             // 
             // panel_username
             // 
-            this.panel_username.BackColor = System.Drawing.Color.White;
+            this.panel_username.BackColor = System.Drawing.Color.Transparent;
             this.panel_username.Controls.Add(this.label_userName);
             this.panel_username.Controls.Add(this.txtbox_username);
             this.panel_username.Location = new System.Drawing.Point(0, 82);
@@ -82,14 +82,15 @@
             this.txtbox_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_username.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.txtbox_username.Location = new System.Drawing.Point(134, 13);
+            this.txtbox_username.Location = new System.Drawing.Point(153, 13);
             this.txtbox_username.Name = "txtbox_username";
+            this.txtbox_username.ReadOnly = true;
             this.txtbox_username.Size = new System.Drawing.Size(290, 20);
             this.txtbox_username.TabIndex = 4;
             // 
             // panel_displayName
             // 
-            this.panel_displayName.BackColor = System.Drawing.Color.White;
+            this.panel_displayName.BackColor = System.Drawing.Color.Transparent;
             this.panel_displayName.Controls.Add(this.label_displayName);
             this.panel_displayName.Controls.Add(this.txtbox_displayName);
             this.panel_displayName.Location = new System.Drawing.Point(0, 146);
@@ -113,35 +114,35 @@
             this.txtbox_displayName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_displayName.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_displayName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.txtbox_displayName.Location = new System.Drawing.Point(136, 12);
+            this.txtbox_displayName.Location = new System.Drawing.Point(153, 12);
             this.txtbox_displayName.Name = "txtbox_displayName";
             this.txtbox_displayName.Size = new System.Drawing.Size(290, 20);
             this.txtbox_displayName.TabIndex = 4;
             // 
-            // label_password
+            // label_oldPassword
             // 
-            this.label_password.AutoSize = true;
-            this.label_password.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label_password.Location = new System.Drawing.Point(11, 9);
-            this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(76, 19);
-            this.label_password.TabIndex = 5;
-            this.label_password.Text = "Mật khẩu";
+            this.label_oldPassword.AutoSize = true;
+            this.label_oldPassword.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_oldPassword.Location = new System.Drawing.Point(11, 12);
+            this.label_oldPassword.Name = "label_oldPassword";
+            this.label_oldPassword.Size = new System.Drawing.Size(97, 19);
+            this.label_oldPassword.TabIndex = 5;
+            this.label_oldPassword.Text = "Mật khẩu cũ";
             // 
             // txtbox_password
             // 
             this.txtbox_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_password.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.txtbox_password.Location = new System.Drawing.Point(136, 8);
+            this.txtbox_password.Location = new System.Drawing.Point(153, 11);
             this.txtbox_password.Name = "txtbox_password";
             this.txtbox_password.Size = new System.Drawing.Size(290, 20);
             this.txtbox_password.TabIndex = 4;
             // 
             // panel_password
             // 
-            this.panel_password.BackColor = System.Drawing.Color.White;
-            this.panel_password.Controls.Add(this.label_password);
+            this.panel_password.BackColor = System.Drawing.Color.Transparent;
+            this.panel_password.Controls.Add(this.label_oldPassword);
             this.panel_password.Controls.Add(this.txtbox_password);
             this.panel_password.Location = new System.Drawing.Point(0, 214);
             this.panel_password.Name = "panel_password";
@@ -155,12 +156,12 @@
             this.txtbox_newPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.txtbox_newPassword.Location = new System.Drawing.Point(153, 12);
             this.txtbox_newPassword.Name = "txtbox_newPassword";
-            this.txtbox_newPassword.Size = new System.Drawing.Size(273, 20);
+            this.txtbox_newPassword.Size = new System.Drawing.Size(290, 20);
             this.txtbox_newPassword.TabIndex = 4;
             // 
             // panel_newPassword
             // 
-            this.panel_newPassword.BackColor = System.Drawing.Color.White;
+            this.panel_newPassword.BackColor = System.Drawing.Color.Transparent;
             this.panel_newPassword.Controls.Add(this.label_newPassword);
             this.panel_newPassword.Controls.Add(this.txtbox_newPassword);
             this.panel_newPassword.Location = new System.Drawing.Point(0, 280);
@@ -180,7 +181,7 @@
             // 
             // panel_retypeNewPassword
             // 
-            this.panel_retypeNewPassword.BackColor = System.Drawing.Color.White;
+            this.panel_retypeNewPassword.BackColor = System.Drawing.Color.Transparent;
             this.panel_retypeNewPassword.Controls.Add(this.label_retypeNewPassword);
             this.panel_retypeNewPassword.Controls.Add(this.txtbox_retypeNewPassword);
             this.panel_retypeNewPassword.Location = new System.Drawing.Point(0, 344);
@@ -206,7 +207,7 @@
             this.txtbox_retypeNewPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.txtbox_retypeNewPassword.Location = new System.Drawing.Point(153, 12);
             this.txtbox_retypeNewPassword.Name = "txtbox_retypeNewPassword";
-            this.txtbox_retypeNewPassword.Size = new System.Drawing.Size(273, 20);
+            this.txtbox_retypeNewPassword.Size = new System.Drawing.Size(290, 20);
             this.txtbox_retypeNewPassword.TabIndex = 4;
             // 
             // btn_update
@@ -300,7 +301,7 @@
         private System.Windows.Forms.Panel panel_displayName;
         private System.Windows.Forms.Label label_displayName;
         private System.Windows.Forms.TextBox txtbox_displayName;
-        private System.Windows.Forms.Label label_password;
+        private System.Windows.Forms.Label label_oldPassword;
         private System.Windows.Forms.TextBox txtbox_password;
         private System.Windows.Forms.Panel panel_password;
         private System.Windows.Forms.TextBox txtbox_newPassword;
