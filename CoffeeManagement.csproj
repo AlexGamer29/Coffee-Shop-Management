@@ -79,8 +79,8 @@
     <Compile Include="Account.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess.cs" />
-    <Compile Include="DropShadow.cs" />
+    <Compile Include="DataAccessObject\Account.cs" />
+    <Compile Include="DataAccessObject\DataAccess.cs" />
     <Compile Include="CoffeeShopDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

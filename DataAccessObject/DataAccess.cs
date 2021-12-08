@@ -13,13 +13,13 @@ namespace Login
         private static DataAccess instance;
         private string ConnectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
 
-        public static DataAccess Instance 
+        public static DataAccess Instance
         {
-            get { if (instance == null) instance = new DataAccess(); return DataAccess.instance; }
+            get { if (instance == null) instance = new DataAccess(); return instance; }
             private set { DataAccess.instance = value; }
         }
 
-        private DataAccess() {}
+        private DataAccess() { }
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

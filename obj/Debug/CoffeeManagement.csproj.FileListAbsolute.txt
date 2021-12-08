@@ -21,7 +21,6 @@ C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.fAccountProfil
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.fAdmin.resources
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.fLogin.resources
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.fManageTable.resources
-C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.Properties.Resources.resources
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\CoffeeManagement.csproj.GenerateResource.cache
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\CoffeeManagement.csproj.CoreCompileInputs.cache
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.exe
@@ -36,3 +35,4 @@ C:\Users\Hi there\Desktop\Coffee-management\Login\bin\Debug\EntityFramework.SqlS
 C:\Users\Hi there\Desktop\Coffee-management\Login\bin\Debug\NuGet.Frameworks.xml
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.fCreateAccount.resources
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\CoffeeManagement.csproj.CopyComplete
+C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.Properties.Resources.resources

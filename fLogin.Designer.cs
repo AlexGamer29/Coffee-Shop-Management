@@ -34,24 +34,24 @@
             this.label_coffee1 = new System.Windows.Forms.Label();
             this.coffee_logo = new System.Windows.Forms.PictureBox();
             this.panel_login = new System.Windows.Forms.Panel();
+            this.pictureBox_close = new System.Windows.Forms.PictureBox();
             this.btn_forgot = new System.Windows.Forms.Button();
             this.btn_login = new System.Windows.Forms.Button();
             this.panel_password = new System.Windows.Forms.Panel();
             this.txtbox_password = new System.Windows.Forms.TextBox();
             this.password_logo = new System.Windows.Forms.PictureBox();
             this.panel_user = new System.Windows.Forms.Panel();
-            this.txtbox_user = new System.Windows.Forms.TextBox();
+            this.txtbox_userName = new System.Windows.Forms.TextBox();
             this.user_logo = new System.Windows.Forms.PictureBox();
             this.label_login = new System.Windows.Forms.Label();
-            this.pictureBox_close = new System.Windows.Forms.PictureBox();
             this.panel_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coffee_logo)).BeginInit();
             this.panel_login.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.panel_password.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.password_logo)).BeginInit();
             this.panel_user.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.user_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_logo
@@ -108,6 +108,16 @@
             this.panel_login.Name = "panel_login";
             this.panel_login.Size = new System.Drawing.Size(450, 530);
             this.panel_login.TabIndex = 1;
+            // 
+            // pictureBox_close
+            // 
+            this.pictureBox_close.Image = global::Login.Properties.Resources.close;
+            this.pictureBox_close.Location = new System.Drawing.Point(423, 3);
+            this.pictureBox_close.Name = "pictureBox_close";
+            this.pictureBox_close.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox_close.TabIndex = 6;
+            this.pictureBox_close.TabStop = false;
+            this.pictureBox_close.Click += new System.EventHandler(this.pictureBox_close_Click);
             // 
             // btn_forgot
             // 
@@ -172,23 +182,23 @@
             // panel_user
             // 
             this.panel_user.BackColor = System.Drawing.Color.White;
-            this.panel_user.Controls.Add(this.txtbox_user);
+            this.panel_user.Controls.Add(this.txtbox_userName);
             this.panel_user.Controls.Add(this.user_logo);
             this.panel_user.Location = new System.Drawing.Point(0, 185);
             this.panel_user.Name = "panel_user";
             this.panel_user.Size = new System.Drawing.Size(450, 45);
             this.panel_user.TabIndex = 2;
             // 
-            // txtbox_user
+            // txtbox_userName
             // 
-            this.txtbox_user.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbox_user.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtbox_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.txtbox_user.Location = new System.Drawing.Point(56, 12);
-            this.txtbox_user.Name = "txtbox_user";
-            this.txtbox_user.Size = new System.Drawing.Size(370, 20);
-            this.txtbox_user.TabIndex = 4;
-            this.txtbox_user.Click += new System.EventHandler(this.txtbox_user_Click);
+            this.txtbox_userName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbox_userName.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_userName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtbox_userName.Location = new System.Drawing.Point(56, 12);
+            this.txtbox_userName.Name = "txtbox_userName";
+            this.txtbox_userName.Size = new System.Drawing.Size(370, 20);
+            this.txtbox_userName.TabIndex = 4;
+            this.txtbox_userName.Click += new System.EventHandler(this.txtbox_user_Click);
             // 
             // user_logo
             // 
@@ -211,16 +221,6 @@
             this.label_login.TabIndex = 1;
             this.label_login.Text = "Login to your account";
             // 
-            // pictureBox_close
-            // 
-            this.pictureBox_close.Image = global::Login.Properties.Resources.close;
-            this.pictureBox_close.Location = new System.Drawing.Point(423, 3);
-            this.pictureBox_close.Name = "pictureBox_close";
-            this.pictureBox_close.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox_close.TabIndex = 6;
-            this.pictureBox_close.TabStop = false;
-            this.pictureBox_close.Click += new System.EventHandler(this.pictureBox_close_Click);
-            // 
             // fLogin
             // 
             this.AcceptButton = this.btn_login;
@@ -239,13 +239,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.coffee_logo)).EndInit();
             this.panel_login.ResumeLayout(false);
             this.panel_login.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).EndInit();
             this.panel_password.ResumeLayout(false);
             this.panel_password.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.password_logo)).EndInit();
             this.panel_user.ResumeLayout(false);
             this.panel_user.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.user_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,7 +264,7 @@
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.TextBox txtbox_password;
         private System.Windows.Forms.PictureBox password_logo;
-        private System.Windows.Forms.TextBox txtbox_user;
+        private System.Windows.Forms.TextBox txtbox_userName;
         private System.Windows.Forms.PictureBox coffee_logo;
         private System.Windows.Forms.PictureBox pictureBox_close;
     }

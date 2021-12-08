@@ -19,6 +19,7 @@ namespace Login
         {
             InitializeComponent();
             LoadAccountList();
+            LoadMenu();
         }
 
         void LoadMenu()

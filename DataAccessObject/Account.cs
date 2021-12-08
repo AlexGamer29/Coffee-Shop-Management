@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +17,13 @@ namespace Login.DataAccessObject
             private set { instance = value; }
         }
 
-        private Account() {}
+        private Account() { }
 
         public bool Login(string userName, string passWord)
         {
-            return false;
+            string query = "SELECT * FROM dbo.Account WHERE UserName = N'" + userName + "' AND PassWord = N'" + passWord + "' ";
+            DataTable result = DataAccess.Instance.ExecuteQuery(query);
+            return result.Rows.Count > 0;
         }
     }
 }

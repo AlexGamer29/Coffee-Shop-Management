@@ -16,35 +16,22 @@ namespace Login
     public partial class fLogin : Form
     {
 
-        SqlConnection connection = new SqlConnection();
         public fLogin()
         {
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        bool Login(string userName, string passWord)
         {
-            connection.ConnectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
-            connection.Open();
+            return DataAccessObject.Account.Instance.Login(userName, passWord);
         }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
-            connection.Open();
-
-            string username = txtbox_user.Text;
-            string password = txtbox_password.Text;
-            SqlCommand cmd = new SqlCommand("SELECT userName, password FROM Account WHERE username='" + txtbox_user.Text + "' AND password='" + txtbox_password.Text + "'", connection);
-            SqlDataAdapter inputData = new SqlDataAdapter(cmd);
-            DataTable data = new DataTable();
-            inputData.Fill(data);
-            if (data.Rows.Count > 0)
+            string userName = txtbox_userName.Text;
+            string passWord = txtbox_password.Text;
+            if (Login(userName, passWord))
             {
-                MessageBox.Show("Đăng nhập thành công");
                 fManageTable formManageTable = new fManageTable();
                 this.Hide();
                 formManageTable.ShowDialog();
@@ -52,14 +39,13 @@ namespace Login
             }
             else
             {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
             }
-            connection.Close();
         }
 
         private void txtbox_user_Click(object sender, EventArgs e)
         {
-            txtbox_user.BackColor = Color.White;
+            txtbox_userName.BackColor = Color.White;
             panel_user.BackColor = Color.White;
             panel_password.BackColor = SystemColors.Control;
             txtbox_password.BackColor = SystemColors.Control;
@@ -84,7 +70,7 @@ namespace Login
         {
             txtbox_password.BackColor = Color.White;
             panel_password.BackColor = Color.White;
-            txtbox_user.BackColor = SystemColors.Control;
+            txtbox_userName.BackColor = SystemColors.Control;
             panel_user.BackColor = SystemColors.Control;
         }
 
