@@ -1,6 +1,5 @@
 # Coffee Shop Management
 
-![Lines of code](https://img.shields.io/tokei/lines/github/AlexGamer29/Coffee-Shop-Management)
 ![GitHub last commit](https://img.shields.io/github/last-commit/AlexGamer29/Coffee-Shop-Management)
 [![GitHub branches](https://badgen.net/github/branches/AlexGamer29/Coffee-Shop-Management)](https://github.com/AlexGamer29/Coffee-Shop-Management)
 [![GitHub commits](https://badgen.net/github/commits/AlexGamer29/Coffee-Shop-Management)](https://github.com/AlexGamer29/Coffee-Shop-Management/commit/)
