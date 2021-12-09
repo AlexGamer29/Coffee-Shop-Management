@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Login.DataAccessObject;
+using Login.DataTransferObject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +17,32 @@ namespace Login
         public fManageTable()
         {
             InitializeComponent();
+            LoadTable();
         }
 
+        #region Methods
+        void LoadTable()
+        {
+            List<Table> tableList = TableDAO.Instance.LoadTableList();
+            foreach (Table item in tableList)
+            {
+                Button btn = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight};
+                btn.Text = item.Name + Environment.NewLine + item.TableStatus;
+                switch (item.TableStatus)
+                {
+                    case "Trống":
+                        btn.BackColor = Color.Gray;
+                        break;
+                    default:
+                        btn.BackColor = Color.White;
+                        break;
+                }
+                flowLayoutPanel_listTable.Controls.Add(btn);
+            }
+        }
+        #endregion
+
+        #region Events
         private void btn_addMenu_Click(object sender, EventArgs e)
         {
 
@@ -49,14 +75,10 @@ namespace Login
             admin.ShowDialog();
         }
 
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox_close_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
     }
 }

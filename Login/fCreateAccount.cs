@@ -88,7 +88,7 @@ namespace Login
                     // Clear all textbox in Form
                     fCreateAccount fCreateAccount = new fCreateAccount();
                     fCreateAccount.ClearTextBoxes(this.Controls);
-                    MessageBox.Show("Account added");
+                    MessageBox.Show("AccountDAO added");
                 }
             }
             

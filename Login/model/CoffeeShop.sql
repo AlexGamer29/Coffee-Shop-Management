@@ -15,7 +15,7 @@ CREATE TABLE CoffeeTable
 (
 	id INT IDENTITY PRIMARY KEY,
 	name NVARCHAR(100) NOT NULL DEFAULT N'No named',
-	tablesStatus NVARCHAR(100) DEFAULT N'Trống' NOT NULL -- Trống = 0 || Có người = 1
+	tableStatus NVARCHAR(100) DEFAULT N'Trống' NOT NULL -- Trống = 0 || Có người = 1
 )
 GO
 
@@ -69,3 +69,29 @@ CREATE TABLE ReceiptInfo
 	FOREIGN KEY (idMenu) REFERENCES dbo.Menu(id)
 )
 GO
+
+--STORE PROCEDURES
+CREATE PROC USERPROC_GetAccountByUserName
+@userName nvarchar(100)
+AS 
+BEGIN
+	SELECT * FROM dbo.Account WHERE userName = @userName
+END
+GO
+
+EXEC dbo.USERPROC_GetAccountByUserName @userName = "admin"
+GO
+
+CREATE PROC USERPROC_Login
+@userName nvarchar(100), @password NVARCHAR(100)
+AS
+BEGIN
+	SELECT * FROM dbo.Account WHERE userName = @userName AND password = @password
+END
+GO
+
+CREATE PROC USERPROC_GetTableList
+AS SELECT * FROM dbo.CoffeeTable
+GO
+
+EXEC dbo.USERPROC_GetTableList

@@ -231,9 +231,10 @@
             // 
             // flowLayoutPanel_listTable
             // 
+            this.flowLayoutPanel_listTable.AutoScroll = true;
             this.flowLayoutPanel_listTable.Location = new System.Drawing.Point(6, 46);
             this.flowLayoutPanel_listTable.Name = "flowLayoutPanel_listTable";
-            this.flowLayoutPanel_listTable.Size = new System.Drawing.Size(591, 596);
+            this.flowLayoutPanel_listTable.Size = new System.Drawing.Size(588, 596);
             this.flowLayoutPanel_listTable.TabIndex = 5;
             // 
             // pictureBox_close

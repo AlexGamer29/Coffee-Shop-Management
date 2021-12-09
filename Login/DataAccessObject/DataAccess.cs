@@ -15,7 +15,7 @@ namespace Login
 
         public static DataAccess Instance
         {
-            get { if (instance == null) instance = new DataAccess(); return instance; }
+            get { if (instance == null) instance = new DataAccess(); return DataAccess.instance; }
             private set { DataAccess.instance = value; }
         }
 

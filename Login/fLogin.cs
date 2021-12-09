@@ -23,7 +23,7 @@ namespace Login
 
         bool Login(string userName, string passWord)
         {
-            return DataAccessObject.Account.Instance.Login(userName, passWord);
+            return DataAccessObject.AccountDAO.Instance.Login(userName, passWord);
         }
 
         private void btn_login_Click(object sender, EventArgs e)
