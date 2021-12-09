@@ -111,12 +111,14 @@
             // listview_Receipt
             // 
             this.listview_Receipt.AccessibleName = "";
+            this.listview_Receipt.GridLines = true;
             this.listview_Receipt.HideSelection = false;
             this.listview_Receipt.Location = new System.Drawing.Point(3, 3);
             this.listview_Receipt.Name = "listview_Receipt";
             this.listview_Receipt.Size = new System.Drawing.Size(442, 471);
             this.listview_Receipt.TabIndex = 0;
             this.listview_Receipt.UseCompatibleStateImageBehavior = false;
+            this.listview_Receipt.View = System.Windows.Forms.View.List;
             // 
             // panel_listButton
             // 
