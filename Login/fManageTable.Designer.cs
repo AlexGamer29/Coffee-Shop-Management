@@ -48,10 +48,10 @@
             this.combobox_categories = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel_listTable = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox_close = new System.Windows.Forms.PictureBox();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader_idFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader_numberOfFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader_price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader_totalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip.SuspendLayout();
             this.panel_listReceipt.SuspendLayout();
             this.panel_listButton.SuspendLayout();
@@ -116,10 +116,10 @@
             // 
             this.listview_Receipt.AccessibleName = "";
             this.listview_Receipt.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader_idFood,
+            this.columnHeader_numberOfFood,
+            this.columnHeader_price,
+            this.columnHeader_totalPrice});
             this.listview_Receipt.GridLines = true;
             this.listview_Receipt.HideSelection = false;
             this.listview_Receipt.Location = new System.Drawing.Point(3, 3);
@@ -258,25 +258,24 @@
             this.pictureBox_close.TabStop = false;
             this.pictureBox_close.Click += new System.EventHandler(this.pictureBox_close_Click);
             // 
-            // columnHeader1
+            // columnHeader_idFood
             // 
-            this.columnHeader1.Text = "Tên món";
-            this.columnHeader1.Width = 194;
+            this.columnHeader_idFood.Text = "Tên món";
+            this.columnHeader_idFood.Width = 138;
             // 
-            // columnHeader2
+            // columnHeader_numberOfFood
             // 
-            this.columnHeader2.Text = "Số lượng";
-            this.columnHeader2.Width = 54;
+            this.columnHeader_numberOfFood.Text = "Số lượng";
             // 
-            // columnHeader3
+            // columnHeader_price
             // 
-            this.columnHeader3.Text = "Đơn giá";
-            this.columnHeader3.Width = 76;
+            this.columnHeader_price.Text = "Đơn giá";
+            this.columnHeader_price.Width = 96;
             // 
-            // columnHeader4
+            // columnHeader_totalPrice
             // 
-            this.columnHeader4.Text = "Thành tiền";
-            this.columnHeader4.Width = 115;
+            this.columnHeader_totalPrice.Text = "Thành tiền";
+            this.columnHeader_totalPrice.Width = 144;
             // 
             // fManageTable
             // 
@@ -330,9 +329,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_listTable;
         private System.Windows.Forms.ComboBox comboBox_switchTable;
         private System.Windows.Forms.PictureBox pictureBox_close;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader_idFood;
+        private System.Windows.Forms.ColumnHeader columnHeader_numberOfFood;
+        private System.Windows.Forms.ColumnHeader columnHeader_price;
+        private System.Windows.Forms.ColumnHeader columnHeader_totalPrice;
     }
 }

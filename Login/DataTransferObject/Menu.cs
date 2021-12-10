@@ -31,8 +31,8 @@ namespace Login.DataTransferObject
         {
             this.FoodName = row["name"].ToString();
             this.Count = (int)row["numberOfFood"];
-            this.Price = (float)row["price"];
-            this.TotalPrice = (float)row["totalPrice"];
+            this.Price = (float)Convert.ToDouble(row["price"].ToString());
+            this.TotalPrice = (float)Convert.ToDouble(row["totalPrice"].ToString());
         }
     }
 }
