@@ -3,8 +3,10 @@ using Login.DataTransferObject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,15 +51,21 @@ namespace Login
         void ShowReceipt(int id)
         {
             listview_Receipt.Items.Clear();
+            float totalPriceDisplay = 0;
             List<Menu> listReceiptInfo = MenuDAO.Instance.GetListMenuByTable(id);
             foreach (Menu item in listReceiptInfo)
             {
+                string count = item.Count.ToString();
+                string price = Currency.FormatCurrency("VND", ((decimal)item.Price));
+                string totalPrice = Currency.FormatCurrency("VND", ((decimal)item.TotalPrice));
                 ListViewItem listItem = new ListViewItem(item.FoodName.ToString());
-                listItem.SubItems.Add(item.Count.ToString());
-                listItem.SubItems.Add(item.Price.ToString());
-                listItem.SubItems.Add(item.TotalPrice.ToString());
+                listItem.SubItems.Add(count);
+                listItem.SubItems.Add(price);
+                listItem.SubItems.Add(totalPrice);
                 listview_Receipt.Items.Add(listItem);
+                totalPriceDisplay += item.TotalPrice;
             }
+            txtbox_totalPrice.Text = Currency.FormatCurrency("VND", ((decimal)totalPriceDisplay));
         }
         #endregion
 

@@ -94,4 +94,151 @@ CREATE PROC USERPROC_GetTableList
 AS SELECT * FROM dbo.CoffeeTable
 GO
 
+--Xóa
+CREATE PROC USERPROC_GetUncheckReceiptIDByTableID
+@idTable INT
+AS
+BEGIN
+	SELECT * FROM dbo.Receipt WHERE idTable = @idTable AND STATUS = 0
+END
+GO
+
+--Xóa
+CREATE PROC USERPROC_GetListReceiptInfo
+@idReceipt INT
+AS
+BEGIN
+	SELECT * FROM dbo.ReceiptInfo WHERE idReceipt = @idReceipt
+END
+GO
+
+--Xóa
+CREATE PROC USERPROC_GetListMenuByTable
+@idTable INT
+AS
+BEGIN
+	SELECT Menu.name, ReceiptInfo.numberOfFood, Menu.price, Menu.price*ReceiptInfo.numberOfFood AS totalPrice FROM dbo.ReceiptInfo AS ReceiptInfo, dbo.Receipt AS Receipt, dbo.Menu AS Menu
+	WHERE ReceiptInfo.idReceipt = Receipt.id AND ReceiptInfo.idMenu = Menu.id AND Receipt.idTable = @idTable
+END
+GO
+
 EXEC dbo.USERPROC_GetTableList
+
+--Add Receipt
+INSERT dbo.Receipt
+(
+    arrivalDate,
+    departDate,
+    idTable,
+    STATUS
+)
+VALUES
+(   GETDATE(), -- arrivalDate - datetime
+    NULL, -- departDate - datetime
+    1,         -- idTable - int
+    0          -- STATUS - int
+    )
+
+
+INSERT dbo.Receipt
+(
+    arrivalDate,
+    departDate,
+    idTable,
+    STATUS
+)
+VALUES
+(   GETDATE(), -- arrivalDate - datetime
+    NULL, -- departDate - datetime
+    2,         -- idTable - int
+    0          -- STATUS - int
+    )
+
+INSERT dbo.Receipt
+(
+    arrivalDate,
+    departDate,
+    idTable,
+    STATUS
+)
+VALUES
+(   GETDATE(), -- arrivalDate - datetime
+    GETDATE(), -- departDate - datetime
+    2,         -- idTable - int
+    1          -- STATUS - int
+    )
+
+-- Add Receipt Info
+INSERT dbo.ReceiptInfo
+(
+    idReceipt,
+    idMenu,
+    numberOfFood
+)
+VALUES
+(   1, -- idReceipt - int
+    1, -- idMenu - int
+    2  -- numberOfFood - int
+    )
+
+INSERT dbo.ReceiptInfo
+(
+    idReceipt,
+    idMenu,
+    numberOfFood
+)
+VALUES
+(   1, -- idReceipt - int
+    3, -- idMenu - int
+    4  -- numberOfFood - int
+    )
+
+INSERT dbo.ReceiptInfo
+(
+    idReceipt,
+    idMenu,
+    numberOfFood
+)
+VALUES
+(   1, -- idReceipt - int
+    5, -- idMenu - int
+    1  -- numberOfFood - int
+    )
+
+INSERT dbo.ReceiptInfo
+(
+    idReceipt,
+    idMenu,
+    numberOfFood
+)
+VALUES
+(   2, -- idReceipt - int
+    1, -- idMenu - int
+    2  -- numberOfFood - int
+    )
+
+INSERT dbo.ReceiptInfo
+(
+    idReceipt,
+    idMenu,
+    numberOfFood
+)
+VALUES
+(   2, -- idReceipt - int
+    6, -- idMenu - int
+    2  -- numberOfFood - int
+    )
+
+INSERT dbo.ReceiptInfo
+(
+    idReceipt,
+    idMenu,
+    numberOfFood
+)
+VALUES
+(   3, -- idReceipt - int
+    5, -- idMenu - int
+    2  -- numberOfFood - int
+    )
+
+GO

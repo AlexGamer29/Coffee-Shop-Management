@@ -84,6 +84,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CoffeeShopDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Currency.cs" />
     <Compile Include="DataAccessObject\AccountDAO.cs" />
     <Compile Include="DataAccessObject\MenuDAO.cs" />
     <Compile Include="DataAccessObject\ReceiptDAO.cs" />
