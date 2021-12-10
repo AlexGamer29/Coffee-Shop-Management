@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Menu = Login.DataTransferObject.Menu;
 
 namespace Login
 {
@@ -28,6 +29,9 @@ namespace Login
             {
                 Button btn = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight};
                 btn.Text = item.Name + Environment.NewLine + item.TableStatus;
+                btn.Click += btn_Click;
+                btn.Tag = item;
+
                 switch (item.TableStatus)
                 {
                     case "Trống":
@@ -40,9 +44,30 @@ namespace Login
                 flowLayoutPanel_listTable.Controls.Add(btn);
             }
         }
+
+
+        void ShowReceipt(int id)
+        {
+            listview_Receipt.Items.Clear();
+            List<Menu> listReceiptInfo = MenuDAO.Instance.GetListMenuByTable(id);
+            foreach (Menu item in listReceiptInfo)
+            {
+                ListViewItem listItem = new ListViewItem(item.FoodName.ToString());
+                listItem.SubItems.Add(item.Count.ToString());
+                listItem.SubItems.Add(item.Price.ToString());
+                listItem.SubItems.Add(item.TotalPrice.ToString());
+                listview_Receipt.Items.Add(listItem);
+            }
+        }
         #endregion
 
         #region Events
+        private void btn_Click(object sender, EventArgs e)
+        {
+            int idTable = ((sender as Button).Tag as Table).ID;
+            ShowReceipt(idTable);
+        }
+
         private void btn_addMenu_Click(object sender, EventArgs e)
         {
 

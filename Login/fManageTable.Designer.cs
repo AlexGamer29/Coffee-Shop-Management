@@ -48,6 +48,10 @@
             this.combobox_categories = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel_listTable = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox_close = new System.Windows.Forms.PictureBox();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip.SuspendLayout();
             this.panel_listReceipt.SuspendLayout();
             this.panel_listButton.SuspendLayout();
@@ -111,6 +115,11 @@
             // listview_Receipt
             // 
             this.listview_Receipt.AccessibleName = "";
+            this.listview_Receipt.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
             this.listview_Receipt.GridLines = true;
             this.listview_Receipt.HideSelection = false;
             this.listview_Receipt.Location = new System.Drawing.Point(3, 3);
@@ -118,7 +127,7 @@
             this.listview_Receipt.Size = new System.Drawing.Size(442, 471);
             this.listview_Receipt.TabIndex = 0;
             this.listview_Receipt.UseCompatibleStateImageBehavior = false;
-            this.listview_Receipt.View = System.Windows.Forms.View.List;
+            this.listview_Receipt.View = System.Windows.Forms.View.Details;
             // 
             // panel_listButton
             // 
@@ -233,10 +242,9 @@
             // 
             // flowLayoutPanel_listTable
             // 
-            this.flowLayoutPanel_listTable.AutoScroll = true;
             this.flowLayoutPanel_listTable.Location = new System.Drawing.Point(6, 46);
             this.flowLayoutPanel_listTable.Name = "flowLayoutPanel_listTable";
-            this.flowLayoutPanel_listTable.Size = new System.Drawing.Size(588, 596);
+            this.flowLayoutPanel_listTable.Size = new System.Drawing.Size(591, 596);
             this.flowLayoutPanel_listTable.TabIndex = 5;
             // 
             // pictureBox_close
@@ -249,6 +257,26 @@
             this.pictureBox_close.TabIndex = 6;
             this.pictureBox_close.TabStop = false;
             this.pictureBox_close.Click += new System.EventHandler(this.pictureBox_close_Click);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên món";
+            this.columnHeader1.Width = 194;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Số lượng";
+            this.columnHeader2.Width = 54;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Đơn giá";
+            this.columnHeader3.Width = 76;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thành tiền";
+            this.columnHeader4.Width = 115;
             // 
             // fManageTable
             // 
@@ -302,5 +330,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_listTable;
         private System.Windows.Forms.ComboBox comboBox_switchTable;
         private System.Windows.Forms.PictureBox pictureBox_close;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
