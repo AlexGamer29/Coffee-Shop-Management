@@ -20,11 +20,12 @@ namespace Login.DataAccessObject
 
         private MenuDAO() { }
 
-        public List<Menu> GetListMenuByTable(int id)
+        public List<Menu> GetListMenuByTable(int idTable)
         {
             List<Menu> listMenu = new List<Menu>();
-            string query = "SELECT Menu.name, ReceiptInfo.numberOfFood, Menu.price, Menu.price*ReceiptInfo.numberOfFood AS totalPrice FROM dbo.ReceiptInfo AS ReceiptInfo, dbo.Receipt AS Receipt, dbo.Menu AS Menu WHERE ReceiptInfo.idReceipt = Receipt.id AND ReceiptInfo.idMenu = Menu.id AND Receipt.STATUS = 0 AND Receipt.idTable = " + id;
-            DataTable data = DataAccess.Instance.ExecuteQuery(query);
+            //string query = "SELECT Menu.name, ReceiptInfo.numberOfFood, Menu.price, Menu.price*ReceiptInfo.numberOfFood AS totalPrice FROM dbo.ReceiptInfo AS ReceiptInfo, dbo.Receipt AS Receipt, dbo.Menu AS Menu WHERE ReceiptInfo.idReceipt = Receipt.id AND ReceiptInfo.idMenu = Menu.id AND Receipt.STATUS = 0 AND Receipt.idTable = " + idTable;
+            string query = "USERPROC_GetListMenuByTable @idTable";
+            DataTable data = DataAccess.Instance.ExecuteQuery(query, new object[] { idTable });
 
             foreach (DataRow item in data.Rows)
             {

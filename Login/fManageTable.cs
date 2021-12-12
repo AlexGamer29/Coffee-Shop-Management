@@ -17,13 +17,29 @@ namespace Login
 {
     public partial class fManageTable : Form
     {
-        public fManageTable()
+        private Account loginAccount;
+
+        public Account LoginAccount 
+        { 
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.AccountType);  }
+        }
+
+        public fManageTable(Account login)
         {
             InitializeComponent();
+            this.LoginAccount = login;
             LoadTable();
         }
 
         #region Methods
+
+        void ChangeAccount(int accountType)
+        {
+            adminToolStripMenuItem.Enabled = accountType == 1;
+            thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
+        }
+
         void LoadTable()
         {
             List<Table> tableList = TableDAO.Instance.LoadTableList();
@@ -98,8 +114,14 @@ namespace Login
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAccountProfile accountProfile = new fAccountProfile();
+            fAccountProfile accountProfile = new fAccountProfile(LoginAccount);
+            accountProfile.UpdateAccount += AccountProfile_UpdateAccount;
             accountProfile.ShowDialog();
+        }
+
+        private void AccountProfile_UpdateAccount(object sender, AccountEvent e)
+        {
+            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Account.DisplayName + ")";
         }
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)

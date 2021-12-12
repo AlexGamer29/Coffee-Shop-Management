@@ -179,12 +179,12 @@
             // txtbox_totalPrice
             // 
             this.txtbox_totalPrice.BackColor = System.Drawing.SystemColors.Window;
-            this.txtbox_totalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_totalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_totalPrice.ForeColor = System.Drawing.Color.Black;
             this.txtbox_totalPrice.Location = new System.Drawing.Point(227, 28);
             this.txtbox_totalPrice.Name = "txtbox_totalPrice";
             this.txtbox_totalPrice.ReadOnly = true;
-            this.txtbox_totalPrice.Size = new System.Drawing.Size(106, 21);
+            this.txtbox_totalPrice.Size = new System.Drawing.Size(106, 20);
             this.txtbox_totalPrice.TabIndex = 9;
             this.txtbox_totalPrice.Text = "0";
             this.txtbox_totalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

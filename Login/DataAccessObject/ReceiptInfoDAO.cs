@@ -20,11 +20,12 @@ namespace Login.DataAccessObject
 
         private ReceiptInfoDAO() { }
 
-        public List<ReceiptInfo> GetListReceiptInfo(int id)
+        public List<ReceiptInfo> GetListReceiptInfo(int idTable)
         {
             List<ReceiptInfo> listReceiptInfo = new List<ReceiptInfo> ();
-            string query = "SELECT * FROM dbo.ReceiptInfo WHERE idReceipt = " + id;
-            DataTable data = DataAccess.Instance.ExecuteQuery(query);
+            //string query = "SELECT * FROM dbo.ReceiptInfo WHERE idReceipt = " + idTable;
+            string query = "USERPROC_GetListReceiptInfo @idTable";
+            DataTable data = DataAccess.Instance.ExecuteQuery(query, new object[] { idTable });
             foreach (DataRow item in data.Rows)
             {
                 ReceiptInfo info = new ReceiptInfo(item);

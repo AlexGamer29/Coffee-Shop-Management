@@ -23,12 +23,13 @@ namespace Login.DataAccessObject
         /// <summary>
         /// Return receipt.ID if query is success or return -1
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="idTable"></param>
         /// <returns></returns>
-        public int GetUncheckReceiptIDByTableID(int id)
+        public int GetUncheckReceiptIDByTableID(int idTable)
         {
-            string query = "SELECT * FROM dbo.Receipt WHERE idTable = " + id +" AND STATUS = 0";
-            DataTable data = DataAccess.Instance.ExecuteQuery(query);
+            //string query = "SELECT * FROM dbo.Receipt WHERE idTable = " + idTable + " AND STATUS = 0";
+            string query = "USERPROC_GetUncheckReceiptIDByTableID @idTable";
+            DataTable data = DataAccess.Instance.ExecuteQuery(query, new object[] { idTable });
             if(data.Rows.Count > 0)
             {
                 Receipt receipt = new Receipt(data.Rows[0]);
