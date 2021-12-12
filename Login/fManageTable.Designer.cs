@@ -35,7 +35,13 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_listReceipt = new System.Windows.Forms.Panel();
             this.listview_Receipt = new System.Windows.Forms.ListView();
+            this.columnHeader_idFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader_numberOfFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader_price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader_totalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel_listButton = new System.Windows.Forms.Panel();
+            this.label_totalPrice = new System.Windows.Forms.Label();
+            this.txtbox_totalPrice = new System.Windows.Forms.TextBox();
             this.comboBox_switchTable = new System.Windows.Forms.ComboBox();
             this.btn_switchTable = new System.Windows.Forms.Button();
             this.amount_discount = new System.Windows.Forms.NumericUpDown();
@@ -111,16 +117,44 @@
             // listview_Receipt
             // 
             this.listview_Receipt.AccessibleName = "";
+            this.listview_Receipt.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader_idFood,
+            this.columnHeader_numberOfFood,
+            this.columnHeader_price,
+            this.columnHeader_totalPrice});
+            this.listview_Receipt.GridLines = true;
             this.listview_Receipt.HideSelection = false;
             this.listview_Receipt.Location = new System.Drawing.Point(3, 3);
             this.listview_Receipt.Name = "listview_Receipt";
             this.listview_Receipt.Size = new System.Drawing.Size(442, 471);
             this.listview_Receipt.TabIndex = 0;
             this.listview_Receipt.UseCompatibleStateImageBehavior = false;
+            this.listview_Receipt.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader_idFood
+            // 
+            this.columnHeader_idFood.Text = "Tên món";
+            this.columnHeader_idFood.Width = 138;
+            // 
+            // columnHeader_numberOfFood
+            // 
+            this.columnHeader_numberOfFood.Text = "Số lượng";
+            // 
+            // columnHeader_price
+            // 
+            this.columnHeader_price.Text = "Đơn giá";
+            this.columnHeader_price.Width = 96;
+            // 
+            // columnHeader_totalPrice
+            // 
+            this.columnHeader_totalPrice.Text = "Thành tiền";
+            this.columnHeader_totalPrice.Width = 144;
             // 
             // panel_listButton
             // 
             this.panel_listButton.AccessibleName = "";
+            this.panel_listButton.Controls.Add(this.label_totalPrice);
+            this.panel_listButton.Controls.Add(this.txtbox_totalPrice);
             this.panel_listButton.Controls.Add(this.comboBox_switchTable);
             this.panel_listButton.Controls.Add(this.btn_switchTable);
             this.panel_listButton.Controls.Add(this.amount_discount);
@@ -130,6 +164,30 @@
             this.panel_listButton.Name = "panel_listButton";
             this.panel_listButton.Size = new System.Drawing.Size(448, 58);
             this.panel_listButton.TabIndex = 3;
+            // 
+            // label_totalPrice
+            // 
+            this.label_totalPrice.AutoSize = true;
+            this.label_totalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_totalPrice.Location = new System.Drawing.Point(252, 9);
+            this.label_totalPrice.Name = "label_totalPrice";
+            this.label_totalPrice.Size = new System.Drawing.Size(52, 13);
+            this.label_totalPrice.TabIndex = 10;
+            this.label_totalPrice.Text = "Tổng tiền";
+            this.label_totalPrice.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtbox_totalPrice
+            // 
+            this.txtbox_totalPrice.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbox_totalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_totalPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtbox_totalPrice.Location = new System.Drawing.Point(227, 28);
+            this.txtbox_totalPrice.Name = "txtbox_totalPrice";
+            this.txtbox_totalPrice.ReadOnly = true;
+            this.txtbox_totalPrice.Size = new System.Drawing.Size(106, 20);
+            this.txtbox_totalPrice.TabIndex = 9;
+            this.txtbox_totalPrice.Text = "0";
+            this.txtbox_totalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBox_switchTable
             // 
@@ -151,7 +209,7 @@
             // 
             // amount_discount
             // 
-            this.amount_discount.Location = new System.Drawing.Point(227, 33);
+            this.amount_discount.Location = new System.Drawing.Point(115, 33);
             this.amount_discount.Name = "amount_discount";
             this.amount_discount.Size = new System.Drawing.Size(106, 20);
             this.amount_discount.TabIndex = 7;
@@ -159,7 +217,7 @@
             // 
             // btn_discount
             // 
-            this.btn_discount.Location = new System.Drawing.Point(227, 3);
+            this.btn_discount.Location = new System.Drawing.Point(115, 3);
             this.btn_discount.Name = "btn_discount";
             this.btn_discount.Size = new System.Drawing.Size(106, 24);
             this.btn_discount.TabIndex = 6;
@@ -231,10 +289,9 @@
             // 
             // flowLayoutPanel_listTable
             // 
-            this.flowLayoutPanel_listTable.AutoScroll = true;
             this.flowLayoutPanel_listTable.Location = new System.Drawing.Point(6, 46);
             this.flowLayoutPanel_listTable.Name = "flowLayoutPanel_listTable";
-            this.flowLayoutPanel_listTable.Size = new System.Drawing.Size(588, 596);
+            this.flowLayoutPanel_listTable.Size = new System.Drawing.Size(591, 596);
             this.flowLayoutPanel_listTable.TabIndex = 5;
             // 
             // pictureBox_close
@@ -270,6 +327,7 @@
             this.menuStrip.PerformLayout();
             this.panel_listReceipt.ResumeLayout(false);
             this.panel_listButton.ResumeLayout(false);
+            this.panel_listButton.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amount_discount)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -300,5 +358,11 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_listTable;
         private System.Windows.Forms.ComboBox comboBox_switchTable;
         private System.Windows.Forms.PictureBox pictureBox_close;
+        private System.Windows.Forms.ColumnHeader columnHeader_idFood;
+        private System.Windows.Forms.ColumnHeader columnHeader_numberOfFood;
+        private System.Windows.Forms.ColumnHeader columnHeader_price;
+        private System.Windows.Forms.ColumnHeader columnHeader_totalPrice;
+        private System.Windows.Forms.Label label_totalPrice;
+        private System.Windows.Forms.TextBox txtbox_totalPrice;
     }
 }

@@ -72,8 +72,8 @@ namespace Login {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["AccountDAO"] != null)) {
-                    base.Tables.Add(new AccountDataTable(ds.Tables["AccountDAO"]));
+                if ((ds.Tables["Account"] != null)) {
+                    base.Tables.Add(new AccountDataTable(ds.Tables["Account"]));
                 }
                 if ((ds.Tables["Categories"] != null)) {
                     base.Tables.Add(new CategoriesDataTable(ds.Tables["Categories"]));
@@ -235,8 +235,8 @@ namespace Login {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["AccountDAO"] != null)) {
-                    base.Tables.Add(new AccountDataTable(ds.Tables["AccountDAO"]));
+                if ((ds.Tables["Account"] != null)) {
+                    base.Tables.Add(new AccountDataTable(ds.Tables["Account"]));
                 }
                 if ((ds.Tables["Categories"] != null)) {
                     base.Tables.Add(new CategoriesDataTable(ds.Tables["Categories"]));
@@ -286,7 +286,7 @@ namespace Login {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableAccount = ((AccountDataTable)(base.Tables["AccountDAO"]));
+            this.tableAccount = ((AccountDataTable)(base.Tables["Account"]));
             if ((initTable == true)) {
                 if ((this.tableAccount != null)) {
                     this.tableAccount.InitVars();
@@ -493,7 +493,7 @@ namespace Login {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public AccountDataTable() {
-                this.TableName = "AccountDAO";
+                this.TableName = "Account";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1070,7 +1070,7 @@ namespace Login {
             
             private global::System.Data.DataColumn columnname;
             
-            private global::System.Data.DataColumn columntablesStatus;
+            private global::System.Data.DataColumn columntableStatus;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1123,9 +1123,9 @@ namespace Login {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn tablesStatusColumn {
+            public global::System.Data.DataColumn tableStatusColumn {
                 get {
-                    return this.columntablesStatus;
+                    return this.columntableStatus;
                 }
             }
             
@@ -1166,12 +1166,12 @@ namespace Login {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CoffeeTableRow AddCoffeeTableRow(string name, string tablesStatus) {
+            public CoffeeTableRow AddCoffeeTableRow(string name, string tableStatus) {
                 CoffeeTableRow rowCoffeeTableRow = ((CoffeeTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         name,
-                        tablesStatus};
+                        tableStatus};
                 rowCoffeeTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCoffeeTableRow);
                 return rowCoffeeTableRow;
@@ -1203,7 +1203,7 @@ namespace Login {
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
                 this.columnname = base.Columns["name"];
-                this.columntablesStatus = base.Columns["tablesStatus"];
+                this.columntableStatus = base.Columns["tableStatus"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1213,8 +1213,8 @@ namespace Login {
                 base.Columns.Add(this.columnid);
                 this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnname);
-                this.columntablesStatus = new global::System.Data.DataColumn("tablesStatus", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntablesStatus);
+                this.columntableStatus = new global::System.Data.DataColumn("tableStatus", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntableStatus);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -1225,8 +1225,8 @@ namespace Login {
                 this.columnid.Unique = true;
                 this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 100;
-                this.columntablesStatus.AllowDBNull = false;
-                this.columntablesStatus.MaxLength = 100;
+                this.columntableStatus.AllowDBNull = false;
+                this.columntableStatus.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2446,12 +2446,12 @@ namespace Login {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string tablesStatus {
+            public string tableStatus {
                 get {
-                    return ((string)(this[this.tableCoffeeTable.tablesStatusColumn]));
+                    return ((string)(this[this.tableCoffeeTable.tableStatusColumn]));
                 }
                 set {
-                    this[this.tableCoffeeTable.tablesStatusColumn] = value;
+                    this[this.tableCoffeeTable.tableStatusColumn] = value;
                 }
             }
             
@@ -3065,8 +3065,8 @@ namespace Login.CoffeeShopDataSetTableAdapters {
         private void InitAdapter() {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "TableDAO";
-            tableMapping.DataSetTable = "AccountDAO";
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Account";
             tableMapping.ColumnMappings.Add("userName", "userName");
             tableMapping.ColumnMappings.Add("displayName", "displayName");
             tableMapping.ColumnMappings.Add("password", "password");
@@ -3074,7 +3074,7 @@ namespace Login.CoffeeShopDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[AccountDAO] WHERE (([userName] = @Original_userName) AND ([displa" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Account] WHERE (([userName] = @Original_userName) AND ([displa" +
                 "yName] = @Original_displayName) AND ([password] = @Original_password) AND ([acco" +
                 "untType] = @Original_accountType))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
@@ -3084,9 +3084,9 @@ namespace Login.CoffeeShopDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_accountType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "accountType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[AccountDAO] ([userName], [displayName], [password], [accountType]" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Account] ([userName], [displayName], [password], [accountType]" +
                 ") VALUES (@userName, @displayName, @password, @accountType);\r\nSELECT userName, d" +
-                "isplayName, password, accountType FROM AccountDAO WHERE (userName = @userName)";
+                "isplayName, password, accountType FROM Account WHERE (userName = @userName)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@displayName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "displayName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3094,8 +3094,8 @@ namespace Login.CoffeeShopDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@accountType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "accountType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[AccountDAO] SET [userName] = @userName, [displayName] = @displayName, [password] = @password, [accountType] = @accountType WHERE (([userName] = @Original_userName) AND ([displayName] = @Original_displayName) AND ([password] = @Original_password) AND ([accountType] = @Original_accountType));
-SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userName = @userName)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Account] SET [userName] = @userName, [displayName] = @displayName, [password] = @password, [accountType] = @accountType WHERE (([userName] = @Original_userName) AND ([displayName] = @Original_displayName) AND ([password] = @Original_password) AND ([accountType] = @Original_accountType));
+SELECT userName, displayName, password, accountType FROM Account WHERE (userName = @userName)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@displayName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "displayName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3120,7 +3120,7 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT userName, displayName, password, accountType FROM dbo.AccountDAO";
+            this._commandCollection[0].CommandText = "SELECT userName, displayName, password, accountType FROM dbo.Account";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3159,7 +3159,7 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(CoffeeShopDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "AccountDAO");
+            return this.Adapter.Update(dataSet, "Account");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3444,7 +3444,7 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
         private void InitAdapter() {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "TableDAO";
+            tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Categories";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("name", "name");
@@ -3761,40 +3761,40 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
         private void InitAdapter() {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "TableDAO";
+            tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "CoffeeTable";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("name", "name");
-            tableMapping.ColumnMappings.Add("tablesStatus", "tablesStatus");
+            tableMapping.ColumnMappings.Add("tableStatus", "tableStatus");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[CoffeeTable] WHERE (([id] = @Original_id) AND ([name] = @Origi" +
-                "nal_name) AND ([tablesStatus] = @Original_tablesStatus))";
+                "nal_name) AND ([tableStatus] = @Original_tableStatus))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tablesStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tablesStatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableStatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CoffeeTable] ([name], [tablesStatus]) VALUES (@name, @tablesSt" +
-                "atus);\r\nSELECT id, name, tablesStatus FROM CoffeeTable WHERE (id = SCOPE_IDENTIT" +
-                "Y())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CoffeeTable] ([name], [tableStatus]) VALUES (@name, @tableStat" +
+                "us);\r\nSELECT id, name, tableStatus FROM CoffeeTable WHERE (id = SCOPE_IDENTITY()" +
+                ")";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tablesStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tablesStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[CoffeeTable] SET [name] = @name, [tablesStatus] = @tablesStatus WHE" +
-                "RE (([id] = @Original_id) AND ([name] = @Original_name) AND ([tablesStatus] = @O" +
-                "riginal_tablesStatus));\r\nSELECT id, name, tablesStatus FROM CoffeeTable WHERE (i" +
-                "d = @id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[CoffeeTable] SET [name] = @name, [tableStatus] = @tableStatus WHERE" +
+                " (([id] = @Original_id) AND ([name] = @Original_name) AND ([tableStatus] = @Orig" +
+                "inal_tableStatus));\r\nSELECT id, name, tableStatus FROM CoffeeTable WHERE (id = @" +
+                "id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tablesStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tablesStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tablesStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tablesStatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableStatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -3811,7 +3811,7 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, name, tablesStatus FROM dbo.CoffeeTable";
+            this._commandCollection[0].CommandText = "SELECT id, name, tableStatus FROM dbo.CoffeeTable";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3872,7 +3872,7 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_name, string Original_tablesStatus) {
+        public virtual int Delete(int Original_id, string Original_name, string Original_tableStatus) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_name == null)) {
                 throw new global::System.ArgumentNullException("Original_name");
@@ -3880,11 +3880,11 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_name));
             }
-            if ((Original_tablesStatus == null)) {
-                throw new global::System.ArgumentNullException("Original_tablesStatus");
+            if ((Original_tableStatus == null)) {
+                throw new global::System.ArgumentNullException("Original_tableStatus");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_tablesStatus));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_tableStatus));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3906,18 +3906,18 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string name, string tablesStatus) {
+        public virtual int Insert(string name, string tableStatus) {
             if ((name == null)) {
                 throw new global::System.ArgumentNullException("name");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(name));
             }
-            if ((tablesStatus == null)) {
-                throw new global::System.ArgumentNullException("tablesStatus");
+            if ((tableStatus == null)) {
+                throw new global::System.ArgumentNullException("tableStatus");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(tablesStatus));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(tableStatus));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3939,18 +3939,18 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string name, string tablesStatus, int Original_id, string Original_name, string Original_tablesStatus, int id) {
+        public virtual int Update(string name, string tableStatus, int Original_id, string Original_name, string Original_tableStatus, int id) {
             if ((name == null)) {
                 throw new global::System.ArgumentNullException("name");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(name));
             }
-            if ((tablesStatus == null)) {
-                throw new global::System.ArgumentNullException("tablesStatus");
+            if ((tableStatus == null)) {
+                throw new global::System.ArgumentNullException("tableStatus");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(tablesStatus));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(tableStatus));
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_id));
             if ((Original_name == null)) {
@@ -3959,11 +3959,11 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_name));
             }
-            if ((Original_tablesStatus == null)) {
-                throw new global::System.ArgumentNullException("Original_tablesStatus");
+            if ((Original_tableStatus == null)) {
+                throw new global::System.ArgumentNullException("Original_tableStatus");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_tablesStatus));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_tableStatus));
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
@@ -3986,8 +3986,8 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string name, string tablesStatus, int Original_id, string Original_name, string Original_tablesStatus) {
-            return this.Update(name, tablesStatus, Original_id, Original_name, Original_tablesStatus, Original_id);
+        public virtual int Update(string name, string tableStatus, int Original_id, string Original_name, string Original_tableStatus) {
+            return this.Update(name, tableStatus, Original_id, Original_name, Original_tableStatus, Original_id);
         }
     }
     
@@ -4110,7 +4110,7 @@ SELECT userName, displayName, password, accountType FROM AccountDAO WHERE (userN
         private void InitAdapter() {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "TableDAO";
+            tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Menu";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("name", "name");
@@ -4447,7 +4447,7 @@ SELECT id, name, idCategories, price FROM Menu WHERE (id = @id)";
         private void InitAdapter() {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "TableDAO";
+            tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Receipt";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("arrivalDate", "arrivalDate");
@@ -4797,7 +4797,7 @@ SELECT id, arrivalDate, departDate, idTable, STATUS FROM Receipt WHERE (id = @id
         private void InitAdapter() {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "TableDAO";
+            tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "ReceiptInfo";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("idReceipt", "idReceipt");

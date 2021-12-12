@@ -1,0 +1,195 @@
+﻿++Solution 'CoffeeManagement' ‎(1 of 1 project)
+i:{00000000-0000-0000-0000-000000000000}:CoffeeManagement.sln
+++CoffeeManagement
+i:{00000000-0000-0000-0000-000000000000}:CoffeeManagement
+++Connected Services
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\connected services\
+++Properties
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\properties\
+++References
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++bin
+++DataAccessObject
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\dataaccessobject\
+++AccountDAO.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\dataaccessobject\accountdao.cs
+++DataAccess.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\dataaccessobject\dataaccess.cs
+++MenuDAO.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\dataaccessobject\menudao.cs
+++ReceiptDAO.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\dataaccessobject\receiptdao.cs
+++ReceiptInfoDAO.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\dataaccessobject\receiptinfodao.cs
+++TableDAO.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\dataaccessobject\tabledao.cs
+++DataTransferObject
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\datatransferobject\
+++Account.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\datatransferobject\account.cs
+++Menu.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\datatransferobject\menu.cs
+++Receipt.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\datatransferobject\receipt.cs
+++ReceiptInfo.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\datatransferobject\receiptinfo.cs
+++Table.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\datatransferobject\table.cs
+++model
+++obj
+++Resources
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\resources\
+++App.config
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\app.config
+++CoffeeShopDataSet.xsd
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\coffeeshopdataset.xsd
+++Currency.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\currency.cs
+++fAccountProfile.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\faccountprofile.cs
+++fAdmin.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\fadmin.cs
+++fCreateAccount.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\fcreateaccount.cs
+++fLogin.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\flogin.cs
+++fManageTable.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\fmanagetable.cs
+++fManageTable.Designer.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\fmanagetable.designer.cs
+++fManageTable.resx
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\fmanagetable.resx
+++Hashing.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\hashing.cs
+++Model1.edmx
+++packages.config
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\packages.config
+++Program.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\program.cs
+++AssemblyInfo.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\properties\assemblyinfo.cs
+++Resources.resx
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\properties\resources.resx
+++Settings.settings
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\properties\settings.settings
+++BCrypt.Net
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++EntityFramework
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++EntityFramework.SqlServer
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++Microsoft.CSharp
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++NuGet.Frameworks
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.ComponentModel.DataAnnotations
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.Core
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.Data
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.Data.DataSetExtensions
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.Deployment
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.Drawing
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.Net.Http
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.Runtime.Serialization
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.Security
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.Windows.Forms
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.Xml
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++System.Xml.Linq
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:
+++Debug
+++Release
+++CoffeeShop.sql
+++close.png
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\resources\close.png
+++CoffeeShopDataSet.Designer.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\coffeeshopdataset.designer.cs
+++CoffeeShopDataSet.xsc
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\coffeeshopdataset.xsc
+++CoffeeShopDataSet.xss
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\coffeeshopdataset.xss
+++fAccountProfile.Designer.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\faccountprofile.designer.cs
+++fAccountProfile.resx
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\faccountprofile.resx
+++fAdmin.Designer.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\fadmin.designer.cs
+++fAdmin.resx
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\fadmin.resx
+++fCreateAccount.Designer.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\fcreateaccount.designer.cs
+++fCreateAccount.resx
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\fcreateaccount.resx
+++fLogin.Designer.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\flogin.designer.cs
+++fLogin.resx
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\flogin.resx
+++Model1.Context.tt
+++Model1.Designer.cs
+++Model1.edmx.diagram
+++Model1.tt
+++Resources.Designer.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\properties\resources.designer.cs
+++Settings.Designer.cs
+i:{ac9e4ab3-22ed-4de4-b75f-35856f6c1812}:c:\users\hi there\desktop\coffee-management\login\properties\settings.designer.cs
+++BCrypt.Net.dll
+++BCrypt.Net.xml
+++EntityFramework.dll
+++EntityFramework.SqlServer.dll
+++EntityFramework.SqlServer.xml
+++EntityFramework.xml
+++Login.exe
+++Login.exe.config
+++Login.pdb
+++NuGet.Frameworks.dll
+++NuGet.Frameworks.xml
+++edmxResourcesToEmbed
+++TempPE
+++.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
+++CoffeeManagement.csproj.AssemblyReference.cache
+++CoffeeManagement.csproj.CopyComplete
+++CoffeeManagement.csproj.CoreCompileInputs.cache
+++CoffeeManagement.csproj.FileListAbsolute.txt
+++CoffeeManagement.csproj.GenerateResource.cache
+++CoffeeManagement.csproj.SuggestedBindingRedirects.cache
+++DesignTimeResolveAssemblyReferences.cache
+++DesignTimeResolveAssemblyReferencesInput.cache
+++Login.csproj.AssemblyReference.cache
+++Login.csproj.CoreCompileInputs.cache
+++Login.csproj.FileListAbsolute.txt
+++Login.csproj.GenerateResource.cache
+++Login.csproj.SuggestedBindingRedirects.cache
+++Login.fAccountProfile.resources
+++Login.fAdmin.resources
+++Login.fCreateAccount.resources
+++Login.fLogin.resources
+++Login.fManageTable.resources
+++Login.Login.resources
+++Login.Properties.Resources.resources
+++Coffee.Properties.Resources.resources
+++Model1.Context.cs
+++Model1.cs
+++AccountModel.csdl
+++AccountModel.msl
+++AccountModel.ssdl
+++Model1.csdl
+++Model1.msl
+++Model1.ssdl
+++AccountModel.Designer.cs.dll
+++CoffeeShopDataSet.Designer.cs.dll
+++LoginDataDataSet.Designer.cs.dll
+++Model1.Context.cs.dll
+++Model1.cs.dll
+++Model1.Designer.cs.dll
+++Properties.Resources.Designer.cs.dll

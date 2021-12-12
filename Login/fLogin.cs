@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using Login.DataTransferObject;
+using Login.DataAccessObject;
 
 namespace Login
 {
@@ -32,7 +34,8 @@ namespace Login
             string passWord = txtbox_password.Text;
             if (Login(userName, passWord))
             {
-                fManageTable formManageTable = new fManageTable();
+                Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                fManageTable formManageTable = new fManageTable(loginAccount);
                 this.Hide();
                 formManageTable.ShowDialog();
                 this.Show();

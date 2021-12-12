@@ -76,17 +76,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccessObject\AccountDAO.cs" />
-    <Compile Include="DataAccessObject\DataAccess.cs" />
+    <Compile Include="AccountEvent.cs" />
     <Compile Include="CoffeeShopDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CoffeeShopDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Currency.cs" />
+    <Compile Include="DataAccessObject\AccountDAO.cs" />
+    <Compile Include="DataAccessObject\MenuDAO.cs" />
+    <Compile Include="DataAccessObject\ReceiptDAO.cs" />
+    <Compile Include="DataAccessObject\DataAccess.cs" />
+    <Compile Include="DataAccessObject\ReceiptInfoDAO.cs" />
     <Compile Include="DataAccessObject\TableDAO.cs" />
+    <Compile Include="DataTransferObject\Account.cs" />
+    <Compile Include="DataTransferObject\Menu.cs" />
+    <Compile Include="DataTransferObject\Receipt.cs" />
+    <Compile Include="DataTransferObject\ReceiptInfo.cs" />
     <Compile Include="DataTransferObject\Table.cs" />
     <Compile Include="fAccountProfile.cs">
       <SubType>Form</SubType>
@@ -119,21 +125,6 @@
       <DependentUpon>fCreateAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Hashing.cs" />
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fAccountProfile.resx">
@@ -172,13 +163,6 @@
     <None Include="CoffeeShopDataSet.xss">
       <DependentUpon>CoffeeShopDataSet.xsd</DependentUpon>
     </None>
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -213,18 +197,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

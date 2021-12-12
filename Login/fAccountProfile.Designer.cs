@@ -79,6 +79,7 @@
             // 
             // txtbox_username
             // 
+            this.txtbox_username.BackColor = System.Drawing.Color.LightGray;
             this.txtbox_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_username.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
@@ -134,10 +135,11 @@
             this.txtbox_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_password.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.txtbox_password.Location = new System.Drawing.Point(153, 11);
+            this.txtbox_password.Location = new System.Drawing.Point(153, 12);
             this.txtbox_password.Name = "txtbox_password";
             this.txtbox_password.Size = new System.Drawing.Size(290, 20);
             this.txtbox_password.TabIndex = 4;
+            this.txtbox_password.UseSystemPasswordChar = true;
             // 
             // panel_password
             // 
@@ -158,6 +160,7 @@
             this.txtbox_newPassword.Name = "txtbox_newPassword";
             this.txtbox_newPassword.Size = new System.Drawing.Size(290, 20);
             this.txtbox_newPassword.TabIndex = 4;
+            this.txtbox_newPassword.UseSystemPasswordChar = true;
             // 
             // panel_newPassword
             // 
@@ -209,6 +212,7 @@
             this.txtbox_retypeNewPassword.Name = "txtbox_retypeNewPassword";
             this.txtbox_retypeNewPassword.Size = new System.Drawing.Size(290, 20);
             this.txtbox_retypeNewPassword.TabIndex = 4;
+            this.txtbox_retypeNewPassword.UseSystemPasswordChar = true;
             // 
             // btn_update
             // 
@@ -219,6 +223,7 @@
             this.btn_update.TabIndex = 10;
             this.btn_update.Text = "Cập nhật";
             this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_exit
             // 
@@ -242,7 +247,6 @@
             this.label_login.Size = new System.Drawing.Size(271, 39);
             this.label_login.TabIndex = 12;
             this.label_login.Text = "Thông tin cá nhân";
-            this.label_login.Click += new System.EventHandler(this.label_login_Click);
             // 
             // pictureBox_close
             // 
