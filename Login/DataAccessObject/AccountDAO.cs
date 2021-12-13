@@ -22,9 +22,26 @@ namespace Login.DataAccessObject
 
         public bool Login(string userName, string passWord)
         {
-            string query = "USERPROC_Login @userName , @password";
-            DataTable result = DataAccess.Instance.ExecuteQuery(query, new object[] {userName, passWord});
-            return result.Rows.Count > 0;
+            string query = "USERPROC_Login @userName";
+
+
+            DataTable result = DataAccess.Instance.ExecuteQuery(query, new object[] { userName });
+
+            string hashedPassword = "";
+            foreach (DataRow row in result.Rows)
+            {
+                hashedPassword += row["password"].ToString();
+            }
+
+            if (BCrypt.Net.BCrypt.Verify(passWord, hashedPassword))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            // return result.Rows.Count > 0;
         }
 
         public bool UpdateAccount(string userName, string displayName, string password, string newPassword)
@@ -46,13 +63,13 @@ namespace Login.DataAccessObject
         }
         **/
         
-        public Account GetAccountByUserName(string userName)
+        public AccountAuthentication GetAccountByUserName(string userName)
         {
             string query = "USERPROC_GetAccountByUserName @userName";
             DataTable data = DataAccess.Instance.ExecuteQuery(query, new object[] { userName });
             foreach (DataRow item in data.Rows)
             {
-                return new Account(item);
+                return new AccountAuthentication(item);
             }
             return null;
         }

@@ -17,15 +17,15 @@ namespace Login
 {
     public partial class fManageTable : Form
     {
-        private Account loginAccount;
+        private AccountAuthentication loginAccount;
 
-        public Account LoginAccount 
+        public AccountAuthentication LoginAccount 
         { 
             get { return loginAccount; }
             set { loginAccount = value; ChangeAccount(loginAccount.AccountType);  }
         }
 
-        public fManageTable(Account login)
+        public fManageTable(AccountAuthentication login)
         {
             InitializeComponent();
             this.LoginAccount = login;

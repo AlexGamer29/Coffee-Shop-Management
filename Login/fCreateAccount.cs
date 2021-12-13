@@ -45,7 +45,7 @@ namespace Login
 
         private void btn_addAccount_Click(object sender, EventArgs e)
         {
-        /** Xoá model Entities => Nhớ input lại
+        /// Xoá model Entities => Nhớ input lại
             try
             {
                 CoffeeShopEntities coffeeEntities = new CoffeeShopEntities();
@@ -97,7 +97,7 @@ namespace Login
             {
                 throw;
             }
-            **/
+            //
         }
     }
 }

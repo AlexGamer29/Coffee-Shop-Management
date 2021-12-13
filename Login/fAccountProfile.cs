@@ -14,21 +14,21 @@ namespace Login
 {
     public partial class fAccountProfile : Form
     {
-        private Account loginAccount;
+        private AccountAuthentication loginAccount;
 
-        public Account LoginAccount
+        public AccountAuthentication LoginAccount
         {
             get { return loginAccount; }
             set { loginAccount = value; ChangeAccount(loginAccount); }
         }
 
-        public fAccountProfile(Account account)
+        public fAccountProfile(AccountAuthentication account)
         {
             InitializeComponent();
             LoginAccount = account;
         }
 
-        void ChangeAccount(Account account)
+        void ChangeAccount(AccountAuthentication account)
         {
             txtbox_username.Text = LoginAccount.UserName;
             txtbox_displayName.Text = LoginAccount.DisplayName;

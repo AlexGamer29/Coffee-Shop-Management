@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Login.DataTransferObject
 {
-    public class Account
+    public class AccountAuthentication
     {
         private string userName;
         private string displayName;
@@ -19,7 +19,7 @@ namespace Login.DataTransferObject
         public string Password { get => password; set => password = value; }
         public int AccountType { get => accountType; set => accountType = value; }
 
-        public Account(string userName, string displayName, int accountType, string password = null)
+        public AccountAuthentication(string userName, string displayName, int accountType, string password = null)
         {
             this.UserName = userName;
             this.DisplayName = displayName;
@@ -27,7 +27,7 @@ namespace Login.DataTransferObject
             this.Password = password;
         }
 
-        public Account(DataRow row)
+        public AccountAuthentication(DataRow row)
         {
             this.UserName = (string)row["userName"].ToString();
             this.DisplayName = (string)row["displayName"].ToString();

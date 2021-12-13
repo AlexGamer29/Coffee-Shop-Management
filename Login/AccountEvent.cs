@@ -9,11 +9,11 @@ namespace Login
 {
     public class AccountEvent : EventArgs
     {
-        private Account account;
+        private AccountAuthentication account;
 
-        public Account Account { get => account; set => account = value; }
+        public AccountAuthentication Account { get => account; set => account = value; }
 
-        public AccountEvent(Account account)
+        public AccountEvent(AccountAuthentication account)
         {
             this.Account = account;
         }

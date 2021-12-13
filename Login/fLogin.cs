@@ -30,19 +30,27 @@ namespace Login
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            string userName = txtbox_userName.Text;
-            string passWord = txtbox_password.Text;
-            if (Login(userName, passWord))
+            try
             {
-                Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
-                fManageTable formManageTable = new fManageTable(loginAccount);
-                this.Hide();
-                formManageTable.ShowDialog();
-                this.Show();
+                string userName = txtbox_userName.Text;
+                string passWord = txtbox_password.Text;
+
+                if (Login(userName, passWord))
+                {
+                    AccountAuthentication loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                    fManageTable formManageTable = new fManageTable(loginAccount);
+                    this.Hide();
+                    formManageTable.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+                }
             }
-            else
+            catch (BCrypt.Net.SaltParseException ex)
             {
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+                MessageBox.Show("Bạn đã nhập sai tên tài khoản hoặc mật khẩu!");
             }
         }
 

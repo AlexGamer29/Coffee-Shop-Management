@@ -72,8 +72,8 @@ namespace Login {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Account"] != null)) {
-                    base.Tables.Add(new AccountDataTable(ds.Tables["Account"]));
+                if ((ds.Tables["AccountAuthentication"] != null)) {
+                    base.Tables.Add(new AccountDataTable(ds.Tables["AccountAuthentication"]));
                 }
                 if ((ds.Tables["Categories"] != null)) {
                     base.Tables.Add(new CategoriesDataTable(ds.Tables["Categories"]));
@@ -235,8 +235,8 @@ namespace Login {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Account"] != null)) {
-                    base.Tables.Add(new AccountDataTable(ds.Tables["Account"]));
+                if ((ds.Tables["AccountAuthentication"] != null)) {
+                    base.Tables.Add(new AccountDataTable(ds.Tables["AccountAuthentication"]));
                 }
                 if ((ds.Tables["Categories"] != null)) {
                     base.Tables.Add(new CategoriesDataTable(ds.Tables["Categories"]));
@@ -286,7 +286,7 @@ namespace Login {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableAccount = ((AccountDataTable)(base.Tables["Account"]));
+            this.tableAccount = ((AccountDataTable)(base.Tables["AccountAuthentication"]));
             if ((initTable == true)) {
                 if ((this.tableAccount != null)) {
                     this.tableAccount.InitVars();
@@ -493,7 +493,7 @@ namespace Login {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public AccountDataTable() {
-                this.TableName = "Account";
+                this.TableName = "AccountAuthentication";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3066,7 +3066,7 @@ namespace Login.CoffeeShopDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Account";
+            tableMapping.DataSetTable = "AccountAuthentication";
             tableMapping.ColumnMappings.Add("userName", "userName");
             tableMapping.ColumnMappings.Add("displayName", "displayName");
             tableMapping.ColumnMappings.Add("password", "password");
@@ -3074,7 +3074,7 @@ namespace Login.CoffeeShopDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Account] WHERE (([userName] = @Original_userName) AND ([displa" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[AccountAuthentication] WHERE (([userName] = @Original_userName) AND ([displa" +
                 "yName] = @Original_displayName) AND ([password] = @Original_password) AND ([acco" +
                 "untType] = @Original_accountType))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
@@ -3084,9 +3084,9 @@ namespace Login.CoffeeShopDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_accountType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "accountType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Account] ([userName], [displayName], [password], [accountType]" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[AccountAuthentication] ([userName], [displayName], [password], [accountType]" +
                 ") VALUES (@userName, @displayName, @password, @accountType);\r\nSELECT userName, d" +
-                "isplayName, password, accountType FROM Account WHERE (userName = @userName)";
+                "isplayName, password, accountType FROM AccountAuthentication WHERE (userName = @userName)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@displayName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "displayName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3094,8 +3094,8 @@ namespace Login.CoffeeShopDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@accountType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "accountType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Account] SET [userName] = @userName, [displayName] = @displayName, [password] = @password, [accountType] = @accountType WHERE (([userName] = @Original_userName) AND ([displayName] = @Original_displayName) AND ([password] = @Original_password) AND ([accountType] = @Original_accountType));
-SELECT userName, displayName, password, accountType FROM Account WHERE (userName = @userName)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[AccountAuthentication] SET [userName] = @userName, [displayName] = @displayName, [password] = @password, [accountType] = @accountType WHERE (([userName] = @Original_userName) AND ([displayName] = @Original_displayName) AND ([password] = @Original_password) AND ([accountType] = @Original_accountType));
+SELECT userName, displayName, password, accountType FROM AccountAuthentication WHERE (userName = @userName)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@displayName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "displayName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3120,7 +3120,7 @@ SELECT userName, displayName, password, accountType FROM Account WHERE (userName
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT userName, displayName, password, accountType FROM dbo.Account";
+            this._commandCollection[0].CommandText = "SELECT userName, displayName, password, accountType FROM dbo.AccountAuthentication";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3159,7 +3159,7 @@ SELECT userName, displayName, password, accountType FROM Account WHERE (userName
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(CoffeeShopDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Account");
+            return this.Adapter.Update(dataSet, "AccountAuthentication");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
