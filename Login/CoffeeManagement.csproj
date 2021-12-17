@@ -92,6 +92,7 @@
     <Compile Include="DataAccessObject\DataAccess.cs" />
     <Compile Include="DataAccessObject\ReceiptInfoDAO.cs" />
     <Compile Include="DataAccessObject\TableDAO.cs" />
+    <Compile Include="DataTransferObject\Account.cs" />
     <Compile Include="DataTransferObject\AccountAuthentication.cs" />
     <Compile Include="DataTransferObject\Menu.cs" />
     <Compile Include="DataTransferObject\Receipt.cs" />

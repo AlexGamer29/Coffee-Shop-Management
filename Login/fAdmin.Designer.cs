@@ -612,6 +612,7 @@
             this.numericUpDown_foodPrice.Size = new System.Drawing.Size(215, 20);
             this.numericUpDown_foodPrice.TabIndex = 6;
             this.numericUpDown_foodPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_foodPrice.ValueChanged += new System.EventHandler(this.numericUpDown_foodPrice_ValueChanged);
             // 
             // label3
             // 
