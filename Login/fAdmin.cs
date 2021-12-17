@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using Login.DataAccessObject;
 
 namespace Login
 {
@@ -20,8 +21,9 @@ namespace Login
             InitializeComponent();
             LoadAccountList();
             LoadMenu();
+            LoadListMenu();
         }
-
+        //Thieu ham Load()
         void LoadMenu()
         {
             string query = "SELECT * FROM dbo.Menu";
@@ -33,7 +35,11 @@ namespace Login
             string query = "EXEC dbo.USERPROC_GetAccountByUserName @userName";
             dataGridView_account.DataSource = DataAccess.Instance.ExecuteQuery(query, new object[] {"admin"});
         }
-
+        
+        void LoadListMenu()
+        {
+            dataGridView_menu.DataSource = MenuDAO.Instance.GetListMenu();
+        }
         private void pictureBox_close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,6 +50,11 @@ namespace Login
             fCreateAccount formCreateAccount = new fCreateAccount();
             formCreateAccount.ShowDialog();
             this.Show();
+        }
+
+        private void btn_viewMenu_Click(object sender, EventArgs e)
+        {
+            LoadListMenu();
         }
     }
 }
