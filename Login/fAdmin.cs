@@ -10,16 +10,28 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using Login.DataAccessObject;
 
 namespace Login
 {
     public partial class fAdmin : Form
     {
+        BindingSource accountList = new BindingSource();
+
         public fAdmin()
         {
             InitializeComponent();
-            LoadAccountList();
+            Load();
+        }
+
+        void Load()
+        {
+            dataGridView_account.DataSource = accountList;
+
             LoadMenu();
+            //LoadAccountList();
+            AddAccountBinding();
+            LoadAccount();
         }
 
         void LoadMenu()
@@ -34,6 +46,18 @@ namespace Login
             dataGridView_account.DataSource = DataAccess.Instance.ExecuteQuery(query, new object[] {"admin"});
         }
 
+        void AddAccountBinding()
+        {
+            txtbox_userName.DataBindings.Add(new Binding("Text", dataGridView_account.DataSource, "Username", true, DataSourceUpdateMode.Never));
+            txtbox_displayName.DataBindings.Add(new Binding("Text", dataGridView_account.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
+            txtbox_accountType.DataBindings.Add(new Binding("Text", dataGridView_account.DataSource, "AccountType", true, DataSourceUpdateMode.Never));
+        }
+
+        void LoadAccount()
+        {
+            accountList.DataSource = AccountDAO.Instance.GetListAccount();
+        }
+
         private void pictureBox_close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,6 +68,15 @@ namespace Login
             fCreateAccount formCreateAccount = new fCreateAccount();
             formCreateAccount.ShowDialog();
             this.Show();
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_viewAccount_Click(object sender, EventArgs e)
+        {
+            LoadAccount();
         }
     }
 }

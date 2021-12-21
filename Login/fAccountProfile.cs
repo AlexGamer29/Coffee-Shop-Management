@@ -15,11 +15,18 @@ namespace Login
     public partial class fAccountProfile : Form
     {
         private AccountAuthentication loginAccount;
+        private event EventHandler<AccountEvent> updateAccount;
 
         public AccountAuthentication LoginAccount
         {
             get { return loginAccount; }
             set { loginAccount = value; ChangeAccount(loginAccount); }
+        }
+
+        public event EventHandler<AccountEvent> UpdateAccount
+        {
+            add { updateAccount += value; }
+            remove { updateAccount -= value; }
         }
 
         public fAccountProfile(AccountAuthentication account)
@@ -52,20 +59,15 @@ namespace Login
                 {
                     MessageBox.Show("Cập nhật thông tin cá nhân thành công!");
                     if (updateAccount != null)
+                    {
                         updateAccount(this, new AccountEvent(AccountDAO.Instance.GetAccountByUserName(userName)));
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Vui lòng điền đúng mật khẩu");
                 }
             }
-        }
-
-        private event EventHandler<AccountEvent> updateAccount;
-        public event EventHandler<AccountEvent> UpdateAccount
-        {
-            add { updateAccount += value; }
-            remove { updateAccount -= value; }
         }
 
         private void fAccountProfile_Load(object sender, EventArgs e)

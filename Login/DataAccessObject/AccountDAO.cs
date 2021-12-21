@@ -62,6 +62,11 @@ namespace Login.DataAccessObject
             return null;
         }
         **/
+
+        public DataTable GetListAccount()
+        {
+            return DataAccess.Instance.ExecuteQuery("SELECT userName, displayName, accountType FROM dbo.Account");   
+        }
         
         public AccountAuthentication GetAccountByUserName(string userName)
         {

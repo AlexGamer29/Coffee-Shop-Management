@@ -50,7 +50,7 @@ namespace Login
             }
             catch (BCrypt.Net.SaltParseException ex)
             {
-                MessageBox.Show("Bạn đã nhập sai tên tài khoản hoặc mật khẩu!");
+                MessageBox.Show(ex.ToString(), ex.Message);
             }
         }
 

@@ -9,7 +9,6 @@ C:\Users\Hi there\Desktop\Coffee-management\Login\bin\Debug\BCrypt.Net.xml
 C:\Users\Hi there\Desktop\Coffee-management\Login\bin\Debug\EntityFramework.xml
 C:\Users\Hi there\Desktop\Coffee-management\Login\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Hi there\Desktop\Coffee-management\Login\bin\Debug\NuGet.Frameworks.xml
-C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\CoffeeManagement.csproj.AssemblyReference.cache
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\CoffeeManagement.csproj.SuggestedBindingRedirects.cache
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.fAccountProfile.resources
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.fAdmin.resources
@@ -22,3 +21,8 @@ C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\CoffeeManagement.csp
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\CoffeeManagement.csproj.CopyComplete
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.exe
 C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.pdb
+C:\Users\Hi there\Desktop\Coffee-management\Login\bin\Debug\Login.exe.manifest
+C:\Users\Hi there\Desktop\Coffee-management\Login\bin\Debug\Login.application
+C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.exe.manifest
+C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\Login.application
+C:\Users\Hi there\Desktop\Coffee-management\Login\obj\Debug\CoffeeManagement.csproj.AssemblyReference.cache

@@ -72,8 +72,8 @@ namespace Login
             foreach (Menu item in listReceiptInfo)
             {
                 string count = item.Count.ToString();
-                string price = Currency.FormatCurrency("VND", ((decimal)item.Price));
-                string totalPrice = Currency.FormatCurrency("VND", ((decimal)item.TotalPrice));
+                string price = Currency.FormatCurrency("VND", (decimal)item.Price);
+                string totalPrice = Currency.FormatCurrency("VND", (decimal)item.TotalPrice);
                 ListViewItem listItem = new ListViewItem(item.FoodName.ToString());
                 listItem.SubItems.Add(count);
                 listItem.SubItems.Add(price);
