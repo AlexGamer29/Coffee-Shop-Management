@@ -11,7 +11,7 @@ namespace Login
     public class DataAccess
     {
         private static DataAccess instance;
-        private string ConnectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
+        private string ConnectionString = "Data Source=DESKTOP-5IDUU87;Initial Catalog=CoffeeShop;Integrated Security=True";
 
         public static DataAccess Instance
         {

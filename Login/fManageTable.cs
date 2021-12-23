@@ -135,5 +135,10 @@ namespace Login
             this.Close();
         }
         #endregion
+
+        private void flowLayoutPanel_listTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

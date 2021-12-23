@@ -293,6 +293,7 @@
             this.flowLayoutPanel_listTable.Name = "flowLayoutPanel_listTable";
             this.flowLayoutPanel_listTable.Size = new System.Drawing.Size(591, 596);
             this.flowLayoutPanel_listTable.TabIndex = 5;
+            this.flowLayoutPanel_listTable.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel_listTable_Paint);
             // 
             // pictureBox_close
             // 

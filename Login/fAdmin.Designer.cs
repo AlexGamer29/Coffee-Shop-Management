@@ -226,10 +226,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.Location = new System.Drawing.Point(11, 13);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 19);
+            this.label7.Size = new System.Drawing.Size(90, 20);
             this.label7.TabIndex = 5;
             this.label7.Text = "Trạng thái";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -247,10 +247,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.Location = new System.Drawing.Point(11, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 19);
+            this.label5.Size = new System.Drawing.Size(74, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Tên bàn";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -258,11 +258,11 @@
             // txtbox_tableName
             // 
             this.txtbox_tableName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_tableName.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_tableName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_tableName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.txtbox_tableName.Location = new System.Drawing.Point(129, 9);
             this.txtbox_tableName.Name = "txtbox_tableName";
-            this.txtbox_tableName.Size = new System.Drawing.Size(188, 27);
+            this.txtbox_tableName.Size = new System.Drawing.Size(188, 26);
             this.txtbox_tableName.TabIndex = 4;
             this.txtbox_tableName.Text = " ";
             // 
@@ -279,10 +279,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(11, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 19);
+            this.label6.Size = new System.Drawing.Size(33, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "ID:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -290,12 +290,12 @@
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.textBox2.Location = new System.Drawing.Point(129, 9);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(188, 27);
+            this.textBox2.Size = new System.Drawing.Size(188, 26);
             this.textBox2.TabIndex = 4;
             // 
             // panel18
@@ -420,10 +420,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label8.Location = new System.Drawing.Point(11, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 19);
+            this.label8.Size = new System.Drawing.Size(127, 20);
             this.label8.TabIndex = 5;
             this.label8.Text = "Tên danh mục:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -431,11 +431,11 @@
             // txtbox_categoryName
             // 
             this.txtbox_categoryName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_categoryName.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_categoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_categoryName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.txtbox_categoryName.Location = new System.Drawing.Point(129, 9);
             this.txtbox_categoryName.Name = "txtbox_categoryName";
-            this.txtbox_categoryName.Size = new System.Drawing.Size(188, 27);
+            this.txtbox_categoryName.Size = new System.Drawing.Size(188, 26);
             this.txtbox_categoryName.TabIndex = 4;
             this.txtbox_categoryName.Text = " ";
             // 
@@ -452,10 +452,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label9.Location = new System.Drawing.Point(11, 13);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 19);
+            this.label9.Size = new System.Drawing.Size(33, 20);
             this.label9.TabIndex = 5;
             this.label9.Text = "ID:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -463,12 +463,12 @@
             // txtbox_idCategory
             // 
             this.txtbox_idCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_idCategory.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_idCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_idCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.txtbox_idCategory.Location = new System.Drawing.Point(129, 9);
             this.txtbox_idCategory.Name = "txtbox_idCategory";
             this.txtbox_idCategory.ReadOnly = true;
-            this.txtbox_idCategory.Size = new System.Drawing.Size(188, 27);
+            this.txtbox_idCategory.Size = new System.Drawing.Size(188, 26);
             this.txtbox_idCategory.TabIndex = 4;
             // 
             // panel15
@@ -597,10 +597,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.Location = new System.Drawing.Point(11, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 19);
+            this.label4.Size = new System.Drawing.Size(42, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Giá:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -612,14 +612,15 @@
             this.numericUpDown_foodPrice.Size = new System.Drawing.Size(215, 20);
             this.numericUpDown_foodPrice.TabIndex = 6;
             this.numericUpDown_foodPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_foodPrice.ValueChanged += new System.EventHandler(this.numericUpDown_foodPrice_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(11, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 19);
+            this.label3.Size = new System.Drawing.Size(14, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = " ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -645,10 +646,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(11, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 19);
+            this.label2.Size = new System.Drawing.Size(95, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Danh mục:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -666,10 +667,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(11, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 19);
+            this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tên món:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -677,11 +678,11 @@
             // txtbox_foodName
             // 
             this.txtbox_foodName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_foodName.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_foodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_foodName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.txtbox_foodName.Location = new System.Drawing.Point(102, 9);
             this.txtbox_foodName.Name = "txtbox_foodName";
-            this.txtbox_foodName.Size = new System.Drawing.Size(215, 27);
+            this.txtbox_foodName.Size = new System.Drawing.Size(215, 26);
             this.txtbox_foodName.TabIndex = 4;
             this.txtbox_foodName.Text = " ";
             // 
@@ -698,10 +699,10 @@
             // label_userName
             // 
             this.label_userName.AutoSize = true;
-            this.label_userName.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_userName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label_userName.Location = new System.Drawing.Point(11, 13);
             this.label_userName.Name = "label_userName";
-            this.label_userName.Size = new System.Drawing.Size(30, 19);
+            this.label_userName.Size = new System.Drawing.Size(33, 20);
             this.label_userName.TabIndex = 5;
             this.label_userName.Text = "ID:";
             this.label_userName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -709,12 +710,12 @@
             // txtbox_foodID
             // 
             this.txtbox_foodID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_foodID.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_foodID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_foodID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.txtbox_foodID.Location = new System.Drawing.Point(102, 9);
             this.txtbox_foodID.Name = "txtbox_foodID";
             this.txtbox_foodID.ReadOnly = true;
-            this.txtbox_foodID.Size = new System.Drawing.Size(215, 27);
+            this.txtbox_foodID.Size = new System.Drawing.Size(215, 26);
             this.txtbox_foodID.TabIndex = 4;
             // 
             // panel6
@@ -736,6 +737,7 @@
             this.btn_viewMenu.TabIndex = 4;
             this.btn_viewMenu.Text = "Xem";
             this.btn_viewMenu.UseVisualStyleBackColor = true;
+            this.btn_viewMenu.Click += new System.EventHandler(this.btn_viewMenu_Click);
             // 
             // btn_editMenu
             // 
@@ -894,10 +896,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label12.Location = new System.Drawing.Point(11, 13);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 19);
+            this.label12.Size = new System.Drawing.Size(78, 20);
             this.label12.TabIndex = 5;
             this.label12.Text = "Chức vụ:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -915,10 +917,10 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label13.Location = new System.Drawing.Point(11, 13);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(97, 19);
+            this.label13.Size = new System.Drawing.Size(108, 20);
             this.label13.TabIndex = 5;
             this.label13.Text = "Tên hiển thị:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -926,11 +928,11 @@
             // txtbox_displayName
             // 
             this.txtbox_displayName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_displayName.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_displayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_displayName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.txtbox_displayName.Location = new System.Drawing.Point(133, 9);
             this.txtbox_displayName.Name = "txtbox_displayName";
-            this.txtbox_displayName.Size = new System.Drawing.Size(184, 27);
+            this.txtbox_displayName.Size = new System.Drawing.Size(184, 26);
             this.txtbox_displayName.TabIndex = 4;
             this.txtbox_displayName.Text = " ";
             // 
@@ -947,10 +949,10 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label14.Location = new System.Drawing.Point(11, 13);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(116, 19);
+            this.label14.Size = new System.Drawing.Size(134, 20);
             this.label14.TabIndex = 5;
             this.label14.Text = "Tên đăng nhập:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -958,12 +960,12 @@
             // txtbox_userName
             // 
             this.txtbox_userName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_userName.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_userName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_userName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.txtbox_userName.Location = new System.Drawing.Point(133, 9);
             this.txtbox_userName.Name = "txtbox_userName";
             this.txtbox_userName.ReadOnly = true;
-            this.txtbox_userName.Size = new System.Drawing.Size(184, 27);
+            this.txtbox_userName.Size = new System.Drawing.Size(184, 26);
             this.txtbox_userName.TabIndex = 4;
             // 
             // panel26
