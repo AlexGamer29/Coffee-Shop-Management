@@ -170,12 +170,9 @@ namespace Login
         
         #endregion
 
-<<<<<<< HEAD
         private void flowLayoutPanel_listTable_Paint(object sender, PaintEventArgs e)
         {
 
         }
-=======
->>>>>>> ce2326069e4406ca3270c9eb77d9339b41f13f0d
     }
 }

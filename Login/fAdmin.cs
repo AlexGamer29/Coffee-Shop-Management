@@ -29,14 +29,11 @@ namespace Login
             dataGridView_account.DataSource = accountList;
 
             LoadMenu();
-<<<<<<< HEAD
             LoadListMenu();
             AddMenuBinding();
-=======
             //LoadAccountList();
             AddAccountBinding();
             LoadAccount();
->>>>>>> ce2326069e4406ca3270c9eb77d9339b41f13f0d
         }
         //Thieu ham Load()
         void LoadMenu()
@@ -61,12 +58,10 @@ namespace Login
            
         }
 
-<<<<<<< HEAD
         void LoadListMenu()
         {
             dataGridView_menu.DataSource = MenuDAO.Instance.GetListMenu();
         }
-=======
         void AddAccountBinding()
         {
             txtbox_userName.DataBindings.Add(new Binding("Text", dataGridView_account.DataSource, "Username", true, DataSourceUpdateMode.Never));
@@ -79,7 +74,6 @@ namespace Login
             accountList.DataSource = AccountDAO.Instance.GetListAccount();
         }
 
->>>>>>> ce2326069e4406ca3270c9eb77d9339b41f13f0d
         private void pictureBox_close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -92,7 +86,6 @@ namespace Login
             this.Show();
         }
 
-<<<<<<< HEAD
         private void btn_viewMenu_Click(object sender, EventArgs e)
         {
             LoadListMenu();
@@ -100,8 +93,8 @@ namespace Login
 
         private void numericUpDown_foodPrice_ValueChanged(object sender, EventArgs e)
         {
+        }
 
-=======
         private void btn_search_Click(object sender, EventArgs e)
         {
         }
@@ -109,7 +102,6 @@ namespace Login
         private void btn_viewAccount_Click(object sender, EventArgs e)
         {
             LoadAccount();
->>>>>>> ce2326069e4406ca3270c9eb77d9339b41f13f0d
         }
     }
 }

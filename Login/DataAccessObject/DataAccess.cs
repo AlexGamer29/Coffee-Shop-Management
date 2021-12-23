@@ -11,14 +11,10 @@ namespace Login
     public class DataAccess
     {
         private static DataAccess instance;
-<<<<<<< HEAD
-        private string ConnectionString = "Data Source=DESKTOP-5IDUU87;Initial Catalog=CoffeeShop;Integrated Security=True";
-=======
-        private string ConnectionString = "Data Source=LAPTOP-TJQFN4F8;Initial Catalog=CoffeeShop;Integrated Security=True";
-        //private string ConnectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
+        //private string ConnectionString = "Data Source=DESKTOP-5IDUU87;Initial Catalog=CoffeeShop;Integrated Security=True";
+        //private string ConnectionString = "Data Source=LAPTOP-TJQFN4F8;Initial Catalog=CoffeeShop;Integrated Security=True";
+        private string ConnectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
         //thế tên lap vào LAPTOP-TJQFN4F8
-
->>>>>>> ce2326069e4406ca3270c9eb77d9339b41f13f0d
 
         public static DataAccess Instance
         {
