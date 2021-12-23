@@ -17,9 +17,6 @@ namespace Login
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new fLogin());
-            //string str = "123123456";
-            //string hash = BCrypt.Net.BCrypt.HashPassword(str);
-            //Console.WriteLine("Hash =  " + hash);
         }
     }
 }

@@ -21,10 +21,10 @@ namespace Login
         public fAdmin()
         {
             InitializeComponent();
-            Load();
+            LoadMethods();
         }
 
-        void Load()
+        void LoadMethods()
         {
             dataGridView_account.DataSource = accountList;
 
