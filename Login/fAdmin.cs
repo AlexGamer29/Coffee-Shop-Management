@@ -27,9 +27,10 @@ namespace Login
         void LoadMethods()
         {
             dataGridView_account.DataSource = accountList;
-
+            
             LoadMenu();
             LoadListFood();
+            LoadCategoryIntoCombobox(comboBox_category);
             AddMenuBinding();
             //LoadAccountList();
             AddAccountBinding();
@@ -55,7 +56,8 @@ namespace Login
         }
         void LoadCategoryIntoCombobox(ComboBox cb )
         {
-           
+            cb.DataSource = CategoryDAO.Instance.GetListCategory();
+            cb.DisplayMember = "Name";
         }
 
         void LoadListFood()

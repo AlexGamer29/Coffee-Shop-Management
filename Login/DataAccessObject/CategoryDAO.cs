@@ -35,5 +35,21 @@ namespace Login.DataAccessObject
             }
             return list;
         }
+        public Category GetCategoryByID( int id )
+        {
+            Category category = null;
+            string query = "SELECT * FROM Categories where id = " + id;
+
+            DataTable data = DataAccess.Instance.ExecuteQuery(query);
+
+            foreach (DataRow dr in data.Rows)
+            {
+                category = new Category(dr);
+                return category;
+
+            }
+
+            return category;
+        }
     }
 }

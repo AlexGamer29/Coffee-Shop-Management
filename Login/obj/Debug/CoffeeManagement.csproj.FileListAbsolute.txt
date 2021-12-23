@@ -25,3 +25,4 @@ D:\code\Coffee-Shop-Management\Login\obj\Debug\Login.application
 D:\code\Coffee-Shop-Management\Login\obj\Debug\CoffeeManagement.csproj.CopyComplete
 D:\code\Coffee-Shop-Management\Login\obj\Debug\Login.exe
 D:\code\Coffee-Shop-Management\Login\obj\Debug\Login.pdb
+D:\code\Coffee-Shop-Management\Login\obj\Debug\CoffeeManagement.csproj.AssemblyReference.cache
