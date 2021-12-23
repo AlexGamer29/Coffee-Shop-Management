@@ -41,6 +41,12 @@ namespace Login
             txtbox_displayName.Text = LoginAccount.DisplayName;
         }
 
+        int checkCredential(string userName, string password)
+        {
+            bool credential = fLogin.Login(userName, password);
+            return !credential ? 0 : 1;
+        }
+
         void UpdateAccountInfo()
         {
             string userName = txtbox_username.Text;
@@ -48,14 +54,15 @@ namespace Login
             string password = txtbox_password.Text;
             string newPassword = txtbox_newPassword.Text;
             string retypeNewPassword = txtbox_retypeNewPassword.Text;
-
-            if (!newPassword.Equals(retypeNewPassword))
+            if (!BCrypt.Net.BCrypt.Equals(newPassword, retypeNewPassword))
             {
                 MessageBox.Show("Vui lòng nhập lại mật khẩu đúng với mật khẩu mới!");
             }
             else
             {
-                if (AccountDAO.Instance.UpdateAccount(userName, displayName, password, newPassword))
+                int check = checkCredential(userName, password);
+                string hashNewPassword = BCrypt.Net.BCrypt.HashPassword(retypeNewPassword);
+                if (AccountDAO.Instance.UpdateAccount(userName, displayName, check, hashNewPassword))
                 {
                     MessageBox.Show("Cập nhật thông tin cá nhân thành công!");
                     if (updateAccount != null)

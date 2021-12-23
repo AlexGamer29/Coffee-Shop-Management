@@ -44,10 +44,10 @@ namespace Login.DataAccessObject
             // return result.Rows.Count > 0;
         }
 
-        public bool UpdateAccount(string userName, string displayName, string password, string newPassword)
+        public bool UpdateAccount(string userName, string displayName, int check, string newPassword)
         {
-            string query = "USERPROC_UpdateAccount @userName , @displayName , @password , @newPassword";
-            int data = DataAccess.Instance.ExecuteNonQuery(query, new object[] { userName, displayName, password, newPassword });
+            string query = "USERPROC_UpdateAccount @userName , @displayName , @check , @newPassword";
+            int data = DataAccess.Instance.ExecuteNonQuery(query, new object[] { userName, displayName, check, newPassword });
             return data > 0;
         }
 
