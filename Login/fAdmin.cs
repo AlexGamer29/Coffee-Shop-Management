@@ -29,7 +29,7 @@ namespace Login
             dataGridView_account.DataSource = accountList;
 
             LoadMenu();
-            LoadListMenu();
+            LoadListFood();
             AddMenuBinding();
             //LoadAccountList();
             AddAccountBinding();
@@ -58,9 +58,9 @@ namespace Login
            
         }
 
-        void LoadListMenu()
+        void LoadListFood()
         {
-            dataGridView_menu.DataSource = MenuDAO.Instance.GetListMenu();
+            dataGridView_menu.DataSource = FoodDAO.Instance.GetListFood();
         }
         void AddAccountBinding()
         {
@@ -88,7 +88,7 @@ namespace Login
 
         private void btn_viewMenu_Click(object sender, EventArgs e)
         {
-            LoadListMenu();
+            LoadListFood();
         }
 
         private void numericUpDown_foodPrice_ValueChanged(object sender, EventArgs e)

@@ -52,7 +52,7 @@ namespace Login
         {
             List<Food> foodList = FoodDAO.Instance.GetFoodByCategoryID(id);
             comboBox1.DataSource = foodList;
-            comboBox1.DisplayMember = "Price";
+            comboBox1.DisplayMember = "Name";
             // Đổi tên Combox1
         }
 

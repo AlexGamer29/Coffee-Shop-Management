@@ -36,5 +36,21 @@ namespace Login.DataAccessObject
             }
             return list;
         }
+
+        public List<Food> GetListFood()
+        {
+            List<Food> listFood = new List<Food>();
+            //string query = "SELECT Menu.name, ReceiptInfo.numberOfFood, Menu.price, Menu.price*ReceiptInfo.numberOfFood AS totalPrice FROM dbo.ReceiptInfo AS ReceiptInfo, dbo.Receipt AS Receipt, dbo.Menu AS Menu WHERE ReceiptInfo.idReceipt = Receipt.id AND ReceiptInfo.idMenu = Menu.id AND Receipt.STATUS = 0 AND Receipt.idTable = " + idTable;
+            string query = "SELECT * FROM Menu";
+            //Thieu procedure
+            DataTable data = DataAccess.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Food menu = new Food(item);
+                listFood.Add(menu);
+            }
+            return listFood;
+        }
     }
 }
