@@ -16,13 +16,27 @@ namespace Login
 {
     public partial class fAdmin : Form
     {
+        BindingSource accountList = new BindingSource();
+
         public fAdmin()
         {
             InitializeComponent();
-            LoadAccountList();
+            LoadMethods();
+        }
+
+        void LoadMethods()
+        {
+            dataGridView_account.DataSource = accountList;
+
             LoadMenu();
+<<<<<<< HEAD
             LoadListMenu();
             AddMenuBinding();
+=======
+            //LoadAccountList();
+            AddAccountBinding();
+            LoadAccount();
+>>>>>>> ce2326069e4406ca3270c9eb77d9339b41f13f0d
         }
         //Thieu ham Load()
         void LoadMenu()
@@ -47,10 +61,25 @@ namespace Login
            
         }
 
+<<<<<<< HEAD
         void LoadListMenu()
         {
             dataGridView_menu.DataSource = MenuDAO.Instance.GetListMenu();
         }
+=======
+        void AddAccountBinding()
+        {
+            txtbox_userName.DataBindings.Add(new Binding("Text", dataGridView_account.DataSource, "Username", true, DataSourceUpdateMode.Never));
+            txtbox_displayName.DataBindings.Add(new Binding("Text", dataGridView_account.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
+            txtbox_accountType.DataBindings.Add(new Binding("Text", dataGridView_account.DataSource, "AccountType", true, DataSourceUpdateMode.Never));
+        }
+
+        void LoadAccount()
+        {
+            accountList.DataSource = AccountDAO.Instance.GetListAccount();
+        }
+
+>>>>>>> ce2326069e4406ca3270c9eb77d9339b41f13f0d
         private void pictureBox_close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -63,6 +92,7 @@ namespace Login
             this.Show();
         }
 
+<<<<<<< HEAD
         private void btn_viewMenu_Click(object sender, EventArgs e)
         {
             LoadListMenu();
@@ -71,6 +101,15 @@ namespace Login
         private void numericUpDown_foodPrice_ValueChanged(object sender, EventArgs e)
         {
 
+=======
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_viewAccount_Click(object sender, EventArgs e)
+        {
+            LoadAccount();
+>>>>>>> ce2326069e4406ca3270c9eb77d9339b41f13f0d
         }
     }
 }

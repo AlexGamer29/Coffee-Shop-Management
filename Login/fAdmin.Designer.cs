@@ -107,7 +107,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button_add = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.comboBox_accountType = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -130,6 +129,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView_receipt = new System.Windows.Forms.DataGridView();
             this.tabControl_receipt = new System.Windows.Forms.TabControl();
+            this.txtbox_accountType = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.tabPage_table.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -830,6 +830,7 @@
             this.btn_search.TabIndex = 5;
             this.btn_search.Text = "Tìm kiếm";
             this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // tabPage_account
             // 
@@ -878,20 +879,12 @@
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.White;
-            this.panel23.Controls.Add(this.comboBox_accountType);
+            this.panel23.Controls.Add(this.txtbox_accountType);
             this.panel23.Controls.Add(this.label12);
             this.panel23.Location = new System.Drawing.Point(5, 105);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(333, 45);
             this.panel23.TabIndex = 7;
-            // 
-            // comboBox_accountType
-            // 
-            this.comboBox_accountType.FormattingEnabled = true;
-            this.comboBox_accountType.Location = new System.Drawing.Point(133, 11);
-            this.comboBox_accountType.Name = "comboBox_accountType";
-            this.comboBox_accountType.Size = new System.Drawing.Size(184, 21);
-            this.comboBox_accountType.TabIndex = 8;
             // 
             // label12
             // 
@@ -987,6 +980,7 @@
             this.btn_viewAccount.TabIndex = 4;
             this.btn_viewAccount.Text = "Xem";
             this.btn_viewAccount.UseVisualStyleBackColor = true;
+            this.btn_viewAccount.Click += new System.EventHandler(this.btn_viewAccount_Click);
             // 
             // btn_editAccount
             // 
@@ -1153,6 +1147,17 @@
             this.tabControl_receipt.Size = new System.Drawing.Size(802, 497);
             this.tabControl_receipt.TabIndex = 0;
             // 
+            // txtbox_accountType
+            // 
+            this.txtbox_accountType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbox_accountType.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_accountType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtbox_accountType.Location = new System.Drawing.Point(133, 11);
+            this.txtbox_accountType.Name = "txtbox_accountType";
+            this.txtbox_accountType.Size = new System.Drawing.Size(184, 27);
+            this.txtbox_accountType.TabIndex = 6;
+            this.txtbox_accountType.Text = " ";
+            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1292,7 +1297,6 @@
         private System.Windows.Forms.DataGridView dataGridView_table;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.ComboBox comboBox_accountType;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Label label13;
@@ -1308,5 +1312,6 @@
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.DataGridView dataGridView_account;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtbox_accountType;
     }
 }

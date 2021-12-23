@@ -37,5 +37,10 @@ namespace Login.DataAccessObject
             }
             return -1;
         }
+
+        public void InsertReceipt(int id)
+        {
+            DataAccess.Instance.ExecuteNonQuery("EXEC USERPROC_InsertReceipt @idTable", new object[]{id});
+        }
     }
 }

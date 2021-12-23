@@ -5,10 +5,17 @@
     <Setting Name="CoffeeShopConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+<<<<<<< HEAD
   &lt;ConnectionString&gt;Data Source=DESKTOP-5IDUU87;Initial Catalog=CoffeeShop;Integrated Security=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=DESKTOP-5IDUU87;Initial Catalog=CoffeeShop;Integrated Security=True</Value>
+=======
+  &lt;ConnectionString&gt;Data Source=LAPTOP-TJQFN4F8;Initial Catalog=CoffeeShop;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=LAPTOP-TJQFN4F8;Initial Catalog=CoffeeShop;Integrated Security=True</Value>
+>>>>>>> ce2326069e4406ca3270c9eb77d9339b41f13f0d
     </Setting>
   </Settings>
 </SettingsFile>

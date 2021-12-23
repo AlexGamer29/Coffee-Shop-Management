@@ -10,8 +10,12 @@ namespace Login
 {
     internal class Hashing
     {
+#pragma warning disable CS0649 // Field 'Hashing.plainText' is never assigned to, and will always have its default value null
         public string plainText;
+#pragma warning restore CS0649 // Field 'Hashing.plainText' is never assigned to, and will always have its default value null
+#pragma warning disable CS0649 // Field 'Hashing.saltBytes' is never assigned to, and will always have its default value null
         public string saltBytes;
+#pragma warning restore CS0649 // Field 'Hashing.saltBytes' is never assigned to, and will always have its default value null
 
         static string GenerateSalt()
         {

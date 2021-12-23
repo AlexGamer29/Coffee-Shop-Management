@@ -30,6 +30,7 @@ namespace Login
             InitializeComponent();
             this.LoginAccount = login;
             LoadTable();
+            LoadCategory();
         }
 
         #region Methods
@@ -38,6 +39,21 @@ namespace Login
         {
             adminToolStripMenuItem.Enabled = accountType == 1;
             thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
+        }
+
+        void LoadCategory()
+        {
+            List<Category> categories = CategoryDAO.Instance.GetListCategory();
+            combobox_categories.DataSource = categories;
+            combobox_categories.DisplayMember = "Name";
+
+        }
+        void LoadFoodListByCategoryID(int id)
+        {
+            List<Food> foodList = FoodDAO.Instance.GetFoodByCategoryID(id);
+            comboBox1.DataSource = foodList;
+            comboBox1.DisplayMember = "Price";
+            // Đổi tên Combox1
         }
 
         void LoadTable()
@@ -72,8 +88,8 @@ namespace Login
             foreach (Menu item in listReceiptInfo)
             {
                 string count = item.Count.ToString();
-                string price = Currency.FormatCurrency("VND", ((decimal)item.Price));
-                string totalPrice = Currency.FormatCurrency("VND", ((decimal)item.TotalPrice));
+                string price = Currency.FormatCurrency("VND", (decimal)item.Price);
+                string totalPrice = Currency.FormatCurrency("VND", (decimal)item.TotalPrice);
                 ListViewItem listItem = new ListViewItem(item.FoodName.ToString());
                 listItem.SubItems.Add(count);
                 listItem.SubItems.Add(price);
@@ -89,12 +105,13 @@ namespace Login
         private void btn_Click(object sender, EventArgs e)
         {
             int idTable = ((sender as Button).Tag as Table).ID;
+            listview_Receipt.Tag = (sender as Button).Tag;
             ShowReceipt(idTable);
         }
 
         private void btn_addMenu_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -132,13 +149,33 @@ namespace Login
 
         private void pictureBox_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();   
         }
+        
+
+        private void combobox_categories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+
+            ComboBox cb = sender as ComboBox;
+
+            if (cb.SelectedItem == null)
+                return;
+
+            Category Selected = cb.SelectedItem as Category;
+            id = Selected.ID;
+
+            LoadFoodListByCategoryID(id);
+        }
+        
         #endregion
 
+<<<<<<< HEAD
         private void flowLayoutPanel_listTable_Paint(object sender, PaintEventArgs e)
         {
 
         }
+=======
+>>>>>>> ce2326069e4406ca3270c9eb77d9339b41f13f0d
     }
 }
