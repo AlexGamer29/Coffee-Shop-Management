@@ -23,7 +23,7 @@ namespace Login
             InitializeComponent();
         }
 
-        bool Login(string userName, string passWord)
+        public static bool Login(string userName, string passWord)
         {
             return DataAccessObject.AccountDAO.Instance.Login(userName, passWord);
         }
