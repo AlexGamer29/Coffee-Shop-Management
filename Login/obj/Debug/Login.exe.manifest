@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zBjUbYH0RgOebqEfc63Sb6LsQTJeYBF402Q+KgvTEOI=</dsig:DigestValue>
+        <dsig:DigestValue>olyQNfwbxyr3c+mtAu96yKwSjJgzJXrzZyncZ45euZs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,6 +98,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>cLBhryYY4RQaCGzejzcbkPWzwzSQi0Ntscp5eT/8M7A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="XanderUI.dll" size="187904">
+      <assemblyIdentity name="XanderUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>nPYOixMSVFI+bAqAxeRecTfERq87yuS7J4MNNLN1Nkg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
