@@ -107,6 +107,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button_add = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.txtbox_accountType = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -129,7 +130,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView_receipt = new System.Windows.Forms.DataGridView();
             this.tabControl_receipt = new System.Windows.Forms.TabControl();
-            this.txtbox_accountType = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.tabPage_table.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -612,7 +612,6 @@
             this.numericUpDown_foodPrice.Size = new System.Drawing.Size(215, 20);
             this.numericUpDown_foodPrice.TabIndex = 6;
             this.numericUpDown_foodPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown_foodPrice.ValueChanged += new System.EventHandler(this.numericUpDown_foodPrice_ValueChanged);
             // 
             // label3
             // 
@@ -886,6 +885,17 @@
             this.panel23.Size = new System.Drawing.Size(333, 45);
             this.panel23.TabIndex = 7;
             // 
+            // txtbox_accountType
+            // 
+            this.txtbox_accountType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbox_accountType.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_accountType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
+            this.txtbox_accountType.Location = new System.Drawing.Point(133, 11);
+            this.txtbox_accountType.Name = "txtbox_accountType";
+            this.txtbox_accountType.Size = new System.Drawing.Size(184, 27);
+            this.txtbox_accountType.TabIndex = 6;
+            this.txtbox_accountType.Text = " ";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -1146,17 +1156,6 @@
             this.tabControl_receipt.SelectedIndex = 0;
             this.tabControl_receipt.Size = new System.Drawing.Size(802, 497);
             this.tabControl_receipt.TabIndex = 0;
-            // 
-            // txtbox_accountType
-            // 
-            this.txtbox_accountType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_accountType.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtbox_accountType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.txtbox_accountType.Location = new System.Drawing.Point(133, 11);
-            this.txtbox_accountType.Name = "txtbox_accountType";
-            this.txtbox_accountType.Size = new System.Drawing.Size(184, 27);
-            this.txtbox_accountType.TabIndex = 6;
-            this.txtbox_accountType.Text = " ";
             // 
             // fAdmin
             // 
