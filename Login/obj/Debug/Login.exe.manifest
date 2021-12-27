@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Login.exe" size="180736">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Login.exe" size="181248">
       <assemblyIdentity name="Login" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZLq0bypWRRvqQwvOkPu7j8VAvVtOkBTcistMB+COfCQ=</dsig:DigestValue>
+        <dsig:DigestValue>BAwGdLZUQ4urdIKybIMRTCGZZ8ZqYPsfy6HFYzYLzog=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -107,7 +107,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+2gz78o6kzHkArjsNWINWrLjhdqW7rIgqkYYo4N8RuE=</dsig:DigestValue>
+      <dsig:DigestValue>ITShCpa45tCoaNVTSrr4mfa5OO2eHSJMpLFZm790oAU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Model1.Context.tt" size="22930">

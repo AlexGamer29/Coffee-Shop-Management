@@ -38,9 +38,27 @@ namespace Login.DataAccessObject
             return -1;
         }
 
+        public void CheckOut(int id, int discount)
+        {
+            string query = "UPDATE dbo.Receipt SET status = 1, " + "discount" + discount + " WHERE id =  " + id;
+            DataAccess.Instance.ExecuteNonQuery(query);
+
+        }
         public void InsertReceipt(int id)
         {
             DataAccess.Instance.ExecuteNonQuery("EXEC USERPROC_InsertReceipt @idTable", new object[]{id});
+        }
+
+        public int GetMaxIDReceipt()
+        {
+            try
+            {
+                return (int)DataAccess.Instance.ExecuteScalar("SELECT MAX(id) FROM dbo.Receipt");
+            }
+            catch 
+            { 
+                return 1; 
+            }
         }
     }
 }

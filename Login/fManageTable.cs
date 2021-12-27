@@ -51,13 +51,15 @@ namespace Login
         void LoadFoodListByCategoryID(int id)
         {
             List<Food> foodList = FoodDAO.Instance.GetFoodByCategoryID(id);
-            comboBox1.DataSource = foodList;
-            comboBox1.DisplayMember = "Name";
+            comboBox_food.DataSource = foodList;
+            comboBox_food.DisplayMember = "Name";
             // Đổi tên Combox1
         }
 
         void LoadTable()
-        {
+        { 
+            flowLayoutPanel_listTable.Controls.Clear();
+
             List<Table> tableList = TableDAO.Instance.LoadTableList();
             foreach (Table item in tableList)
             {
@@ -97,7 +99,7 @@ namespace Login
                 listview_Receipt.Items.Add(listItem);
                 totalPriceDisplay += item.TotalPrice;
             }
-            txtbox_totalPrice.Text = Currency.FormatCurrency("VND", ((decimal)totalPriceDisplay));
+            txtbox_totalPrice.Text = Currency.FormatCurrency("VND", ((decimal)totalPriceDisplay));           
         }
         #endregion
 
@@ -111,10 +113,26 @@ namespace Login
 
         private void btn_addMenu_Click(object sender, EventArgs e)
         {
+            Table table = listview_Receipt.Tag as Table;
             
+            int idReceipt = ReceiptDAO.Instance.GetUncheckReceiptIDByTableID(table.ID);
+            int idFood = (comboBox_food.SelectedItem as Food).ID;
+            int count = (int)numericUpDown_foodCount.Value;
+
+            if (idReceipt == -1)
+            {
+                ReceiptDAO.Instance.InsertReceipt(table.ID);
+                ReceiptInfoDAO.Instance.InsertReceiptInfo(ReceiptDAO.Instance.GetMaxIDReceipt(), idFood, count);
+            }
+            else
+            {
+                ReceiptInfoDAO.Instance.InsertReceiptInfo(idReceipt, idFood, count);    
+            }
+            ShowReceipt(table.ID);
+            LoadTable();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_switchTable_Click(object sender, EventArgs e)
         {
 
         }
@@ -157,22 +175,40 @@ namespace Login
         {
             int id = 0;
 
-            ComboBox cb = sender as ComboBox;
+            ComboBox combo = sender as ComboBox;
 
-            if (cb.SelectedItem == null)
+            if (combo.SelectedItem == null)
                 return;
 
-            Category Selected = cb.SelectedItem as Category;
+            Category Selected = combo.SelectedItem as Category;
             id = Selected.ID;
 
             LoadFoodListByCategoryID(id);
         }
-        
+        private void btn_checkOut_Click(object sender, EventArgs e)
+        {
+            Table table = listview_Receipt.Tag as Table;
+
+            int idReceipt = ReceiptDAO.Instance.GetUncheckReceiptIDByTableID(table.ID);
+            int discount = (int)amount_discount.Value;
+
+            double totalPrice = Convert.ToDouble(txtbox_totalPrice.Text.Split(' ')[0]);
+            double finaltotalPrice = totalPrice - (totalPrice/100) * discount;
+            if (idReceipt != -1)
+            {
+                if (MessageBox.Show(String.Format("Ban co chac thanh toan hoa don cho ban {0}\n Tong tien" +
+                    "Tong tien - (Tong tien/100) * Giam gia = {1} - ({1}/100) * {2} = {3}", table.Name, totalPrice, discount, finaltotalPrice), "Thong bao ", 
+                    MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    ReceiptDAO.Instance.CheckOut(idReceipt, discount);
+                    ShowReceipt(table.ID);
+
+                    LoadTable(); 
+                }
+            }
+        }
         #endregion
 
-        private void flowLayoutPanel_listTable_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
     }
 }

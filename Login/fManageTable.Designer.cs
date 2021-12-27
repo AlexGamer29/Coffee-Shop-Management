@@ -48,9 +48,9 @@
             this.btn_discount = new System.Windows.Forms.Button();
             this.btn_checkOut = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_foodCount = new System.Windows.Forms.NumericUpDown();
             this.btn_addMenu = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_food = new System.Windows.Forms.ComboBox();
             this.combobox_categories = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel_listTable = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox_close = new System.Windows.Forms.PictureBox();
@@ -59,7 +59,7 @@
             this.panel_listButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amount_discount)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_foodCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,14 +73,15 @@
             this.đăngXuấtToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1759, 38);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(1055, 24);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip1";
             // 
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(67, 34);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.adminToolStripMenuItem.Text = "Admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
@@ -89,20 +90,20 @@
             this.thôngTinTàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thôngTinCáNhânToolStripMenuItem});
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(151, 34);
+            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
             // thôngTinCáNhânToolStripMenuItem
             // 
             this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
-            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
             this.thôngTinCáNhânToolStripMenuItem.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(91, 34);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -110,10 +111,9 @@
             // 
             this.panel_listReceipt.AccessibleName = "";
             this.panel_listReceipt.Controls.Add(this.listview_Receipt);
-            this.panel_listReceipt.Location = new System.Drawing.Point(800, 128);
-            this.panel_listReceipt.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_listReceipt.Location = new System.Drawing.Point(600, 104);
             this.panel_listReceipt.Name = "panel_listReceipt";
-            this.panel_listReceipt.Size = new System.Drawing.Size(597, 587);
+            this.panel_listReceipt.Size = new System.Drawing.Size(448, 477);
             this.panel_listReceipt.TabIndex = 2;
             // 
             // listview_Receipt
@@ -126,10 +126,9 @@
             this.columnHeader_totalPrice});
             this.listview_Receipt.GridLines = true;
             this.listview_Receipt.HideSelection = false;
-            this.listview_Receipt.Location = new System.Drawing.Point(4, 4);
-            this.listview_Receipt.Margin = new System.Windows.Forms.Padding(4);
+            this.listview_Receipt.Location = new System.Drawing.Point(3, 3);
             this.listview_Receipt.Name = "listview_Receipt";
-            this.listview_Receipt.Size = new System.Drawing.Size(588, 579);
+            this.listview_Receipt.Size = new System.Drawing.Size(442, 471);
             this.listview_Receipt.TabIndex = 0;
             this.listview_Receipt.UseCompatibleStateImageBehavior = false;
             this.listview_Receipt.View = System.Windows.Forms.View.Details;
@@ -163,20 +162,18 @@
             this.panel_listButton.Controls.Add(this.amount_discount);
             this.panel_listButton.Controls.Add(this.btn_discount);
             this.panel_listButton.Controls.Add(this.btn_checkOut);
-            this.panel_listButton.Location = new System.Drawing.Point(800, 719);
-            this.panel_listButton.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_listButton.Location = new System.Drawing.Point(600, 584);
             this.panel_listButton.Name = "panel_listButton";
-            this.panel_listButton.Size = new System.Drawing.Size(597, 71);
+            this.panel_listButton.Size = new System.Drawing.Size(448, 58);
             this.panel_listButton.TabIndex = 3;
             // 
             // label_totalPrice
             // 
             this.label_totalPrice.AutoSize = true;
             this.label_totalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label_totalPrice.Location = new System.Drawing.Point(336, 11);
-            this.label_totalPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_totalPrice.Location = new System.Drawing.Point(252, 9);
             this.label_totalPrice.Name = "label_totalPrice";
-            this.label_totalPrice.Size = new System.Drawing.Size(68, 17);
+            this.label_totalPrice.Size = new System.Drawing.Size(52, 13);
             this.label_totalPrice.TabIndex = 10;
             this.label_totalPrice.Text = "Tổng tiền";
             this.label_totalPrice.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -186,11 +183,10 @@
             this.txtbox_totalPrice.BackColor = System.Drawing.SystemColors.Window;
             this.txtbox_totalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_totalPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtbox_totalPrice.Location = new System.Drawing.Point(303, 34);
-            this.txtbox_totalPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbox_totalPrice.Location = new System.Drawing.Point(227, 28);
             this.txtbox_totalPrice.Name = "txtbox_totalPrice";
             this.txtbox_totalPrice.ReadOnly = true;
-            this.txtbox_totalPrice.Size = new System.Drawing.Size(140, 23);
+            this.txtbox_totalPrice.Size = new System.Drawing.Size(106, 20);
             this.txtbox_totalPrice.TabIndex = 9;
             this.txtbox_totalPrice.Text = "0";
             this.txtbox_totalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -198,77 +194,71 @@
             // comboBox_switchTable
             // 
             this.comboBox_switchTable.FormattingEnabled = true;
-            this.comboBox_switchTable.Location = new System.Drawing.Point(4, 39);
-            this.comboBox_switchTable.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_switchTable.Location = new System.Drawing.Point(3, 32);
             this.comboBox_switchTable.Name = "comboBox_switchTable";
-            this.comboBox_switchTable.Size = new System.Drawing.Size(140, 24);
+            this.comboBox_switchTable.Size = new System.Drawing.Size(106, 21);
             this.comboBox_switchTable.TabIndex = 5;
             // 
             // btn_switchTable
             // 
-            this.btn_switchTable.Location = new System.Drawing.Point(4, 4);
-            this.btn_switchTable.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_switchTable.Location = new System.Drawing.Point(3, 3);
             this.btn_switchTable.Name = "btn_switchTable";
-            this.btn_switchTable.Size = new System.Drawing.Size(141, 30);
+            this.btn_switchTable.Size = new System.Drawing.Size(106, 24);
             this.btn_switchTable.TabIndex = 8;
             this.btn_switchTable.Text = "Chuyển bàn";
             this.btn_switchTable.UseVisualStyleBackColor = true;
-            this.btn_switchTable.Click += new System.EventHandler(this.button1_Click);
+            this.btn_switchTable.Click += new System.EventHandler(this.btn_switchTable_Click);
             // 
             // amount_discount
             // 
-            this.amount_discount.Location = new System.Drawing.Point(153, 41);
-            this.amount_discount.Margin = new System.Windows.Forms.Padding(4);
+            this.amount_discount.Location = new System.Drawing.Point(115, 33);
             this.amount_discount.Name = "amount_discount";
-            this.amount_discount.Size = new System.Drawing.Size(141, 22);
+            this.amount_discount.Size = new System.Drawing.Size(106, 20);
             this.amount_discount.TabIndex = 7;
             this.amount_discount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn_discount
             // 
-            this.btn_discount.Location = new System.Drawing.Point(153, 4);
-            this.btn_discount.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_discount.Location = new System.Drawing.Point(115, 3);
             this.btn_discount.Name = "btn_discount";
-            this.btn_discount.Size = new System.Drawing.Size(141, 30);
+            this.btn_discount.Size = new System.Drawing.Size(106, 24);
             this.btn_discount.TabIndex = 6;
             this.btn_discount.Text = "Giảm giá";
             this.btn_discount.UseVisualStyleBackColor = true;
             // 
             // btn_checkOut
             // 
-            this.btn_checkOut.Location = new System.Drawing.Point(452, 4);
-            this.btn_checkOut.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_checkOut.Location = new System.Drawing.Point(339, 3);
             this.btn_checkOut.Name = "btn_checkOut";
-            this.btn_checkOut.Size = new System.Drawing.Size(141, 64);
+            this.btn_checkOut.Size = new System.Drawing.Size(106, 52);
             this.btn_checkOut.TabIndex = 5;
             this.btn_checkOut.Text = "Thanh toán";
             this.btn_checkOut.UseVisualStyleBackColor = true;
+            this.btn_checkOut.Click += new System.EventHandler(this.btn_checkOut_Click);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.numericUpDown1);
+            this.panel4.Controls.Add(this.numericUpDown_foodCount);
             this.panel4.Controls.Add(this.btn_addMenu);
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.comboBox_food);
             this.panel4.Controls.Add(this.combobox_categories);
-            this.panel4.Location = new System.Drawing.Point(800, 57);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(600, 46);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(597, 68);
+            this.panel4.Size = new System.Drawing.Size(448, 55);
             this.panel4.TabIndex = 4;
             // 
-            // numericUpDown1
+            // numericUpDown_foodCount
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(485, 23);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.numericUpDown_foodCount.Location = new System.Drawing.Point(364, 19);
+            this.numericUpDown_foodCount.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(105, 22);
-            this.numericUpDown1.TabIndex = 4;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numericUpDown_foodCount.Name = "numericUpDown_foodCount";
+            this.numericUpDown_foodCount.Size = new System.Drawing.Size(79, 20);
+            this.numericUpDown_foodCount.TabIndex = 4;
+            this.numericUpDown_foodCount.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -276,61 +266,56 @@
             // 
             // btn_addMenu
             // 
-            this.btn_addMenu.Location = new System.Drawing.Point(336, 4);
-            this.btn_addMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_addMenu.Location = new System.Drawing.Point(252, 3);
             this.btn_addMenu.Name = "btn_addMenu";
-            this.btn_addMenu.Size = new System.Drawing.Size(141, 59);
+            this.btn_addMenu.Size = new System.Drawing.Size(106, 48);
             this.btn_addMenu.TabIndex = 3;
             this.btn_addMenu.Text = "Thêm món";
             this.btn_addMenu.UseVisualStyleBackColor = true;
             this.btn_addMenu.Click += new System.EventHandler(this.btn_addMenu_Click);
             // 
-            // comboBox1
+            // comboBox_food
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(4, 37);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(323, 24);
-            this.comboBox1.TabIndex = 2;
+            this.comboBox_food.AccessibleName = "";
+            this.comboBox_food.FormattingEnabled = true;
+            this.comboBox_food.Location = new System.Drawing.Point(3, 30);
+            this.comboBox_food.Name = "comboBox_food";
+            this.comboBox_food.Size = new System.Drawing.Size(243, 21);
+            this.comboBox_food.TabIndex = 2;
             // 
             // combobox_categories
             // 
             this.combobox_categories.FormattingEnabled = true;
-            this.combobox_categories.Location = new System.Drawing.Point(4, 4);
-            this.combobox_categories.Margin = new System.Windows.Forms.Padding(4);
+            this.combobox_categories.Location = new System.Drawing.Point(3, 3);
             this.combobox_categories.Name = "combobox_categories";
-            this.combobox_categories.Size = new System.Drawing.Size(323, 24);
+            this.combobox_categories.Size = new System.Drawing.Size(243, 21);
             this.combobox_categories.TabIndex = 1;
             this.combobox_categories.SelectedIndexChanged += new System.EventHandler(this.combobox_categories_SelectedIndexChanged);
             // 
             // flowLayoutPanel_listTable
             // 
-            this.flowLayoutPanel_listTable.Location = new System.Drawing.Point(8, 57);
-            this.flowLayoutPanel_listTable.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel_listTable.Location = new System.Drawing.Point(6, 46);
             this.flowLayoutPanel_listTable.Name = "flowLayoutPanel_listTable";
-            this.flowLayoutPanel_listTable.Size = new System.Drawing.Size(788, 734);
+            this.flowLayoutPanel_listTable.Size = new System.Drawing.Size(591, 596);
             this.flowLayoutPanel_listTable.TabIndex = 5;
-            this.flowLayoutPanel_listTable.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel_listTable_Paint);
             // 
             // pictureBox_close
             // 
             this.pictureBox_close.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox_close.Image = global::Login.Properties.Resources.close;
-            this.pictureBox_close.Location = new System.Drawing.Point(1375, 0);
-            this.pictureBox_close.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox_close.Location = new System.Drawing.Point(1031, 0);
             this.pictureBox_close.Name = "pictureBox_close";
-            this.pictureBox_close.Size = new System.Drawing.Size(32, 30);
+            this.pictureBox_close.Size = new System.Drawing.Size(24, 24);
             this.pictureBox_close.TabIndex = 6;
             this.pictureBox_close.TabStop = false;
             this.pictureBox_close.Click += new System.EventHandler(this.pictureBox_close_Click);
             // 
             // fManageTable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1407, 799);
+            this.ClientSize = new System.Drawing.Size(1055, 649);
             this.Controls.Add(this.pictureBox_close);
             this.Controls.Add(this.flowLayoutPanel_listTable);
             this.Controls.Add(this.panel4);
@@ -339,7 +324,6 @@
             this.Controls.Add(this.menuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fManageTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -351,7 +335,7 @@
             this.panel_listButton.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amount_discount)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_foodCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -370,12 +354,12 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox combobox_categories;
         private System.Windows.Forms.Button btn_addMenu;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_food;
         private System.Windows.Forms.Button btn_switchTable;
         private System.Windows.Forms.NumericUpDown amount_discount;
         private System.Windows.Forms.Button btn_discount;
         private System.Windows.Forms.Button btn_checkOut;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown_foodCount;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_listTable;
         private System.Windows.Forms.ComboBox comboBox_switchTable;
         private System.Windows.Forms.PictureBox pictureBox_close;
