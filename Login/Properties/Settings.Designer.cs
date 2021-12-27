@@ -32,5 +32,15 @@ namespace Login.Properties {
                 return ((string)(this["CoffeeShopConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=14.243.50.116;Initial Catalog=CoffeeShop;User ID=oop;Password=admin")]
+        public string RemoteConnectionString {
+            get {
+                return ((string)(this["RemoteConnectionString"]));
+            }
+        }
     }
 }
