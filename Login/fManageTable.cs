@@ -31,7 +31,7 @@ namespace Login
             this.LoginAccount = login;
             LoadTable();
             LoadCategory();
-            //LoadComboBoxTable(cbswitchTable);
+            LoadComboBoxTable(comboBox_switchTable);
             // Bị lỗi nhe Đức
         }
 
@@ -144,9 +144,9 @@ namespace Login
 
         private void btn_switchTable_Click(object sender, EventArgs e)
         {
-            int id1 = (ListviewReceipt.Tag as Table);
+            int id1 = (listview_Receipt.Tag as Table).ID;
 
-            int id2 = (cbSwitchTable.SelectItems as Table).ID;
+            int id2 = (comboBox_switchTable.SelectedItem as Table).ID;
             
 
             TableDAO.Instance.switchTable(id1, id2);

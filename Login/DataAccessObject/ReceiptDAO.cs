@@ -40,7 +40,7 @@ namespace Login.DataAccessObject
 
         public void CheckOut(int id, int discount)
         {
-            string query = "UPDATE dbo.Receipt SET status = 1, " + "discount" + discount + " WHERE id =  " + id;
+            string query = "UPDATE dbo.Receipt SET status = 1, " + "discount = " + discount + " WHERE id =  " + id;
             DataAccess.Instance.ExecuteNonQuery(query);
 
         }
