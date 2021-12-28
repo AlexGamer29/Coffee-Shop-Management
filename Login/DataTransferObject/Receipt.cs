@@ -21,7 +21,7 @@ namespace Login.DataTransferObject
         public int Status { get => status; set => status = value; }
         public int Discount { get => discount; set => discount = value; }
 
-        public Receipt(int id, DateTime? arrivalDate, DateTime? departDate, int status, int discount)
+        public Receipt(int id, DateTime? arrivalDate, DateTime? departDate, int status, int discount = 0)
         {
             this.ID = id;
             this.ArrivalDate = arrivalDate;

@@ -27,8 +27,8 @@ namespace Login.DataAccessObject
         /// <returns></returns>
         public int GetUncheckReceiptIDByTableID(int idTable)
         {
-            //string query = "SELECT * FROM dbo.Receipt WHERE idTable = " + idTable + " AND STATUS = 0";
-            string query = "USERPROC_GetUncheckReceiptIDByTableID @idTable";
+            string query = "SELECT * FROM dbo.Receipt WHERE idTable = " + idTable + " AND STATUS = 0";
+            //string query = "USERPROC_GetUncheckReceiptIDByTableID @idTable";
             DataTable data = DataAccess.Instance.ExecuteQuery(query, new object[] { idTable });
             if(data.Rows.Count > 0)
             {
@@ -40,7 +40,7 @@ namespace Login.DataAccessObject
 
         public void CheckOut(int id, int discount)
         {
-            string query = "UPDATE dbo.Receipt SET status = 1, " + "discount = " + discount + " WHERE id =  " + id;
+            string query = "UPDATE dbo.Receipt SET status = 1, " + "discount = " + discount + " WHERE id = " + id;
             DataAccess.Instance.ExecuteNonQuery(query);
 
         }

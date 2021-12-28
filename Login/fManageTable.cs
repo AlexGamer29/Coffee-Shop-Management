@@ -37,6 +37,12 @@ namespace Login
 
         #region Methods
 
+        void LoadComboboxTable(ComboBox cb)
+        {
+            cb.DataSource = TableDAO.Instance.LoadTableList();
+            cb.DisplayMember = "Name";
+        }
+
         void ChangeAccount(int accountType)
         {
             adminToolStripMenuItem.Enabled = accountType == 1;
@@ -101,7 +107,7 @@ namespace Login
                 listview_Receipt.Items.Add(listItem);
                 totalPriceDisplay += item.TotalPrice;
             }
-            txtbox_totalPrice.Text = Currency.FormatCurrency("VND", ((decimal)totalPriceDisplay));           
+            txtbox_totalPrice.Text = Currency.FormatCurrency("VND", (decimal)totalPriceDisplay);         
         }
 
         void LoadComboBoxTable(ComboBox cb)
@@ -197,8 +203,8 @@ namespace Login
             if (combo.SelectedItem == null)
                 return;
 
-            Category Selected = combo.SelectedItem as Category;
-            id = Selected.ID;
+            Category selected = combo.SelectedItem as Category;
+            id = selected.ID;
 
             LoadFoodListByCategoryID(id);
         }
@@ -209,8 +215,9 @@ namespace Login
             int idReceipt = ReceiptDAO.Instance.GetUncheckReceiptIDByTableID(table.ID);
             int discount = (int)amount_discount.Value;
 
-            double totalPrice = Convert.ToDouble(txtbox_totalPrice.Text.Split(' ')[0]);
-            double finaltotalPrice = totalPrice - (totalPrice/100) * discount;
+            decimal totalPrice = Convert.ToDecimal(txtbox_totalPrice.Text.ToString().Split(' ')[0]);
+            decimal finaltotalPrice = totalPrice - (totalPrice/100) * discount;
+
             if (idReceipt != -1)
             {
                 if (MessageBox.Show(String.Format("Ban co chac thanh toan hoa don cho ban {0}\n Tong tien" +
