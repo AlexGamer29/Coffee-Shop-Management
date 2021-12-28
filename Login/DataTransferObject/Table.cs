@@ -23,7 +23,6 @@ namespace Login.DataTransferObject
             this.Name = name;
             this.TableStatus = status;
         }
-
         public Table(DataRow row)
         {
             this.ID = (int) row["id"];

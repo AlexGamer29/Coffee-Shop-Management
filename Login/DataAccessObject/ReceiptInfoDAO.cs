@@ -36,7 +36,7 @@ namespace Login.DataAccessObject
 
         public void InsertReceiptInfo(int idReceipt, int idMenu, int numberOfFood)
         {
-            DataAccess.Instance.ExecuteNonQuery("EXEC USERPROC_InsertReceiptInfo @idReceipt, @idMenu, @numberOfFood", new object[]{ idReceipt, idMenu, numberOfFood});
+            DataAccess.Instance.ExecuteNonQuery("EXEC USERPROC_InsertReceiptInfo @idReceipt , @idMenu , @numberOfFood", new object[]{ idReceipt, idMenu, numberOfFood});
         }
     }
 }

@@ -22,6 +22,10 @@ namespace Login.DataAccessObject
 
         private TableDAO() {}
 
+        public void switchTable(int id1, int id2)
+        {
+            DataAccess.Instance.ExecuteQuery("USERPROC_SwitchTable @idTable @idTable12", new object[] {id1, id2});
+        }
         public List<Table> LoadTableList()
         {
             List<Table> tableList = new List<Table>();

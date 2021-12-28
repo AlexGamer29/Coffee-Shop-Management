@@ -30,13 +30,15 @@ namespace Login
             
             LoadMenu();
             LoadListFood();
-            LoadCategoryIntoCombobox(comboBox_category);
-            AddMenuBinding();
+
+            // Chưa chạy được
+            //LoadCategoryIntoCombobox(comboBox_category);
+            //AddMenuBinding();
             //LoadAccountList();
             AddAccountBinding();
             LoadAccount();
         }
-        //Thieu ham Load()
+
         void LoadMenu()
         {
             string query = "SELECT * FROM dbo.Menu";
@@ -91,10 +93,6 @@ namespace Login
         private void btn_viewMenu_Click(object sender, EventArgs e)
         {
             LoadListFood();
-        }
-
-        private void numericUpDown_foodPrice_ValueChanged(object sender, EventArgs e)
-        {
         }
 
         private void btn_search_Click(object sender, EventArgs e)

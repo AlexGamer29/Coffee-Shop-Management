@@ -31,6 +31,8 @@ namespace Login
             this.LoginAccount = login;
             LoadTable();
             LoadCategory();
+            //LoadComboBoxTable(cbswitchTable);
+            // Bị lỗi nhe Đức
         }
 
         #region Methods
@@ -101,6 +103,14 @@ namespace Login
             }
             txtbox_totalPrice.Text = Currency.FormatCurrency("VND", ((decimal)totalPriceDisplay));           
         }
+
+        void LoadComboBoxTable(ComboBox cb)
+        {
+            cb.DataSource = TableDAO.Instance.LoadTableList();
+            cb.DisplayMember = "Name";
+
+        }
+
         #endregion
 
         #region Events
@@ -134,7 +144,14 @@ namespace Login
 
         private void btn_switchTable_Click(object sender, EventArgs e)
         {
+            int id1 = (ListviewReceipt.Tag as Table);
 
+            int id2 = (cbSwitchTable.SelectItems as Table).ID;
+            
+
+            TableDAO.Instance.switchTable(id1, id2);
+
+            LoadTable();
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -197,7 +214,7 @@ namespace Login
             if (idReceipt != -1)
             {
                 if (MessageBox.Show(String.Format("Ban co chac thanh toan hoa don cho ban {0}\n Tong tien" +
-                    "Tong tien - (Tong tien/100) * Giam gia = {1} - ({1}/100) * {2} = {3}", table.Name, totalPrice, discount, finaltotalPrice), "Thong bao ", 
+                    "Tong tien - (Tong tien/100) * Giam gia\n => {1} - ({1}/100) * {2} = {3}", table.Name, totalPrice, discount, finaltotalPrice), "Thong bao ", 
                     MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     ReceiptDAO.Instance.CheckOut(idReceipt, discount);

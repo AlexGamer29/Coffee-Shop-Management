@@ -19,12 +19,14 @@ namespace Login.DataTransferObject
         public DateTime? DepartDate { get => departDate; set => departDate = value; }
         public int Status { get => status; set => status = value; }
 
-        public Receipt(int id, DateTime? arrivalDate, DateTime? departDate, int status)
+        public int Discount { get => Discount; set => Discount = value; }
+        public Receipt(int id, DateTime? arrivalDate, DateTime? departDate, int status, int discount)
         {
             this.ID = id;
             this.ArrivalDate = arrivalDate;
             this.DepartDate = departDate;
             this.Status = status;
+            this.Discount = discount;
         }
 
         public Receipt(DataRow row)
@@ -35,6 +37,10 @@ namespace Login.DataTransferObject
             if (departDateTemp.ToString() != "")
                 this.DepartDate = (DateTime?)departDateTemp;
             this.Status = (int)row["status"];
+            if (Discount.ToString() != "")
+            {
+                Discount = (int)Discount;
+            }
         }
     }
 }

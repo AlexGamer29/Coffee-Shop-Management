@@ -54,6 +54,7 @@ namespace Login
             string password = txtbox_password.Text;
             string newPassword = txtbox_newPassword.Text;
             string retypeNewPassword = txtbox_retypeNewPassword.Text;
+
             if (!BCrypt.Net.BCrypt.Equals(newPassword, retypeNewPassword))
             {
                 MessageBox.Show("Vui lòng nhập lại mật khẩu đúng với mật khẩu mới!");
@@ -61,8 +62,8 @@ namespace Login
             else
             {
                 int check = checkCredential(userName, password);
-                string hashNewPassword = BCrypt.Net.BCrypt.HashPassword(retypeNewPassword);
-                if (AccountDAO.Instance.UpdateAccount(userName, displayName, check, hashNewPassword))
+                //string hashNewPassword = BCrypt.Net.BCrypt.HashPassword(retypeNewPassword);
+                if (AccountDAO.Instance.UpdateAccount(userName, displayName, check, BCrypt.Net.BCrypt.HashPassword(retypeNewPassword)))
                 {
                     MessageBox.Show("Cập nhật thông tin cá nhân thành công!");
                     if (updateAccount != null)
@@ -104,12 +105,14 @@ namespace Login
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            this.Dispose();
         }
 
         private void pictureBox_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            this.Dispose();
         }
     }
 }
