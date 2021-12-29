@@ -17,6 +17,8 @@ namespace Login
     public partial class fAdmin : Form
     {
         BindingSource accountList = new BindingSource();
+        private object dtgvReceipt;
+        private object dtpkToDate;
 
         public fAdmin()
         {
@@ -37,6 +39,9 @@ namespace Login
             //LoadAccountList();
             AddAccountBinding();
             LoadAccount();
+            // Sorry ae, lại lỗi nữa rồi =(((
+            LoadDateTimePickerReceipt();
+            LoadListReceiptByDate(dateTimePicker_fromDate.Value, dateTimePicker_toDate.Value);
         }
 
         void LoadMenu()
@@ -78,6 +83,19 @@ namespace Login
             accountList.DataSource = AccountDAO.Instance.GetListAccount();
         }
 
+        void LoadListReceiptByDate(DateTime CheckIn, DateTime CheckOut)
+        {
+            dataGridView_receipt.DataSource = ReceiptDAO.Instance.GetReceiptListByDate(CheckIn, CheckOut);
+        }
+            
+        
+        void LoadDateTimePickerReceipt()
+        {
+            DateTime time = DateTime.Now;
+            dateTimePicker_fromDate.Value = new DateTime(time.Year, time.Month, 1);
+            dateTimePicker_toDate.Value = dateTimePicker_fromDate.Value.AddMonths(1).AddDays(-1); 
+        }
+
         private void pictureBox_close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -102,6 +120,12 @@ namespace Login
         private void btn_viewAccount_Click(object sender, EventArgs e)
         {
             LoadAccount();
+        }
+
+        private void btn_viewReceipt_Click(object sender, EventArgs e)
+        {
+            LoadListReceiptByDate(dateTimePicker_fromDate.Value, dateTimePicker_toDate.Value);
+            
         }
     }
 }

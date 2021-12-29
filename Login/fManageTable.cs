@@ -224,7 +224,7 @@ namespace Login
                     "Tong tien - (Tong tien/100) * Giam gia\n => {1} - ({1}/100) * {2} = {3}", table.Name, totalPrice, discount, finaltotalPrice), "Thong bao ", 
                     MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    ReceiptDAO.Instance.CheckOut(idReceipt, discount);
+                    ReceiptDAO.Instance.CheckOut(idReceipt, discount, (float) finaltotalPrice);
                     ShowReceipt(table.ID);
 
                     LoadTable(); 

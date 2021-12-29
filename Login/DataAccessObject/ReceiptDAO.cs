@@ -38,15 +38,24 @@ namespace Login.DataAccessObject
             return -1;
         }
 
-        public void CheckOut(int id, int discount)
+        public void CheckOut(int id, int discount, float totalPrice)
         {
+<<<<<<< Updated upstream
             string query = "UPDATE dbo.Receipt SET status = 1, " + "discount = " + discount + " WHERE id = " + id;
+=======
+            string query = "UPDATE dbo.Receipt SET departDate = GETDATE(), status = 1, " + "discount = " + discount + ", totalPrice = " + totalPrice + " WHERE id =  " + id;
+>>>>>>> Stashed changes
             DataAccess.Instance.ExecuteNonQuery(query);
 
         }
         public void InsertReceipt(int id)
         {
             DataAccess.Instance.ExecuteNonQuery("EXEC USERPROC_InsertReceipt @idTable", new object[]{id});
+        }
+
+        public DataTable GetReceiptListByDate(DateTime checkIn, DateTime checkOut)
+        {
+            return DataAccess.Instance.ExecuteQuery("exec USP_GetListReceiptByDate @checkIn, @checkOut", new object[] { checkIn, checkOut });
         }
 
         public int GetMaxIDReceipt()

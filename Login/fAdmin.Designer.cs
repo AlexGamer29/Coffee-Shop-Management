@@ -888,11 +888,11 @@
             // txtbox_accountType
             // 
             this.txtbox_accountType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_accountType.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtbox_accountType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtbox_accountType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.txtbox_accountType.Location = new System.Drawing.Point(133, 11);
             this.txtbox_accountType.Name = "txtbox_accountType";
-            this.txtbox_accountType.Size = new System.Drawing.Size(184, 27);
+            this.txtbox_accountType.Size = new System.Drawing.Size(184, 26);
             this.txtbox_accountType.TabIndex = 6;
             this.txtbox_accountType.Text = " ";
             // 
@@ -1089,6 +1089,7 @@
             this.btn_viewReceipt.TabIndex = 1;
             this.btn_viewReceipt.Text = "Xem";
             this.btn_viewReceipt.UseVisualStyleBackColor = true;
+            this.btn_viewReceipt.Click += new System.EventHandler(this.btn_viewReceipt_Click);
             // 
             // dateTimePicker_toDate
             // 
