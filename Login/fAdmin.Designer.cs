@@ -716,6 +716,7 @@
             this.txtbox_foodID.ReadOnly = true;
             this.txtbox_foodID.Size = new System.Drawing.Size(215, 26);
             this.txtbox_foodID.TabIndex = 4;
+            this.txtbox_foodID.TextChanged += new System.EventHandler(this.txtbox_foodID_TextChanged);
             // 
             // panel6
             // 
@@ -746,6 +747,7 @@
             this.btn_editMenu.TabIndex = 3;
             this.btn_editMenu.Text = "Sửa";
             this.btn_editMenu.UseVisualStyleBackColor = true;
+            this.btn_editMenu.Click += new System.EventHandler(this.btn_editMenu_Click);
             // 
             // btn_deleteMenu
             // 
@@ -755,6 +757,7 @@
             this.btn_deleteMenu.TabIndex = 2;
             this.btn_deleteMenu.Text = "Xóa";
             this.btn_deleteMenu.UseVisualStyleBackColor = true;
+            this.btn_deleteMenu.Click += new System.EventHandler(this.btn_deleteMenu_Click);
             // 
             // btn_addMenu
             // 
@@ -764,6 +767,7 @@
             this.btn_addMenu.TabIndex = 1;
             this.btn_addMenu.Text = "Thêm";
             this.btn_addMenu.UseVisualStyleBackColor = true;
+            this.btn_addMenu.Click += new System.EventHandler(this.btn_addMenu_Click);
             // 
             // panel3
             // 

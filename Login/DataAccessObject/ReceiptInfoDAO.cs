@@ -20,6 +20,10 @@ namespace Login.DataAccessObject
 
         private ReceiptInfoDAO() { }
 
+        public void DeleteReceiptInfoByFoodID(int id)
+        {
+            DataAccess.Instance.ExecuteQuery("delete dbo.ReceiptInfo WHERE idFood = " + id);
+        }
         public List<ReceiptInfo> GetListReceiptInfo(int idTable)
         {
             List<ReceiptInfo> listReceiptInfo = new List<ReceiptInfo> ();

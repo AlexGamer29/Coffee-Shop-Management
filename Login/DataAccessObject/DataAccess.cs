@@ -54,6 +54,11 @@ namespace Login
             return data;
         }
 
+        internal int ExecuteNonQuery()
+        {
+            throw new NotImplementedException();
+        }
+
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int excutedLines = 0;

@@ -11,6 +11,7 @@ namespace Login.DataAccessObject
     public class FoodDAO
     {
         private static FoodDAO instance;
+        private object id;
 
         public static FoodDAO Instance
         {
@@ -52,5 +53,33 @@ namespace Login.DataAccessObject
             }
             return listFood;
         }
+
+        public bool InsertFood(string name, int id,float price)
+        {
+           string query = string.Format("INSERT dbo.Menu (name,idCategory,price)VALUES (N'{0}',{1},{2})",name,id,price);
+           int result = DataAccess.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        public bool UpdateFood(string name, int idFood, float price, int id)
+        {
+            string query = string.Format("UPDATE dbo.Menu SET name = N'{0}', idCategory = {1}, price = {2} WHERE id = {3}", name, idFood,price,id);
+            int result = DataAccess.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        public bool DeleteFood(int idFood)
+        {
+            ReceiptInfoDAO.Instance.DeleteReceiptInfoByFoodID(idFood);
+            string query = string.Format("Delete Food where id ={0}", idFood);
+            int result = DataAccess.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        //internal bool DeleteFood(int id)
+        //{
+         //   throw new NotImplementedException();
+        //}
     }
 }

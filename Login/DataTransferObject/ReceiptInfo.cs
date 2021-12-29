@@ -18,6 +18,7 @@ namespace Login.DataTransferObject
         public int IdReceipt { get => idReceipt; set => idReceipt = value; }
         public int IdMenu { get => idMenu; set => idMenu = value; }
         public int NumberOfFood { get => numberOfFood; set => numberOfFood = value; }
+        public static object Instance { get; internal set; }
 
         public ReceiptInfo(int id, int idReceipt, int idMenu, int numberOfFood)
         {

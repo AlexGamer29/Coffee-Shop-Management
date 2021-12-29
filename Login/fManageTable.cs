@@ -129,6 +129,11 @@ namespace Login
         private void btn_addMenu_Click(object sender, EventArgs e)
         {
             Table table = listview_Receipt.Tag as Table;
+            if(table == null)
+            {
+                MessageBox.Show("Hay chon ban");
+                return;
+            }
             
             int idReceipt = ReceiptDAO.Instance.GetUncheckReceiptIDByTableID(table.ID);
             int idFood = (comboBox_food.SelectedItem as Food).ID;
@@ -184,7 +189,31 @@ namespace Login
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fAdmin admin = new fAdmin();
+            admin.InsertFood += Admin_InsertFood;
+            admin.DeleteFood += Admin_DeleteFood;
+            admin.UpdateFood += Admin_UpdateFood;
             admin.ShowDialog();
+        }
+
+        void Admin_UpdateFood(object sender, EventArgs e)
+        {
+            LoadFoodListByCategoryID((combobox_categories.SelectedItem as Category).ID);
+            if (listview_Receipt.Tag != null) ;
+                ShowReceipt((listview_Receipt.Tag as Table).ID);
+        }
+
+        void Admin_DeleteFood(object sender, EventArgs e)
+        {
+            LoadFoodListByCategoryID((combobox_categories.SelectedItem as Category).ID);
+            ShowReceipt((listview_Receipt.Tag as Table).ID);
+            LoadTable();
+        }
+
+        void Admin_InsertFood(object sender, EventArgs e)
+        {
+            LoadFoodListByCategoryID((combobox_categories.SelectedItem as Category).ID);
+            if (listview_Receipt.Tag != null) ;
+                ShowReceipt((listview_Receipt.Tag as Table).ID);
         }
 
         private void pictureBox_close_Click(object sender, EventArgs e)
