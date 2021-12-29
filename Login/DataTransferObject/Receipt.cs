@@ -37,14 +37,10 @@ namespace Login.DataTransferObject
             var departDateTemp = row["departDate"];
             if (departDateTemp.ToString() != "")
                 this.DepartDate = (DateTime?)departDateTemp;
+            
             this.Status = (int)row["status"];
-            if (Discount.ToString() != "")
-            {
-                Discount = (int)Discount;
-            }
-
-            //if (row["discount"].ToString() != "")
-            //    this.Discount = (int)row["discount"];
+            if (row["discount"].ToString() != "")
+                this.Discount = (int)row["discount"];
         }
     }
 }

@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Menu = Login.DataTransferObject.Menu;
+//using Menu = Login.DataTransferObject.Menu;
 
 namespace Login
 {
@@ -37,11 +37,11 @@ namespace Login
 
         #region Methods
 
-        void LoadComboboxTable(ComboBox cb)
-        {
-            cb.DataSource = TableDAO.Instance.LoadTableList();
-            cb.DisplayMember = "Name";
-        }
+        //void LoadComboboxTable(ComboBox cb)
+        //{
+        //    cb.DataSource = TableDAO.Instance.LoadTableList();
+        //    cb.DisplayMember = "Name";
+        //}
 
         void ChangeAccount(int accountType)
         {
@@ -61,7 +61,7 @@ namespace Login
             List<Food> foodList = FoodDAO.Instance.GetFoodByCategoryID(id);
             comboBox_food.DataSource = foodList;
             comboBox_food.DisplayMember = "Name";
-            // Đổi tên Combox1
+             //Đổi tên Combox1
         }
 
         void LoadTable()
@@ -94,33 +94,32 @@ namespace Login
         {
             listview_Receipt.Items.Clear();
             float totalPriceDisplay = 0;
-            List<Menu> listReceiptInfo = MenuDAO.Instance.GetListMenuByTable(id);
-            foreach (Menu item in listReceiptInfo)
+            List<DataTransferObject.Menu> listReceiptInfo = MenuDAO.Instance.GetListMenuByTable(id);
+            foreach (DataTransferObject.Menu item in listReceiptInfo)
             {
-                string count = item.Count.ToString();
-                string price = Currency.FormatCurrency("VND", (decimal)item.Price);
-                string totalPrice = Currency.FormatCurrency("VND", (decimal)item.TotalPrice);
+                //string count = item.Count.ToString();
+                //string price = Currency.FormatCurrency("VND", (decimal)item.Price);
+                //string totalPrice = Currency.FormatCurrency("VND", (decimal)item.TotalPrice);
                 ListViewItem listItem = new ListViewItem(item.FoodName.ToString());
-                listItem.SubItems.Add(count);
-                listItem.SubItems.Add(price);
-                listItem.SubItems.Add(totalPrice);
-                listview_Receipt.Items.Add(listItem);
+                listItem.SubItems.Add(item.Count.ToString());
+                listItem.SubItems.Add(Currency.FormatCurrency("VND", (decimal)item.Price));
+                listItem.SubItems.Add(Currency.FormatCurrency("VND", (decimal)item.TotalPrice));
                 totalPriceDisplay += item.TotalPrice;
+                listview_Receipt.Items.Add(listItem);
             }
-            txtbox_totalPrice.Text = Currency.FormatCurrency("VND", (decimal)totalPriceDisplay);         
+            txtbox_totalPrice.Text = Currency.FormatCurrency("VND", (decimal)totalPriceDisplay);
         }
 
         void LoadComboBoxTable(ComboBox cb)
         {
             cb.DataSource = TableDAO.Instance.LoadTableList();
             cb.DisplayMember = "Name";
-
         }
 
         #endregion
 
         #region Events
-        private void btn_Click(object sender, EventArgs e)
+        void btn_Click(object sender, EventArgs e)
         {
             int idTable = ((sender as Button).Tag as Table).ID;
             listview_Receipt.Tag = (sender as Button).Tag;
@@ -177,7 +176,7 @@ namespace Login
             accountProfile.ShowDialog();
         }
 
-        private void AccountProfile_UpdateAccount(object sender, AccountEvent e)
+        void AccountProfile_UpdateAccount(object sender, AccountEvent e)
         {
             thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Account.DisplayName + ")";
         }
@@ -227,7 +226,7 @@ namespace Login
                     ReceiptDAO.Instance.CheckOut(idReceipt, discount, (float) finaltotalPrice);
                     ShowReceipt(table.ID);
 
-                    LoadTable(); 
+                    LoadTable();
                 }
             }
         }

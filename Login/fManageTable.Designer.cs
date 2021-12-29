@@ -35,7 +35,7 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_listReceipt = new System.Windows.Forms.Panel();
             this.listview_Receipt = new System.Windows.Forms.ListView();
-            this.columnHeader_idFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader_idMenu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_numberOfFood = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_totalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -120,7 +120,7 @@
             // 
             this.listview_Receipt.AccessibleName = "";
             this.listview_Receipt.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader_idFood,
+            this.columnHeader_idMenu,
             this.columnHeader_numberOfFood,
             this.columnHeader_price,
             this.columnHeader_totalPrice});
@@ -133,10 +133,10 @@
             this.listview_Receipt.UseCompatibleStateImageBehavior = false;
             this.listview_Receipt.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader_idFood
+            // columnHeader_idMenu
             // 
-            this.columnHeader_idFood.Text = "Tên món";
-            this.columnHeader_idFood.Width = 138;
+            this.columnHeader_idMenu.Text = "Tên món";
+            this.columnHeader_idMenu.Width = 138;
             // 
             // columnHeader_numberOfFood
             // 
@@ -363,7 +363,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_listTable;
         private System.Windows.Forms.ComboBox comboBox_switchTable;
         private System.Windows.Forms.PictureBox pictureBox_close;
-        private System.Windows.Forms.ColumnHeader columnHeader_idFood;
+        private System.Windows.Forms.ColumnHeader columnHeader_idMenu;
         private System.Windows.Forms.ColumnHeader columnHeader_numberOfFood;
         private System.Windows.Forms.ColumnHeader columnHeader_price;
         private System.Windows.Forms.ColumnHeader columnHeader_totalPrice;
