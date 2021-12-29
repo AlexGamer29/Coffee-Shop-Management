@@ -198,7 +198,7 @@ namespace Login
         void Admin_UpdateFood(object sender, EventArgs e)
         {
             LoadFoodListByCategoryID((combobox_categories.SelectedItem as Category).ID);
-            if (listview_Receipt.Tag != null) ;
+            if (listview_Receipt.Tag != null)
                 ShowReceipt((listview_Receipt.Tag as Table).ID);
         }
 
@@ -212,7 +212,7 @@ namespace Login
         void Admin_InsertFood(object sender, EventArgs e)
         {
             LoadFoodListByCategoryID((combobox_categories.SelectedItem as Category).ID);
-            if (listview_Receipt.Tag != null) ;
+            if (listview_Receipt.Tag != null)
                 ShowReceipt((listview_Receipt.Tag as Table).ID);
         }
 

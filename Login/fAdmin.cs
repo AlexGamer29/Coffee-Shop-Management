@@ -144,12 +144,11 @@ namespace Login
             LoadAccount();
         }
 
-<<<<<<< Updated upstream
         private void btn_viewReceipt_Click(object sender, EventArgs e)
         {
             LoadListReceiptByDate(dateTimePicker_fromDate.Value, dateTimePicker_toDate.Value);
+        }
             
-=======
         private void txtbox_foodID_TextChanged(object sender, EventArgs e)
         {
             if(dataGridView_menu.SelectedCells.Count > 0)
@@ -229,7 +228,6 @@ namespace Login
             {
                 MessageBox.Show("Co loi khi xoa mon");
             }
->>>>>>> Stashed changes
         }
     }
 }
