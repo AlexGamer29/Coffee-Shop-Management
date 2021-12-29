@@ -17,8 +17,8 @@ namespace Login
     public partial class fAdmin : Form
     {
         BindingSource accountList = new BindingSource();
-        private object dtgvReceipt;
-        private object dtpkToDate;
+        //private object dtgvReceipt;
+        //private object dtpkToDate;
 
         public fAdmin()
         {
