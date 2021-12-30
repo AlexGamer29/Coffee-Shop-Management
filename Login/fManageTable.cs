@@ -32,16 +32,9 @@ namespace Login
             LoadTable();
             LoadCategory();
             LoadComboBoxTable(comboBox_switchTable);
-            // Bị lỗi nhe Đức
         }
 
         #region Methods
-
-        //void LoadComboboxTable(ComboBox cb)
-        //{
-        //    cb.DataSource = TableDAO.Instance.LoadTableList();
-        //    cb.DisplayMember = "Name";
-        //}
 
         void ChangeAccount(int accountType)
         {
@@ -61,7 +54,6 @@ namespace Login
             List<Food> foodList = FoodDAO.Instance.GetFoodByCategoryID(id);
             comboBox_food.DataSource = foodList;
             comboBox_food.DisplayMember = "Name";
-             //Đổi tên Combox1
         }
 
         void LoadTable()
@@ -89,7 +81,6 @@ namespace Login
             }
         }
 
-
         void ShowReceipt(int id)
         {
             listview_Receipt.Items.Clear();
@@ -97,13 +88,13 @@ namespace Login
             List<DataTransferObject.Menu> listReceiptInfo = MenuDAO.Instance.GetListMenuByTable(id);
             foreach (DataTransferObject.Menu item in listReceiptInfo)
             {
-                //string count = item.Count.ToString();
-                //string price = Currency.FormatCurrency("VND", (decimal)item.Price);
-                //string totalPrice = Currency.FormatCurrency("VND", (decimal)item.TotalPrice);
+                string count = item.Count.ToString();
+                string price = Currency.FormatCurrency("VND", (decimal)item.Price);
+                string totalPrice = Currency.FormatCurrency("VND", (decimal)item.TotalPrice);
                 ListViewItem listItem = new ListViewItem(item.FoodName.ToString());
-                listItem.SubItems.Add(item.Count.ToString());
-                listItem.SubItems.Add(Currency.FormatCurrency("VND", (decimal)item.Price));
-                listItem.SubItems.Add(Currency.FormatCurrency("VND", (decimal)item.TotalPrice));
+                listItem.SubItems.Add(count);
+                listItem.SubItems.Add(price);
+                listItem.SubItems.Add(totalPrice);
                 totalPriceDisplay += item.TotalPrice;
                 listview_Receipt.Items.Add(listItem);
             }
@@ -189,6 +180,7 @@ namespace Login
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fAdmin admin = new fAdmin();
+            admin.loginAccount = LoginAccount;
             admin.InsertFood += Admin_InsertFood;
             admin.DeleteFood += Admin_DeleteFood;
             admin.UpdateFood += Admin_UpdateFood;

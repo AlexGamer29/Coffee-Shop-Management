@@ -21,6 +21,8 @@ namespace Login
         //private object dtgvReceipt;
         //private object dtpkToDate;
 
+        public AccountAuthentication loginAccount;
+
         public fAdmin()
         {
             InitializeComponent();
@@ -29,18 +31,16 @@ namespace Login
 
         void LoadMethods()
         {
-            dataGridView_menu.DataSource = accountList;
+            dataGridView_account.DataSource = accountList;
             
             LoadMenu();
             LoadListFood();
 
-            // Chưa chạy được
-            //LoadCategoryIntoCombobox(comboBox_category);
-            //AddMenuBinding();
+            LoadCategoryIntoCombobox(comboBox_category);
+            AddMenuBinding();
             //LoadAccountList();
             AddAccountBinding();
             LoadAccount();
-            // Sorry ae, lại lỗi nữa rồi =(((
             LoadDateTimePickerReceipt();
             LoadListReceiptByDate(dateTimePicker_fromDate.Value, dateTimePicker_toDate.Value);
         }
@@ -51,17 +51,17 @@ namespace Login
             dataGridView_menu.DataSource = DataAccess.Instance.ExecuteQuery(query);
         }
 
-        void LoadAccountList()
-        {
-            string query = "EXEC dbo.USERPROC_GetAccountByUserName @userName";
-            dataGridView_account.DataSource = DataAccess.Instance.ExecuteQuery(query, new object[] {"admin"});
-        }
-        //Thieu ham lay LoadListRecriptByDate va LoadDateTimePikerReciept
+        //void LoadAccountList()
+        //{
+        //    string query = "EXEC dbo.USERPROC_GetAccountByUserName @userName";
+        //    dataGridView_account.DataSource = DataAccess.Instance.ExecuteQuery(query, new object[] {"admin"});
+        //}
+
         void AddMenuBinding()
         {
             txtbox_foodName.DataBindings.Add(new Binding("Text",dataGridView_menu.DataSource,"Name", true,DataSourceUpdateMode.Never));
             txtbox_foodID.DataBindings.Add(new Binding("Text", dataGridView_menu.DataSource, "ID", true, DataSourceUpdateMode.Never));
-            numericUpDown_foodPrice.DataBindings.Add(new Binding("Value", dataGridView_menu.DataSource, "Price", true, DataSourceUpdateMode.Never));
+            numericUpDown_foodPrice.DataBindings.Add(new Binding("Text", dataGridView_menu.DataSource, "Price", true, DataSourceUpdateMode.Never));
             
         }
         void LoadCategoryIntoCombobox(ComboBox cb )
@@ -86,9 +86,9 @@ namespace Login
             accountList.DataSource = AccountDAO.Instance.GetListAccount();
         }
 
-        void LoadListReceiptByDate(DateTime CheckIn, DateTime CheckOut)
+        void LoadListReceiptByDate(DateTime arrivalDate, DateTime departDate)
         {
-            dataGridView_receipt.DataSource = ReceiptDAO.Instance.GetReceiptListByDate(CheckIn, CheckOut);
+            dataGridView_receipt.DataSource = ReceiptDAO.Instance.GetReceiptListByDate(arrivalDate, departDate);
         }
             
         
@@ -151,25 +151,28 @@ namespace Login
             
         private void txtbox_foodID_TextChanged(object sender, EventArgs e)
         {
-            if(dataGridView_menu.SelectedCells.Count > 0)
+            try
             {
-                int id = (int)dataGridView_menu.SelectedCells[0].OwningRow.Cells["CategoryID"].Value;
-                Category category = CategoryDAO.Instance.GetCategoryByID(1);
-                comboBox_category.SelectedItem = category;
-                int index = -1;
-                int i = 0;
-                foreach (Category item in comboBox_category.Items)
+                if (dataGridView_menu.SelectedCells.Count > 0)
                 {
-                    if(item.ID == category.ID)
+                    int id = (int)dataGridView_menu.SelectedCells[0].OwningRow.Cells["idCategories"].Value;
+                    Category category = CategoryDAO.Instance.GetCategoryByID(id);
+                    comboBox_category.SelectedItem = category;
+                    int index = -1;
+                    int i = 0;
+                    foreach (Category item in comboBox_category.Items)
                     {
-                        index = i;
-                        break;
+                        if (item.ID == category.ID)
+                        {
+                            index = i;
+                            break;
+                        }
+                        i++;
                     }
-                    i++;
+                    comboBox_category.SelectedIndex = index;
                 }
-                comboBox_category.SelectedIndex = index;
             }
-
+            catch { }
         }
 
         private void btn_addMenu_Click(object sender, EventArgs e)

@@ -1,2 +1,3 @@
-/ Login / bin /
-/ Login / obj /
+/Login/bin/
+/Login/obj/
+*.suo

@@ -50,9 +50,9 @@ namespace Login.DataAccessObject
             DataAccess.Instance.ExecuteNonQuery("EXEC USERPROC_InsertReceipt @idTable", new object[]{id});
         }
 
-        public DataTable GetReceiptListByDate(DateTime checkIn, DateTime checkOut)
+        public DataTable GetReceiptListByDate(DateTime arrivalDate, DateTime departDate)
         {
-            return DataAccess.Instance.ExecuteQuery("exec USP_GetListReceiptByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
+            return DataAccess.Instance.ExecuteQuery("EXEC USERPROC_GetListReceiptByDate @arrivalDate , @departDate", new object[] { arrivalDate, departDate });
         }
 
         public int GetMaxIDReceipt()
