@@ -54,7 +54,7 @@ namespace Login.DataAccessObject
             return listFood;
         }
 
-        public bool InsertFood(string name, int id, float price)
+        public bool AddFood(string name, int id, float price)
         {
            string query = string.Format("INSERT dbo.Menu ( name, idCategories, price ) VALUES (N'{0}', {1}, {2})", name, id, price);
            int result = DataAccess.Instance.ExecuteNonQuery(query);
@@ -70,7 +70,7 @@ namespace Login.DataAccessObject
         public bool DeleteFood(int idFood)
         {
             ReceiptInfoDAO.Instance.DeleteReceiptInfoByFoodID(idFood);
-            string query = string.Format("DELETE Food WHERE id ={0}", idFood);
+            string query = string.Format("DELETE Food WHERE id = {0}", idFood);
             int result = DataAccess.Instance.ExecuteNonQuery(query);
 
             return result > 0;

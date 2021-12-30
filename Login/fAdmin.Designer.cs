@@ -81,7 +81,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown_foodPrice = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.comboBox_category = new System.Windows.Forms.ComboBox();
@@ -104,10 +103,9 @@
             this.btn_search = new System.Windows.Forms.Button();
             this.tabPage_account = new System.Windows.Forms.TabPage();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_resetPassword = new System.Windows.Forms.Button();
             this.button_add = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.txtbox_accountType = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -130,6 +128,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView_receipt = new System.Windows.Forms.DataGridView();
             this.tabControl_receipt = new System.Windows.Forms.TabControl();
+            this.numericUpDown_foodPrice = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_accountType = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_close)).BeginInit();
             this.tabPage_table.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -149,7 +149,6 @@
             this.tabPage_menu.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_foodPrice)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel_username.SuspendLayout();
@@ -170,6 +169,8 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receipt)).BeginInit();
             this.tabControl_receipt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_foodPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_accountType)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox_close
@@ -586,8 +587,8 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Controls.Add(this.label4);
             this.panel9.Controls.Add(this.numericUpDown_foodPrice);
+            this.panel9.Controls.Add(this.label4);
             this.panel9.Controls.Add(this.label3);
             this.panel9.Location = new System.Drawing.Point(5, 156);
             this.panel9.Name = "panel9";
@@ -604,14 +605,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Giá:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // numericUpDown_foodPrice
-            // 
-            this.numericUpDown_foodPrice.Location = new System.Drawing.Point(102, 12);
-            this.numericUpDown_foodPrice.Name = "numericUpDown_foodPrice";
-            this.numericUpDown_foodPrice.Size = new System.Drawing.Size(215, 20);
-            this.numericUpDown_foodPrice.TabIndex = 6;
-            this.numericUpDown_foodPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -850,7 +843,7 @@
             // 
             // panel21
             // 
-            this.panel21.Controls.Add(this.button1);
+            this.panel21.Controls.Add(this.btn_resetPassword);
             this.panel21.Controls.Add(this.button_add);
             this.panel21.Controls.Add(this.panel23);
             this.panel21.Controls.Add(this.panel24);
@@ -860,14 +853,15 @@
             this.panel21.Size = new System.Drawing.Size(342, 383);
             this.panel21.TabIndex = 9;
             // 
-            // button1
+            // btn_resetPassword
             // 
-            this.button1.Location = new System.Drawing.Point(238, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 70);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Đặt lại mật khẩu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_resetPassword.Location = new System.Drawing.Point(238, 156);
+            this.btn_resetPassword.Name = "btn_resetPassword";
+            this.btn_resetPassword.Size = new System.Drawing.Size(99, 70);
+            this.btn_resetPassword.TabIndex = 8;
+            this.btn_resetPassword.Text = "Đặt lại mật khẩu";
+            this.btn_resetPassword.UseVisualStyleBackColor = true;
+            this.btn_resetPassword.Click += new System.EventHandler(this.btn_resetPassword_Click);
             // 
             // button_add
             // 
@@ -882,23 +876,12 @@
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.White;
-            this.panel23.Controls.Add(this.txtbox_accountType);
+            this.panel23.Controls.Add(this.numericUpDown_accountType);
             this.panel23.Controls.Add(this.label12);
             this.panel23.Location = new System.Drawing.Point(5, 105);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(333, 45);
             this.panel23.TabIndex = 7;
-            // 
-            // txtbox_accountType
-            // 
-            this.txtbox_accountType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbox_accountType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtbox_accountType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
-            this.txtbox_accountType.Location = new System.Drawing.Point(133, 11);
-            this.txtbox_accountType.Name = "txtbox_accountType";
-            this.txtbox_accountType.Size = new System.Drawing.Size(184, 26);
-            this.txtbox_accountType.TabIndex = 6;
-            this.txtbox_accountType.Text = " ";
             // 
             // label12
             // 
@@ -971,7 +954,6 @@
             this.txtbox_userName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.txtbox_userName.Location = new System.Drawing.Point(133, 9);
             this.txtbox_userName.Name = "txtbox_userName";
-            this.txtbox_userName.ReadOnly = true;
             this.txtbox_userName.Size = new System.Drawing.Size(184, 26);
             this.txtbox_userName.TabIndex = 4;
             // 
@@ -1004,6 +986,7 @@
             this.btn_editAccount.TabIndex = 3;
             this.btn_editAccount.Text = "Sửa";
             this.btn_editAccount.UseVisualStyleBackColor = true;
+            this.btn_editAccount.Click += new System.EventHandler(this.btn_editAccount_Click);
             // 
             // btn_deleteAccount
             // 
@@ -1013,6 +996,7 @@
             this.btn_deleteAccount.TabIndex = 2;
             this.btn_deleteAccount.Text = "Xóa";
             this.btn_deleteAccount.UseVisualStyleBackColor = true;
+            this.btn_deleteAccount.Click += new System.EventHandler(this.btn_deleteAccount_Click);
             // 
             // btn_addAccount
             // 
@@ -1022,6 +1006,7 @@
             this.btn_addAccount.TabIndex = 1;
             this.btn_addAccount.Text = "Thêm";
             this.btn_addAccount.UseVisualStyleBackColor = true;
+            this.btn_addAccount.Click += new System.EventHandler(this.btn_addAccount_Click);
             // 
             // panel27
             // 
@@ -1162,6 +1147,30 @@
             this.tabControl_receipt.Size = new System.Drawing.Size(802, 497);
             this.tabControl_receipt.TabIndex = 0;
             // 
+            // numericUpDown_foodPrice
+            // 
+            this.numericUpDown_foodPrice.Location = new System.Drawing.Point(102, 12);
+            this.numericUpDown_foodPrice.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numericUpDown_foodPrice.Name = "numericUpDown_foodPrice";
+            this.numericUpDown_foodPrice.Size = new System.Drawing.Size(215, 20);
+            this.numericUpDown_foodPrice.TabIndex = 10;
+            // 
+            // numericUpDown_accountType
+            // 
+            this.numericUpDown_accountType.Location = new System.Drawing.Point(133, 13);
+            this.numericUpDown_accountType.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_accountType.Name = "numericUpDown_accountType";
+            this.numericUpDown_accountType.Size = new System.Drawing.Size(184, 20);
+            this.numericUpDown_accountType.TabIndex = 6;
+            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1197,7 +1206,6 @@
             this.panel4.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_foodPrice)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -1225,6 +1233,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_receipt)).EndInit();
             this.tabControl_receipt.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_foodPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_accountType)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1251,7 +1261,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown_foodPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.ComboBox comboBox_category;
@@ -1315,7 +1324,8 @@
         private System.Windows.Forms.Button btn_addAccount;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.DataGridView dataGridView_account;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtbox_accountType;
+        private System.Windows.Forms.Button btn_resetPassword;
+        private System.Windows.Forms.NumericUpDown numericUpDown_foodPrice;
+        private System.Windows.Forms.NumericUpDown numericUpDown_accountType;
     }
 }

@@ -18,6 +18,8 @@ namespace Login
     public partial class fAdmin : Form
     {
         BindingSource accountList = new BindingSource();
+        BindingSource foodList = new BindingSource();
+
         //private object dtgvReceipt;
         //private object dtpkToDate;
 
@@ -31,9 +33,10 @@ namespace Login
 
         void LoadMethods()
         {
+            dataGridView_menu.DataSource = foodList;
             dataGridView_account.DataSource = accountList;
             
-            LoadMenu();
+            //LoadMenu(); => bỏ
             LoadListFood();
 
             LoadCategoryIntoCombobox(comboBox_category);
@@ -45,11 +48,11 @@ namespace Login
             LoadListReceiptByDate(dateTimePicker_fromDate.Value, dateTimePicker_toDate.Value);
         }
 
-        void LoadMenu()
-        {
-            string query = "SELECT * FROM dbo.Menu";
-            dataGridView_menu.DataSource = DataAccess.Instance.ExecuteQuery(query);
-        }
+        //void LoadMenu()
+        //{
+        //    string query = "SELECT * FROM dbo.Menu";
+        //    dataGridView_menu.DataSource = DataAccess.Instance.ExecuteQuery(query);
+        //}
 
         //void LoadAccountList()
         //{
@@ -59,10 +62,9 @@ namespace Login
 
         void AddMenuBinding()
         {
-            txtbox_foodName.DataBindings.Add(new Binding("Text",dataGridView_menu.DataSource,"Name", true,DataSourceUpdateMode.Never));
+            txtbox_foodName.DataBindings.Add(new Binding("Text",dataGridView_menu.DataSource,"Name", true, DataSourceUpdateMode.Never));
             txtbox_foodID.DataBindings.Add(new Binding("Text", dataGridView_menu.DataSource, "ID", true, DataSourceUpdateMode.Never));
-            numericUpDown_foodPrice.DataBindings.Add(new Binding("Text", dataGridView_menu.DataSource, "Price", true, DataSourceUpdateMode.Never));
-            
+            numericUpDown_foodPrice.DataBindings.Add(new Binding("Value", dataGridView_menu.DataSource, "Price", true, DataSourceUpdateMode.Never));
         }
         void LoadCategoryIntoCombobox(ComboBox cb )
         {
@@ -72,13 +74,13 @@ namespace Login
 
         void LoadListFood()
         {
-            accountList.DataSource = FoodDAO.Instance.GetListFood();
+            foodList.DataSource = FoodDAO.Instance.GetListFood();
         }
         void AddAccountBinding()
         {
             txtbox_userName.DataBindings.Add(new Binding("Text", dataGridView_account.DataSource, "Username", true, DataSourceUpdateMode.Never));
             txtbox_displayName.DataBindings.Add(new Binding("Text", dataGridView_account.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
-            txtbox_accountType.DataBindings.Add(new Binding("Text", dataGridView_account.DataSource, "AccountType", true, DataSourceUpdateMode.Never));
+            numericUpDown_accountType.DataBindings.Add(new Binding("Value", dataGridView_account.DataSource, "AccountType", true, DataSourceUpdateMode.Never));
         }
 
         void LoadAccount()
@@ -97,6 +99,65 @@ namespace Login
             DateTime time = DateTime.Now;
             dateTimePicker_fromDate.Value = new DateTime(time.Year, time.Month, 1);
             dateTimePicker_toDate.Value = dateTimePicker_fromDate.Value.AddMonths(1).AddDays(-1); 
+        }
+
+        void AddAccount(string userName, string displayName, int accountType)
+        {
+            if(AccountDAO.Instance.InsertAccount(userName, displayName, accountType))
+            {
+                MessageBox.Show("Thêm tài khoản thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm tài khoản thất bại");
+            }
+
+            LoadAccount();
+        }
+
+        void DeleteAccount(string userName)
+        {
+            if (loginAccount.UserName.Equals(userName))
+            {
+                MessageBox.Show("Bạn không thể xóa tài khoản bạn đang dùng");
+                return;
+            }
+            if (AccountDAO.Instance.DeleteAccount(userName))
+            {
+                MessageBox.Show("Xóa tài khoản thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa tài khoản thất bại");
+            }
+
+            LoadAccount();
+        }
+
+        void EditAccount(string userName, string displayName, int accountType)
+        {
+            if (AccountDAO.Instance.UpdateAccount(userName, displayName, accountType))
+            {
+                MessageBox.Show("Sửa tài khoản thành công");
+            }
+            else
+            {
+                MessageBox.Show("Sửa tài khoản thất bại");
+            }
+
+            LoadAccount();
+        }
+
+        void ResetPassword(string userName)
+        {
+            if (AccountDAO.Instance.ResetPassword(userName))
+            {
+                MessageBox.Show("Đặt lại mật khẩu thành công");
+            }
+            else
+            {
+                MessageBox.Show("Đặt lại mật khẩu thất bại");
+            }
         }
 
         private void pictureBox_close_Click(object sender, EventArgs e)
@@ -118,7 +179,7 @@ namespace Login
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            //thieu LoadListByReceiptByDate
+            //thieu ham SearchFoodByName
         }
         private event EventHandler insertFood;
         public event EventHandler InsertFood
@@ -181,7 +242,7 @@ namespace Login
             int categoryID = (comboBox_category.SelectedItem as Category).ID;
             float price = (float)numericUpDown_foodPrice.Value;
 
-            if(FoodDAO.Instance.InsertFood(name, categoryID,price))
+            if(FoodDAO.Instance.AddFood(name, categoryID, price))
             {
                 MessageBox.Show("Them mon thanh cong");
                 LoadListFood();
@@ -204,14 +265,14 @@ namespace Login
 
             if (FoodDAO.Instance.UpdateFood(name, categoryID, price,id))
             {
-                MessageBox.Show("Sua mon thanh cong");
+                MessageBox.Show("Sửa món thành công");
                 LoadListFood();
                 if(updateFood != null)
                     updateFood(this,new EventArgs());
             }
             else
             {
-                MessageBox.Show("Co loi khi sua mon");
+                MessageBox.Show("Có lỗi khi sửa món");
             }
         }
 
@@ -222,7 +283,7 @@ namespace Login
 
             if (FoodDAO.Instance.DeleteFood(id))
             {
-                MessageBox.Show("Xoa mon thanh cong");
+                MessageBox.Show("Xóa món thành công");
                 LoadListFood();
                 if (deleteFood != null)
                     deleteFood(this,new EventArgs());
@@ -231,6 +292,38 @@ namespace Login
             {
                 MessageBox.Show("Co loi khi xoa mon");
             }
+        }
+
+        private void btn_addAccount_Click(object sender, EventArgs e)
+        {
+            string userName = txtbox_userName.Text;
+            string displayName = txtbox_displayName.Text;
+            int accountType = (int) numericUpDown_accountType.Value;
+
+            AddAccount(userName, displayName, accountType);
+        }
+
+        private void btn_deleteAccount_Click(object sender, EventArgs e)
+        {
+            string userName = txtbox_userName.Text;
+
+            DeleteAccount(userName);
+        }
+
+        private void btn_editAccount_Click(object sender, EventArgs e)
+        {
+            string userName = txtbox_userName.Text;
+            string displayName = txtbox_displayName.Text;
+            int accountType = (int)numericUpDown_accountType.Value;
+
+            EditAccount(userName, displayName, accountType);
+        }
+
+        private void btn_resetPassword_Click(object sender, EventArgs e)
+        {
+            string userName = txtbox_userName.Text;
+
+            ResetPassword(userName);
         }
     }
 }

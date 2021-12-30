@@ -78,5 +78,34 @@ namespace Login.DataAccessObject
             }
             return null;
         }
+
+        public bool InsertAccount(string userName, string displayName, int accountType)
+        {
+            string query = string.Format("INSERT dbo.Account ( userName, displayName, accountType ) VALUES (N'{0}', N'{1}', {2})", userName, displayName, accountType);
+            int result = DataAccess.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool UpdateAccount(string userName, string displayName, int accountType)
+        {
+            string query = string.Format("UPDATE dbo.Account SET displayName = N'{0}', accountType = {1} WHERE userName = N'{2}'", displayName, accountType, userName);
+            int result = DataAccess.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        public bool DeleteAccount(string userName)
+        {
+            string query = string.Format("DELETE Account WHERE userName = N'{0}'", userName);
+            int result = DataAccess.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool ResetPassword(string userName)
+        {
+            string query = string.Format("Update Account SET password = N'$2a$10$zWOdWBB2QIuHAb8djS8L5OsHAgzrXkVA1u6YPzzMtrbjE3vQDDj7O' WHERE userName = N'{0}'", userName);
+            int result = DataAccess.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }
