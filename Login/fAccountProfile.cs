@@ -55,6 +55,10 @@ namespace Login
             string newPassword = txtbox_newPassword.Text;
             string retypeNewPassword = txtbox_retypeNewPassword.Text;
 
+            /// Nếu 2 trường mật khẩu mới null thì hash lại trường mật khẩu hiện tại
+            /// Ngược lại check 2 trường mật khẩu 
+            string hashPassword = "";
+
             if (!BCrypt.Net.BCrypt.Equals(newPassword, retypeNewPassword))
             {
                 MessageBox.Show("Vui lòng nhập lại mật khẩu đúng với mật khẩu mới!");
@@ -62,8 +66,19 @@ namespace Login
             else
             {
                 int check = checkCredential(userName, password);
-                //string hashNewPassword = BCrypt.Net.BCrypt.HashPassword(retypeNewPassword);
-                if (AccountDAO.Instance.UpdateAccount(userName, displayName, check, BCrypt.Net.BCrypt.HashPassword(retypeNewPassword)))
+                if (string.IsNullOrEmpty(newPassword) && string.IsNullOrEmpty(retypeNewPassword) && string.IsNullOrWhiteSpace(newPassword) && string.IsNullOrWhiteSpace(retypeNewPassword))
+                {
+                    if (MessageBox.Show("Thay đổi userName", "Bạn có chắc muốn thay đồi userName", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        hashPassword += BCrypt.Net.BCrypt.HashPassword(password);
+                    }
+                }
+                else
+                {
+                    hashPassword += BCrypt.Net.BCrypt.HashPassword(newPassword);
+                }
+
+                if (AccountDAO.Instance.UpdateAccount(userName, displayName, check, hashPassword)) /** BCrypt.Net.BCrypt.HashPassword(retypeNewPassword) **/
                 {
                     MessageBox.Show("Cập nhật thông tin cá nhân thành công!");
                     if (updateAccount != null)
