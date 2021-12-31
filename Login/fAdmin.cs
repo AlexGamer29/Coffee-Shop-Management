@@ -18,10 +18,18 @@ namespace Login
     public partial class fAdmin : Form
     {
         BindingSource accountList = new BindingSource();
+<<<<<<< Updated upstream
         BindingSource foodList = new BindingSource();
 
         //private object dtgvReceipt;
         //private object dtpkToDate;
+=======
+        private object DateTimePickerReceipt;
+        private object DateTimePickerToDate;
+
+        public object DateTimePickerToDate1 { get => DateTimePickerToDate; set => DateTimePickerToDate = value; }
+        //public object DateTimePickerReceipt1 { get => DateTimePickerReceipt; set => DateTimePickerReceipt = value; }
+>>>>>>> Stashed changes
 
         public AccountAuthentication loginAccount;
 
@@ -44,6 +52,10 @@ namespace Login
             //LoadAccountList();
             AddAccountBinding();
             LoadAccount();
+<<<<<<< Updated upstream
+=======
+            
+>>>>>>> Stashed changes
             LoadDateTimePickerReceipt();
             LoadListReceiptByDate(dateTimePicker_fromDate.Value, dateTimePicker_toDate.Value);
         }
