@@ -33,7 +33,7 @@ namespace Login.DataAccessObject
                 hashedPassword += row["password"].ToString();
             }
 
-            if (BCrypt.Net.BCrypt.Verify(passWord, hashedPassword))
+                if (BCrypt.Net.BCrypt.Verify(passWord, hashedPassword))
             {
                 return true;
             }
