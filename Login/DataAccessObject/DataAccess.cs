@@ -14,9 +14,9 @@ namespace Login
         private static DataAccess instance;
         //private string ConnectionString = "Data Source=LAPTOP-3COKBC5G;Initial Catalog=CoffeeShop;Integrated Security=True";
         //private string ConnectionString = "Data Source=LAPTOP-TJQFN4F8;Initial Catalog=CoffeeShop;Integrated Security=True";
-        //private string ConnectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
+        private string ConnectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
         //thế tên lap vào LAPTOP-TJQFN4F8
-        private string ConnectionString = "Data Source=14.243.50.116;Initial Catalog=CoffeeShop;User ID=oop;Password=admin";
+        //private string ConnectionString = "Data Source=14.243.50.116;Initial Catalog=CoffeeShop;User ID=oop;Password=admin";
 
 
         public static DataAccess Instance
