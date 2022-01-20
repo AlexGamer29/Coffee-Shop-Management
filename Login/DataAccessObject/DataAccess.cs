@@ -12,18 +12,8 @@ namespace Login
     public class DataAccess
     {
         private static DataAccess instance;
-<<<<<<< HEAD
-        
+
         private string ConnectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
-=======
-        //private string ConnectionString = "Data Source=LAPTOP-3COKBC5G;Initial Catalog=CoffeeShop;Integrated Security=True";
-        private string ConnectionString = "Data Source=LAPTOP-TJQFN4F8;Initial Catalog=CoffeeShop;Integrated Security=True";
-        //private string ConnectionString = "Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True";
-        //thế tên lap vào LAPTOP-TJQFN4F8
-        //private string ConnectionString = "Data Source=14.243.50.116;Initial Catalog=CoffeeShop;User ID=oop;Password=admin";
-
->>>>>>> 11fa6ecc5ba3971311b5d58e76efb198f4c0d1fb
-
         public static DataAccess Instance
         {
             get { if (instance == null) instance = new DataAccess(); return DataAccess.instance; }
