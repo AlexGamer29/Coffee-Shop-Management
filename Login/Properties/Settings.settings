@@ -2,21 +2,21 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Login.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
+    <Setting Name="CoffeeShop20220112" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=14.245.29.164;Initial Catalog=CoffeeShop;User ID=oop;Password=admin&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=14.245.29.164;Initial Catalog=CoffeeShop;User ID=oop;Password=admin</Value>
+    </Setting>
     <Setting Name="CoffeeShopConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;Data Source=LAPTOP-TJQFN4F8;Initial Catalog=CoffeeShop;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=LAPTOP-TJQFN4F8;Initial Catalog=CoffeeShop;Integrated Security=True</Value>
-    </Setting>
-    <Setting Name="RemoteConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;Data Source=14.243.50.116;Initial Catalog=CoffeeShop;User ID=oop;Password=admin&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=14.243.50.116;Initial Catalog=CoffeeShop;User ID=oop;Password=admin</Value>
+      <Value Profile="(Default)">Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

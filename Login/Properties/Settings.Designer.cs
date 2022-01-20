@@ -26,20 +26,20 @@ namespace Login.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-TJQFN4F8;Initial Catalog=CoffeeShop;Integrated Security=True")]
-        public string CoffeeShopConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=14.245.29.164;Initial Catalog=CoffeeShop;User ID=oop;Password=admin")]
+        public string CoffeeShop20220112 {
             get {
-                return ((string)(this["CoffeeShopConnectionString"]));
+                return ((string)(this["CoffeeShop20220112"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=14.243.50.116;Initial Catalog=CoffeeShop;User ID=oop;Password=admin")]
-        public string RemoteConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-GRVMPUG;Initial Catalog=CoffeeShop;Integrated Security=True")]
+        public string CoffeeShopConnectionString {
             get {
-                return ((string)(this["RemoteConnectionString"]));
+                return ((string)(this["CoffeeShopConnectionString"]));
             }
         }
     }

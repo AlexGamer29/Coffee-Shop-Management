@@ -22,7 +22,7 @@ namespace Login.DataAccessObject
 
         public void DeleteReceiptInfoByFoodID(int id)
         {
-            DataAccess.Instance.ExecuteQuery("delete dbo.ReceiptInfo WHERE idFood = " + id);
+            DataAccess.Instance.ExecuteQuery("DELETE dbo.ReceiptInfo WHERE idMenu = " + id);
         }
         public List<ReceiptInfo> GetListReceiptInfo(int idTable)
         {

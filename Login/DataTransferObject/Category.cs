@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Telerik.WinControls.UI;
 
 namespace Login.DataTransferObject
 {
@@ -20,5 +21,10 @@ namespace Login.DataTransferObject
         }
         public int ID { get => iD; set => iD = value; }
         public string Name { get => name; set => name = value; }
+
+        public static implicit operator RadListDataItem(Category v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

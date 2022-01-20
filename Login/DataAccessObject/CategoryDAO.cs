@@ -23,33 +23,51 @@ namespace Login.DataAccessObject
         public List<Category> GetListCategory()
         {
             List<Category> list = new List<Category>();
-            string query = "SELECT * FROM Categories";
-            
+            string query = "USERPROC_GetListCategory";
+
             DataTable data = DataAccess.Instance.ExecuteQuery(query);
-            
+
             foreach (DataRow dr in data.Rows)
             {
                 Category category = new Category(dr);
                 list.Add(category);
-
             }
             return list;
         }
-        public Category GetCategoryByID( int id )
+        public Category GetCategoryByID(int id)
         {
             Category category = null;
-            string query = "SELECT * FROM Categories where id = " + id;
+            string query = "USERPROC_GetCategoryByID @id";
 
-            DataTable data = DataAccess.Instance.ExecuteQuery(query);
+            DataTable data = DataAccess.Instance.ExecuteQuery(query, new object[] { id });
 
             foreach (DataRow dr in data.Rows)
             {
                 category = new Category(dr);
                 return category;
-
             }
-
             return category;
+        }
+
+        public bool AddCategory(string name)
+        {
+            string query = string.Format("INSERT dbo.Categories ( name ) VALUES (N'{0}')", name);
+            int result = DataAccess.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool UpdateCategory(string name, int idCategory)
+        {
+            string query = string.Format("UPDATE dbo.Categories SET name = N'{0}' WHERE id = {1}", name, idCategory);
+            int result = DataAccess.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool DeleteCategory(int idCategory)
+        {
+            string query = string.Format("DELETE dbo.Categories WHERE id = {0}", idCategory);
+            int result = DataAccess.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
     }
 }

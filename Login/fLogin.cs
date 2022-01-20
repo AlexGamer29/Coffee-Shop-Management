@@ -17,7 +17,6 @@ namespace Login
 {
     public partial class fLogin : Form
     {
-
         public fLogin()
         {
             InitializeComponent();
@@ -25,23 +24,23 @@ namespace Login
 
         public static bool Login(string userName, string passWord)
         {
-            return DataAccessObject.AccountDAO.Instance.Login(userName, passWord);
+            return AccountDAO.Instance.Login(userName, passWord);
         }
-
-        private void btn_login_Click(object sender, EventArgs e)
+        private void Button_Login_Click(object sender, EventArgs e)
         {
             try
             {
-                string userName = txtbox_userName.Text;
-                string passWord = txtbox_password.Text;
+                string userName = TextBox_UserName.Text;
+                string passWord = TextBox_Password.Text;
 
                 if (Login(userName, passWord))
                 {
                     AccountAuthentication loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
-                    fManageTable formManageTable = new fManageTable(loginAccount);
+                    RadForm formManageTable = new RadForm(loginAccount);
                     this.Hide();
                     formManageTable.ShowDialog();
                     this.Show();
+                    ClearTextBoxes();
                 }
                 else
                 {
@@ -54,38 +53,49 @@ namespace Login
             }
         }
 
-        private void txtbox_user_Click(object sender, EventArgs e)
+        protected void ClearTextBoxes()
         {
-            txtbox_userName.BackColor = Color.White;
-            panel_user.BackColor = Color.White;
-            panel_password.BackColor = SystemColors.Control;
-            txtbox_password.BackColor = SystemColors.Control;
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else
+                        func(control.Controls);
+            };
+
+            func(Controls);
         }
 
-        private void user_logo_Click(object sender, EventArgs e)
+        private void TextBox_UserName_Click(object sender, EventArgs e)
         {
-
+            TextBox_UserName.BackColor = Color.White;
+            Panel_User.BackColor = Color.White;
+            Panel_Password.BackColor = SystemColors.Control;
+            TextBox_Password.BackColor = SystemColors.Control;
+        }
+        private void TextBox_Password_Click(object sender, EventArgs e)
+        {
+            TextBox_Password.BackColor = Color.White;
+            Panel_Password.BackColor = Color.White;
+            TextBox_UserName.BackColor = SystemColors.Control;
+            Panel_User.BackColor = SystemColors.Control;
         }
 
-        private void password_logo_MouseDown(object sender, MouseEventArgs e)
+        private void Password_Logo_MouseDown(object sender, MouseEventArgs e)
         {
-            txtbox_password.UseSystemPasswordChar = false;
+            TextBox_Password.UseSystemPasswordChar = false;
         }
 
-        private void password_logo_MouseUp(object sender, MouseEventArgs e)
+        private void Password_Logo_MouseUp(object sender, MouseEventArgs e)
         {
-            txtbox_password.UseSystemPasswordChar = true;
-        }
-        
-        private void txtbox_password_Click(object sender, EventArgs e)
-        {
-            txtbox_password.BackColor = Color.White;
-            panel_password.BackColor = Color.White;
-            txtbox_userName.BackColor = SystemColors.Control;
-            panel_user.BackColor = SystemColors.Control;
+            TextBox_Password.UseSystemPasswordChar = true;
         }
 
-        private void pictureBox_close_Click(object sender, EventArgs e)
+
+        private void PictureBox_Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
